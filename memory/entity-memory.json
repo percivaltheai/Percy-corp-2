@@ -53,6 +53,10 @@
       {
         "fact": "Clawker website deployed at clawker.pages.dev - landing page with agent economy infrastructure info",
         "added": "2026-02-23T09:49:44.287903"
+      },
+      {
+        "fact": "Clawker website: deployed via Cloudflare Workers + static assets. Source: ~/Percy-Corp/clawker-worker/. Tech: wrangler.toml with assets directory. Custom domain clawker.net routes to Worker. Key files: index.html, wrangler.toml",
+        "added": "2026-02-23T10:11:05.058043"
       }
     ]
   }
