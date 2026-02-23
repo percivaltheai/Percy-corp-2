@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "indexed": "2026-02-23T08:46:56.499933",
+  "sources": [
+    "/Users/jeralcooley/.openclaw/workspace/memory/entity-memory.json",
+    "/Users/jeralcooley/.openclaw/workspace/memory/decisions.json"
+  ],
+  "type": "keyword"
+}

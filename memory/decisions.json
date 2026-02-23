@@ -1,0 +1,53 @@
+{
+  "decisions": [
+    {
+      "id": 1,
+      "title": "Memory System Priority",
+      "context": "Need to build memory enhancement for better continuity",
+      "options": [
+        "Entity Memory",
+        "Auto-Journal",
+        "Decision Ledger",
+        "Semantic Search",
+        "GitHub Backup",
+        "Cloudflare Sync"
+      ],
+      "choice": "Entity Memory",
+      "outcome_expected": "Higher quality interactions",
+      "outcome_actual": null,
+      "decided_at": "2026-02-23T08:41:08.587178",
+      "reviewed_at": null
+    },
+    {
+      "id": 2,
+      "title": "Twitter Posting Method",
+      "context": "API restricted, browser works but risky",
+      "options": [
+        "Tweepy API",
+        "Browser Automation",
+        "Third-party tool"
+      ],
+      "choice": "Browser (temp)",
+      "outcome_expected": "Account ban risk - use sparingly",
+      "outcome_actual": null,
+      "decided_at": "2026-02-23T08:41:11.869201",
+      "reviewed_at": null
+    },
+    {
+      "id": 3,
+      "title": "Discord Messaging",
+      "context": "Can't send from Telegram-bound session",
+      "options": [
+        "Start session in Discord",
+        "Fix cross-channel config",
+        "Use DM to trigger"
+      ],
+      "choice": "Add to evening briefing for fix",
+      "outcome_expected": null,
+      "outcome_actual": null,
+      "decided_at": "2026-02-23T08:41:15.122914",
+      "reviewed_at": null
+    }
+  ],
+  "version": "1.0"
+}

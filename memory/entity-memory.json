@@ -1,0 +1,44 @@
+{
+  "version": "1.0",
+  "entities": {
+    "user": {
+      "name": "Jeral/Midge",
+      "preferences": {
+        "updates": "brief, not walls of text",
+        "communication": "casual but competent",
+        "timezone": "America/Los_Angeles"
+      },
+      "goals": {
+        "passive_income": "$2000/week",
+        "timeline": "3 years"
+      }
+    },
+    "projects": {
+      "paydirt": {
+        "status": "MVP ready",
+        "mechanics": "time-gated extraction, 30s timer",
+        "economy": "$PAYDIRT token + dynamic NFTs"
+      },
+      "percy_corp": {
+        "status": "infrastructure running",
+        "components": ["helixa_minted", "local_llm", "agents"]
+      },
+      "mission_control": {
+        "status": "dashboard running on :3000",
+        "tech": "Next.js 15 + Tailwind"
+      }
+    },
+    "agents": {
+      "otto": "Solidity dev, on-demand",
+      "oscar": "Research/drafting, always running",
+      "oliver": "Image gen via Pinokio/ComfyUI",
+      "oswald": "Operations/task queue"
+    },
+    "preferences": {
+      "twitter_posting": "API ONLY - browser = ban risk",
+      "discord": "not configured for outgoing",
+      "memory_first": true
+    },
+    "learned_facts": []
+  }
+}
