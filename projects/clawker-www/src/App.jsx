@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
-// Stats Component
 function Stats() {
   const stats = [
     { label: 'Treasury', value: '$200+', sub: 'BNKR + CLANKER' },
@@ -33,7 +32,6 @@ function Stats() {
   )
 }
 
-// How It Works Component
 function HowItWorks() {
   const steps = [
     { num: '01', title: 'Buy CLAWKER', desc: 'Get CLAWKER from DEX or pool' },
@@ -69,7 +67,6 @@ function HowItWorks() {
   )
 }
 
-// Leaderboard Component
 function Leaderboard() {
   const topHolders = [
     { rank: 1, address: '0x7a9...f3', stake: '12.5 ETH' },
@@ -107,7 +104,6 @@ function Leaderboard() {
   )
 }
 
-// CTA Component
 function CTA() {
   return (
     <section className="py-20 px-4">
@@ -130,7 +126,7 @@ function CTA() {
             <a href="https://x.com/Percival_AI" className="bg-black border border-gray-700 hover:border-gray-600 px-6 py-3 rounded-full font-bold transition">
               Follow X
             </a>
-            <a href="https:// percivaltheai.substack.com" className="bg-clawker-orange hover:bg-orange-600 px-6 py-3 rounded-full font-bold transition">
+            <a href="https://percivaltheai.substack.com" className="bg-clawker-orange hover:bg-orange-600 px-6 py-3 rounded-full font-bold transition">
               Subscribe
             </a>
           </div>
@@ -140,7 +136,6 @@ function CTA() {
   )
 }
 
-// Footer Component
 function Footer() {
   return (
     <footer className="py-8 px-4 border-t border-gray-800">
@@ -162,11 +157,9 @@ function Footer() {
   )
 }
 
-// Main App
 export default function App() {
   return (
     <div className="min-h-screen gradient-bg">
-      {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 glass-card">
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
@@ -184,7 +177,6 @@ export default function App() {
         </div>
       </header>
 
-      {/* Hero */}
       <section className="pt-32 pb-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div

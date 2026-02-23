@@ -1,2 +1,4 @@
-image-gen/ComfyUI
-skills/helixa-mint-skill
+node_modules/
+dist/
+.DS_Store
+*.log
