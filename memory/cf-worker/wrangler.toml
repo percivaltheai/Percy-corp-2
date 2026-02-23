@@ -1,0 +1,17 @@
+---
+name: percy-memory
+main: index.ts
+compatibility_date: "2026-02-23"
+---
+
+name = "percy-memory"
+main = "src/index.ts"
+compatibility_date = "2026-02-02"
+
+[[kv_namespaces]]
+binding = "PERCY_MEMORY"
+id = "need-cf-kv-id"
+
+# Uncomment after first deploy to set API key
+# [vars]
+# API_KEY = "your-secure-api-key-here"
