@@ -41,7 +41,8 @@
     "preferences": {
       "twitter_posting": "API ONLY - browser = ban risk",
       "discord": "not configured for outgoing",
-      "memory_first": true
+      "memory_first": true,
+      "memory_review": "daily at 11:30 PM"
     },
     "learned_facts": [
       {
