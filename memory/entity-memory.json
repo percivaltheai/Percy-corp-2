@@ -11,6 +11,9 @@
       "goals": {
         "passive_income": "$2000/week",
         "timeline": "3 years"
+      },
+      "wallet": {
+        "meta": "0x2Ee6D91b39B4C3cF0Ce8C1171A9dbd0312092cc2"
       }
     },
     "projects": {
