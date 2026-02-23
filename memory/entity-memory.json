@@ -21,7 +21,11 @@
       },
       "percy_corp": {
         "status": "infrastructure running",
-        "components": ["helixa_minted", "local_llm", "agents"]
+        "components": [
+          "helixa_minted",
+          "local_llm",
+          "agents"
+        ]
       },
       "mission_control": {
         "status": "dashboard running on :3000",
@@ -39,6 +43,11 @@
       "discord": "not configured for outgoing",
       "memory_first": true
     },
-    "learned_facts": []
+    "learned_facts": [
+      {
+        "fact": "Twitter API works via requests-oauthlib with OAuth 1.0a - browser posting = ban risk, must use API only",
+        "added": "2026-02-23T09:29:11.584347"
+      }
+    ]
   }
 }
