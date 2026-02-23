@@ -11,7 +11,7 @@
  */
 
 export interface Env {
-  PERCY_MEMORY: KVNamespace;
+  percy_memory: KVNamespace;
   API_KEY: string;
 }
 
@@ -48,11 +48,11 @@ function notFound() {
 
 // Get all memory
 async function getAllMemory(env: Env): Promise<Response> {
-  const keys = await env.PERCY_MEMORY.list();
+  const keys = await env.percy_memory.list();
   const memory: Record<string, any> = {};
   
   for (const key of keys.keys) {
-    const value = await env.PERCY_MEMORY.get(key.name);
+    const value = await env.percy_memory.get(key.name);
     if (value) {
       memory[key.name] = JSON.parse(value);
     }
@@ -65,7 +65,7 @@ async function getAllMemory(env: Env): Promise<Response> {
 
 // Get specific memory key
 async function getMemoryKey(key: string, env: Env): Promise<Response> {
-  const value = await env.PERCY_MEMORY.get(key);
+  const value = await env.percy_memory.get(key);
   
   if (!value) {
     return notFound();
@@ -79,7 +79,8 @@ async function getMemoryKey(key: string, env: Env): Promise<Response> {
 // Set memory
 async function setMemory(request: Request, env: Env): Promise<Response> {
   try {
-    const body = await request.json();
+    const bodyText = await request.text();
+    const body = JSON.parse(bodyText);
     
     if (!body.key || body.value === undefined) {
       return new Response("Missing key or value", { 
@@ -88,13 +89,13 @@ async function setMemory(request: Request, env: Env): Promise<Response> {
       });
     }
     
-    await env.PERCY_MEMORY.put(body.key, JSON.stringify(body.value));
+    await env.percy_memory.put(body.key, JSON.stringify(body.value));
     
     return new Response(JSON.stringify({ success: true, key: body.key }), {
       headers: { ...corsHeaders(), "Content-Type": "application/json" },
     });
   } catch (e) {
-    return new Response("Invalid JSON", { 
+    return new Response("Invalid JSON: " + String(e), { 
       status: 400,
       headers: corsHeaders() 
     });
@@ -103,12 +104,12 @@ async function setMemory(request: Request, env: Env): Promise<Response> {
 
 // Search memory (simple keyword)
 async function searchMemory(query: string, env: Env): Promise<Response> {
-  const keys = await env.PERCY_MEMORY.list();
+  const keys = await env.percy_memory.list();
   const results: Array<{key: string, matches: string[]}> = [];
   const queryLower = query.toLowerCase();
   
   for (const key of keys.keys) {
-    const value = await env.PERCY_MEMORY.get(key.name);
+    const value = await env.percy_memory.get(key.name);
     if (value && value.toLowerCase().includes(queryLower)) {
       const parsed = JSON.parse(value);
       results.push({

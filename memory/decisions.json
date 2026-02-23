@@ -47,6 +47,23 @@
       "outcome_actual": null,
       "decided_at": "2026-02-23T08:41:15.122914",
       "reviewed_at": null
+    },
+    {
+      "id": 4,
+      "title": "Memory System Buildout",
+      "context": "5 memory systems to improve continuity",
+      "options": [
+        "Entity Memory",
+        "Auto-Journal",
+        "Decision Ledger",
+        "Semantic Search",
+        "GitHub Backup"
+      ],
+      "choice": "Built all 5",
+      "outcome_expected": "Better session continuity",
+      "outcome_actual": null,
+      "decided_at": "2026-02-23T08:49:53.510993",
+      "reviewed_at": null
     }
   ],
   "version": "1.0"

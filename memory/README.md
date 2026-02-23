@@ -63,8 +63,32 @@ python3 memory/decision-ledger.py get 1
 - [x] Auto-Journaling ✅
 - [x] Decision Ledger ✅
 - [x] Semantic Search ✅
-- [ ] GitHub Backup
-- [ ] Cloudflare Sync
+- [x] GitHub Backup ✅
+
+## GitHub Backup (Built ✅)
+
+```bash
+# Check status
+python3 memory/github-backup.py status
+
+# Commit changes
+python3 memory/github-backup.py commit "added new decision"
+
+# Commit + push
+python3 memory/github-backup.py push
+```
+
+- Auto-syncs with Obsidian via launchd (hourly)
+- Commits to Percy-Corp-2 repo
+- Full version history of memory changes
+
+---
+
+## Auto-Sync (Running ✅)
+
+Launchd agent runs `sync-obsidian.py` every hour:
+- Syncs to Obsidian (entity memory + decisions)
+- Commits + pushes to GitHub
 
 ## Semantic Search (Built ✅)
 

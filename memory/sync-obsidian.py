@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sync entity memory to Obsidian + GitHub"""
+"""Sync entity memory to Obsidian + GitHub + Cloudflare"""
 
 import json
 import subprocess
@@ -9,6 +9,58 @@ from datetime import datetime
 MEMORY_FILE = Path(__file__).parent / "entity-memory.json"
 OBSIDIAN_PATH = Path.home() / "Library/Mobile Documents/iCloud~md~obsidian/Documents/Openclaw Knowledge Core/Openclaw Knowledge Core"
 REPO_PATH = Path(__file__).parent.parent
+CONFIG_FILE = Path(__file__).parent / "cf-config.json"
+
+def load_cf_config():
+    if CONFIG_FILE.exists():
+        with open(CONFIG_FILE) as f:
+            return json.load(f)
+    return {}
+
+def sync_to_cloudflare():
+    """Sync local memory to Cloudflare KV"""
+    config = load_cf_config()
+    if not config.get("worker_url") or not config.get("api_key"):
+        print("Cloudflare not configured, skipping...")
+        return
+    
+    try:
+        import requests
+        
+        # Get local memory
+        with open(MEMORY_FILE) as f:
+            memory = json.load(f)
+        
+        api_key = config["api_key"]
+        base_url = config["worker_url"]
+        
+        # Sync each entity
+        for key, value in memory.get("entities", {}).items():
+            resp = requests.post(
+                f"{base_url}/memory",
+                json={"key": key, "value": value},
+                headers={"X-API-Key": api_key},
+                timeout=10
+            )
+            if resp.status_code == 200:
+                print(f"  Cloudflare: {key}")
+        
+        # Sync decisions
+        decisions_file = Path(__file__).parent / "decisions.json"
+        if decisions_file.exists():
+            with open(decisions_file) as f:
+                decisions = json.load(f)
+            requests.post(
+                f"{base_url}/memory",
+                json={"key": "decisions", "value": decisions},
+                headers={"X-API-Key": api_key},
+                timeout=10
+            )
+            print(f"  Cloudflare: decisions")
+        
+        print("Synced to Cloudflare")
+    except Exception as e:
+        print(f"Cloudflare sync failed: {e}")
 
 def get_obsidian_note(name):
     """Get note path in vault"""
@@ -155,4 +207,5 @@ if __name__ == "__main__":
     print(f"=== Memory Sync {datetime.now().strftime('%Y-%m-%d %H:%M')} ===")
     sync_to_obsidian()
     sync_to_github()
+    sync_to_cloudflare()
     print("=== Sync Complete ===")
