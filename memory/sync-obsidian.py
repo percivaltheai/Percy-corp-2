@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
-"""Sync entity memory to Obsidian"""
+"""Sync entity memory to Obsidian + GitHub"""
 
 import json
 import subprocess
 from pathlib import Path
+from datetime import datetime
 
 MEMORY_FILE = Path(__file__).parent / "entity-memory.json"
 OBSIDIAN_PATH = Path.home() / "Library/Mobile Documents/iCloud~md~obsidian/Documents/Openclaw Knowledge Core/Openclaw Knowledge Core"
+REPO_PATH = Path(__file__).parent.parent
 
 def get_obsidian_note(name):
     """Get note path in vault"""
@@ -18,7 +20,7 @@ def sync_to_obsidian():
     
     content = """---
 tags: [memory, entities]
-updated: """ + json.dumps(mem.get("updated", "")) + """
+updated: """ + datetime.now().isoformat() + """
 ---
 
 # Entity Memory
@@ -58,10 +60,9 @@ updated: """ + json.dumps(mem.get("updated", "")) + """
     learned = mem.get("entities", {}).get("learned_facts", [])
     if learned:
         content += "\n## Learned Facts\n"
-        for item in learned[-10:]:  # last 10
+        for item in learned[-10:]:
             content += f"- {item.get('fact', '')} ({item.get('added', '')[:10]})\n"
     
-    # Write to Obsidian
     note_path = get_obsidian_note("entities")
     with open(note_path, "w") as f:
         f.write(content)
@@ -99,5 +100,59 @@ tags: [memory, decisions]
         
         print(f"Synced to Obsidian: {ledger_note}")
 
+def sync_to_github():
+    """Commit and push memory changes"""
+    import sys
+    
+    # Add memory files
+    result = subprocess.run(
+        ["git", "add", "memory/"],
+        cwd=REPO_PATH,
+        capture_output=True,
+        text=True
+    )
+    
+    # Check if anything to commit
+    result = subprocess.run(
+        ["git", "diff", "--cached", "--quiet"],
+        cwd=REPO_PATH,
+        capture_output=True
+    )
+    
+    if result.returncode == 0:
+        print("No changes to commit")
+        return
+    
+    # Commit
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
+    result = subprocess.run(
+        ["git", "commit", "-m", f"Memory update ({timestamp})"],
+        cwd=REPO_PATH,
+        capture_output=True,
+        text=True
+    )
+    
+    if result.returncode != 0:
+        print(f"Commit failed: {result.stderr}")
+        return
+    
+    print(f"Committed memory: {timestamp}")
+    
+    # Push
+    result = subprocess.run(
+        ["git", "push", "origin", "main"],
+        cwd=REPO_PATH,
+        capture_output=True,
+        text=True
+    )
+    
+    if result.returncode != 0:
+        print(f"Push failed: {result.stderr}")
+    else:
+        print("Pushed to GitHub")
+
 if __name__ == "__main__":
+    print(f"=== Memory Sync {datetime.now().strftime('%Y-%m-%d %H:%M')} ===")
     sync_to_obsidian()
+    sync_to_github()
+    print("=== Sync Complete ===")
