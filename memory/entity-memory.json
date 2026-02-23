@@ -31,7 +31,7 @@
         "status": "dashboard running on :3000",
         "tech": "Next.js 15 + Tailwind"
       },
-      "clawker_www": "deployed at clawker.pages.dev"
+      "clawker_www": "live at clawker.net (via Workers + Cloudflare)"
     },
     "agents": {
       "otto": "Solidity dev, on-demand",
