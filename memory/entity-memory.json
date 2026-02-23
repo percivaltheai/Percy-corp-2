@@ -30,7 +30,8 @@
       "mission_control": {
         "status": "dashboard running on :3000",
         "tech": "Next.js 15 + Tailwind"
-      }
+      },
+      "clawker_www": "deployed at clawker.pages.dev"
     },
     "agents": {
       "otto": "Solidity dev, on-demand",
