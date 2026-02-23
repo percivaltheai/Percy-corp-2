@@ -64,6 +64,14 @@
       "outcome_actual": null,
       "decided_at": "2026-02-23T08:49:53.510993",
       "reviewed_at": null
+    },
+    {
+      "id": 5,
+      "title": "Twitter Posting Method",
+      "context": "API restricted, browser works but risky",
+      "options": [],
+      "choice": "requests-oauthlib via OAuth 1.0a",
+      "decided_at": "2026-02-23T09:29:03.372938"
     }
   ],
   "version": "1.0"
