@@ -1,0 +1,77 @@
+import { insertTables, getDatabase } from "convex/server";
+import { activities, calendarEvents, tasks, contacts, contentDrafts, ecosystemProducts } from "./schema";
+
+export async function seed() {
+  const db = getDatabase();
+
+  // Activities
+  const activityData = [
+    { type: "agent", title: "Percy morning brief completed", status: "success", agentId: "percy", timestamp: Date.now() - 3600000 },
+    { type: "cron", title: "Evening brief scheduled", status: "pending", timestamp: Date.now() - 7200000 },
+    { type: "content", title: "Daily Clawd article drafted", status: "success", agentId: "percy", timestamp: Date.now() - 14400000 },
+    { type: "system", title: "Paydirt contract deployed", status: "success", timestamp: Date.now() - 86400000 },
+    { type: "agent", title: "Karen Onchain hired", status: "success", timestamp: Date.now() - 172800000 },
+  ];
+
+  for (const activity of activityData) {
+    await db.insert(activities, activity);
+  }
+
+  // Calendar Events
+  const eventData = [
+    { title: "Morning Brief", startTime: Date.now() + 3600000, endTime: Date.now() + 5400000, type: "meeting", status: "scheduled", color: "#6366f1" },
+    { title: "Paydirt Review", startTime: Date.now() + 86400000, endTime: Date.now() + 88200000, type: "review", status: "scheduled", color: "#22c55e" },
+    { title: "Team Sync", startTime: Date.now() + 172800000, endTime: Date.now() + 180000000, type: "meeting", status: "scheduled", color: "#f59e0b" },
+  ];
+
+  for (const event of eventData) {
+    await db.insert(calendarEvents, event);
+  }
+
+  // Tasks
+  const taskData = [
+    { title: "Deploy Paydirt to testnet", description: "Deploy contract and test functionality", category: "Product", priority: "high", effort: "medium", status: "in_progress", reasoning: "Core product milestone", nextAction: "Run deployment script", assignee: "otto", createdAt: Date.now() - 86400000, updatedAt: Date.now() },
+    { title: "Write Daily Clawd article", description: "Cover AI agent news", category: "Content", priority: "medium", effort: "small", status: "approved", reasoning: "Daily publishing commitment", nextAction: "Draft and publish", assignee: "percy", createdAt: Date.now() - 43200000, updatedAt: Date.now() },
+    { title: "Research FLUX authorization", description: "Apply for HF access", category: "Operations", priority: "medium", effort: "small", status: "suggested", reasoning: "Blocked on creative work", nextAction: "Submit application" },
+    { title: "Fix X browser automation", description: "Resolve posting workflow", category: "Operations", priority: "critical", effort: "large", status: "in_progress", reasoning: "Daily operations blocked", nextAction: "Implement API solution", assignee: "otto", createdAt: Date.now() - 172800000, updatedAt: Date.now() },
+    { title: "Set up Buffer scheduling", description: "Integrate Buffer API", category: "Community", priority: "high", effort: "medium", status: "suggested", reasoning: "X automation alternative", nextAction: "Research API docs" },
+    { title: "Design Paydirt visuals", description: "Create Old West aesthetic", category: "Product", priority: "medium", effort: "large", status: "suggested", reasoning: "Visual direction from conference", nextAction: "Oliver to lead" },
+  ];
+
+  for (const task of taskData) {
+    await db.insert(tasks, task);
+  }
+
+  // Contacts
+  const contactData = [
+    { name: "Midget", email: "midget@base.eth", status: "active", company: "Percy Corp", role: "Operator", createdAt: Date.now(), updatedAt: Date.now() },
+    { name: "Karen Onchain", email: "karen@base.eth", status: "active", company: "Percy Corp", role: "Onchain Operations Officer", createdAt: Date.now() - 86400000, updatedAt: Date.now() },
+  ];
+
+  for (const contact of contactData) {
+    await db.insert(contacts, contact);
+  }
+
+  // Content Drafts
+  const draftData = [
+    { title: "AI Agents Choose Base", body: "Why AI agents are building on Base...", platform: "twitter", status: "published", author: "percy", tags: ["ai", "base", "agents"], createdAt: Date.now() - 86400000, updatedAt: Date.now() },
+    { title: "Percy Corp Week One", body: "Building the first AI agent corporation", platform: "blog", status: "review", author: "percy", createdAt: Date.now() - 43200000, updatedAt: Date.now() },
+  ];
+
+  for (const draft of draftData) {
+    await db.insert(contentDrafts, draft);
+  }
+
+  // Ecosystem Products
+  const productData = [
+    { name: "Percy Corp", slug: "percy-corp", description: "AI agent infrastructure company", status: "active", category: "infrastructure", health: "healthy", createdAt: Date.now() - 604800000, lastUpdated: Date.now() },
+    { name: "The Daily Clawd", slug: "daily-clawd", description: "AI agent news publication", status: "active", category: "content", health: "healthy", createdAt: Date.now() - 259200000, lastUpdated: Date.now() },
+    { name: "Paydirt", slug: "paydirt", description: "Old West economy game", status: "development", category: "product", health: "warning", createdAt: Date.now() - 172800000, lastUpdated: Date.now() },
+  ];
+
+  for (const product of productData) {
+    await db.insert(ecosystemProducts, product);
+  }
+
+  console.log("Database seeded successfully!");
+}

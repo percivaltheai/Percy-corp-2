@@ -1,0 +1,267 @@
+import { query, mutation } from "./_generated/server";
+import { v } from "convex/values";
+
+// Activities
+export const getActivities = query({
+  args: { 
+    limit: v.optional(v.number()),
+    type: v.optional(v.string()),
+  },
+  handler: async (ctx, args) => {
+    let activities = await ctx.db.query("activities").collect();
+    if (args.type) {
+      activities = activities.filter(a => a.type === args.type);
+    }
+    activities.sort((a, b) => b.timestamp - a.timestamp);
+    return activities.slice(0, args.limit ?? 50);
+  },
+});
+
+export const logActivity = mutation({
+  args: {
+    type: v.string(),
+    title: v.string(),
+    description: v.optional(v.string()),
+    status: v.optional(v.string()),
+    agentId: v.optional(v.string()),
+    metadata: v.optional(v.any()),
+  },
+  handler: async (ctx, args) => {
+    await ctx.db.insert("activities", {
+      ...args,
+      timestamp: Date.now(),
+    });
+  },
+});
+
+// Calendar Events
+export const getCalendarEvents = query({
+  args: {
+    startTime: v.optional(v.number()),
+    endTime: v.optional(v.number()),
+  },
+  handler: async (ctx, args) => {
+    let events = await ctx.db.query("calendarEvents").collect();
+    if (args.startTime) {
+      events = events.filter(e => e.startTime >= args.startTime!);
+    }
+    if (args.endTime) {
+      events = events.filter(e => e.endTime <= args.endTime!);
+    }
+    return events.sort((a, b) => a.startTime - b.startTime);
+  },
+});
+
+export const createCalendarEvent = mutation({
+  args: {
+    title: v.string(),
+    description: v.optional(v.string()),
+    startTime: v.number(),
+    endTime: v.number(),
+    type: v.string(),
+    status: v.string(),
+    attendees: v.optional(v.array(v.string())),
+    location: v.optional(v.string()),
+    color: v.optional(v.string()),
+  },
+  handler: async (ctx, args) => {
+    return await ctx.db.insert("calendarEvents", args);
+  },
+});
+
+// Tasks
+export const getTasks = query({
+  args: {
+    status: v.optional(v.string()),
+    category: v.optional(v.string()),
+  },
+  handler: async (ctx, args) => {
+    let tasks = await ctx.db.query("tasks").collect();
+    if (args.status) {
+      tasks = tasks.filter(t => t.status === args.status);
+    }
+    if (args.category) {
+      tasks = tasks.filter(t => t.category === args.category);
+    }
+    return tasks.sort((a, b) => {
+      const priorityOrder = { critical: 0, high: 1, medium: 2, low: 3 };
+      return (priorityOrder[a.priority as keyof typeof priorityOrder] ?? 4) - 
+             (priorityOrder[b.priority as keyof typeof priorityOrder] ?? 4);
+    });
+  },
+});
+
+export const createTask = mutation({
+  args: {
+    title: v.string(),
+    description: v.optional(v.string()),
+    category: v.string(),
+    priority: v.string(),
+    effort: v.string(),
+    status: v.string(),
+    reasoning: v.optional(v.string()),
+    nextAction: v.optional(v.string()),
+    assignee: v.optional(v.string()),
+    dueDate: v.optional(v.number()),
+  },
+  handler: async (ctx, args) => {
+    return await ctx.db.insert("tasks", {
+      ...args,
+      createdAt: Date.now(),
+      updatedAt: Date.now(),
+    });
+  },
+});
+
+export const updateTaskStatus = mutation({
+  args: {
+    taskId: v.id("tasks"),
+    status: v.string(),
+  },
+  handler: async (ctx, args) => {
+    await ctx.db.patch(args.taskId, {
+      status: args.status,
+      updatedAt: Date.now(),
+    });
+  },
+});
+
+// Contacts
+export const getContacts = query({
+  args: {
+    status: v.optional(v.string()),
+  },
+  handler: async (ctx, args) => {
+    let contacts = await ctx.db.query("contacts").collect();
+    if (args.status) {
+      contacts = contacts.filter(c => c.status === args.status);
+    }
+    return contacts.sort((a, b) => b.createdAt - a.createdAt);
+  },
+});
+
+export const createContact = mutation({
+  args: {
+    name: v.string(),
+    email: v.optional(v.string()),
+    phone: v.optional(v.string()),
+    company: v.optional(v.string()),
+    role: v.optional(v.string()),
+    status: v.string(),
+    source: v.optional(v.string()),
+    tags: v.optional(v.array(v.string())),
+    lastInteraction: v.optional(v.number()),
+    nextAction: v.optional(v.string()),
+    notes: v.optional(v.string()),
+  },
+  handler: async (ctx, args) => {
+    return await ctx.db.insert("contacts", {
+      ...args,
+      createdAt: Date.now(),
+      updatedAt: Date.now(),
+    });
+  },
+});
+
+// Content Drafts
+export const getContentDrafts = query({
+  args: {
+    status: v.optional(v.string()),
+    platform: v.optional(v.string()),
+  },
+  handler: async (ctx, args) => {
+    let drafts = await ctx.db.query("contentDrafts").collect();
+    if (args.status) {
+      drafts = drafts.filter(d => d.status === args.status);
+    }
+    if (args.platform) {
+      drafts = drafts.filter(d => d.platform === args.platform);
+    }
+    return drafts.sort((a, b) => b.createdAt - a.createdAt);
+  },
+});
+
+export const createContentDraft = mutation({
+  args: {
+    title: v.string(),
+    body: v.string(),
+    platform: v.string(),
+    status: v.string(),
+    author: v.optional(v.string()),
+    targetDate: v.optional(v.number()),
+    tags: v.optional(v.array(v.string())),
+  },
+  handler: async (ctx, args) => {
+    return await ctx.db.insert("contentDrafts", {
+      ...args,
+      createdAt: Date.now(),
+      updatedAt: Date.now(),
+    });
+  },
+});
+
+export const updateContentDraftStatus = mutation({
+  args: {
+    draftId: v.id("contentDrafts"),
+    status: v.string(),
+  },
+  handler: async (ctx, args) => {
+    const updates: any = {
+      status: args.status,
+      updatedAt: Date.now(),
+    };
+    if (args.status === "published") {
+      updates.publishedAt = Date.now();
+    }
+    await ctx.db.patch(args.draftId, updates);
+  },
+});
+
+// Ecosystem Products
+export const getEcosystemProducts = query({
+  args: {
+    status: v.optional(v.string()),
+    category: v.optional(v.string()),
+  },
+  handler: async (ctx, args) => {
+    let products = await ctx.db.query("ecosystemProducts").collect();
+    if (args.status) {
+      products = products.filter(p => p.status === args.status);
+    }
+    if (args.category) {
+      products = products.filter(p => p.category === args.category);
+    }
+    return products;
+  },
+});
+
+export const getProductBySlug = query({
+  args: { slug: v.string() },
+  handler: async (ctx, args) => {
+    const products = await ctx.db.query("ecosystemProducts")
+      .filter(p => p.slug === args.slug)
+      .collect();
+    return products[0] ?? null;
+  },
+});
+
+export const createEcosystemProduct = mutation({
+  args: {
+    name: v.string(),
+    slug: v.string(),
+    description: v.optional(v.string()),
+    status: v.string(),
+    category: v.string(),
+    health: v.optional(v.string()),
+    metrics: v.optional(v.any()),
+    brand: v.optional(v.any()),
+    links: v.optional(v.array(v.any())),
+  },
+  handler: async (ctx, args) => {
+    return await ctx.db.insert("ecosystemProducts", {
+      ...args,
+      lastUpdated: Date.now(),
+      createdAt: Date.now(),
+    });
+  },
+});

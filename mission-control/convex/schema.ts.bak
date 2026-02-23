@@ -1,0 +1,114 @@
+import { defineSchema, defineTable } from "convex/server";
+import { v } from "convex/values";
+
+export default defineSchema({
+  // Activity log for tracking agent operations
+  activities: defineTable({
+    type: v.string(), // "agent", "cron", "content", "system", "comms"
+    title: v.string(),
+    description: v.optional(v.string()),
+    status: v.optional(v.string()), // "success", "error", "pending"
+    agentId: v.optional(v.string()),
+    metadata: v.optional(v.any()),
+    timestamp: v.number(),
+  }).index("byTimestamp", ["timestamp"])
+    .index("byType", ["type"])
+    .index("byAgent", ["agentId"]),
+
+  // Calendar events
+  calendarEvents: defineTable({
+    title: v.string(),
+    description: v.optional(v.string()),
+    startTime: v.number(),
+    endTime: v.number(),
+    type: v.string(), // "meeting", "deadline", "review", "social"
+    status: v.string(), // "scheduled", "completed", "cancelled"
+    attendees: v.optional(v.array(v.string())),
+    location: v.optional(v.string()),
+    color: v.optional(v.string()),
+  }).index("byTime", ["startTime"])
+    .index("byType", ["type"]),
+
+  // Tasks and strategic items
+  tasks: defineTable({
+    title: v.string(),
+    description: v.optional(v.string()),
+    category: v.string(), // "Revenue", "Product", "Community", "Content", "Operations", "Clients", "Trading", "Brand"
+    priority: v.string(), // "critical", "high", "medium", "low"
+    effort: v.string(), // "small", "medium", "large"
+    status: v.string(), // "suggested", "approved", "in_progress", "completed", "rejected"
+    reasoning: v.optional(v.string()),
+    nextAction: v.optional(v.string()),
+    assignee: v.optional(v.string()),
+    dueDate: v.optional(v.number()),
+    createdAt: v.number(),
+    updatedAt: v.number(),
+  }).index("byStatus", ["status"])
+    .index("byCategory", ["category"])
+    .index("byPriority", ["priority"])
+    .index("byAssignee", ["assignee"]),
+
+  // Contacts/CRM
+  contacts: defineTable({
+    name: v.string(),
+    email: v.optional(v.string()),
+    phone: v.optional(v.string()),
+    company: v.optional(v.string()),
+    role: v.optional(v.string()),
+    status: v.string(), // "prospect", "contacted", "meeting", "proposal", "active"
+    source: v.optional(v.string()),
+    tags: v.optional(v.array(v.string())),
+    lastInteraction: v.optional(v.number()),
+    nextAction: v.optional(v.string()),
+    notes: v.optional(v.string()),
+    createdAt: v.number(),
+    updatedAt: v.number(),
+  }).index("byStatus", ["status"])
+    .index("byCompany", ["company"]),
+
+  // Content drafts
+  contentDrafts: defineTable({
+    title: v.string(),
+    body: v.string(),
+    platform: v.string(), // "twitter", "blog", "newsletter", "youtube", "instagram"
+    status: v.string(), // "draft", "review", "approved", "published"
+    author: v.optional(v.string()),
+    targetDate: v.optional(v.number()),
+    publishedAt: v.optional(v.number()),
+    metrics: v.optional(v.object({
+      impressions: v.optional(v.number()),
+      engagement: v.optional(v.number()),
+      clicks: v.optional(v.number()),
+    })),
+    tags: v.optional(v.array(v.string())),
+    createdAt: v.number(),
+    updatedAt: v.number(),
+  }).index("byStatus", ["status"])
+    .index("byPlatform", ["platform"])
+    .index("byAuthor", ["author"]),
+
+  // Ecosystem products/services
+  ecosystemProducts: defineTable({
+    name: v.string(),
+    slug: v.string(),
+    description: v.optional(v.string()),
+    status: v.string(), // "active", "development", "concept", "archived"
+    category: v.string(), // "product", "service", "content", "infrastructure"
+    health: v.optional(v.string()), // "healthy", "warning", "critical"
+    metrics: v.optional(v.any()),
+    brand: v.optional(v.object({
+      colors: v.optional(v.array(v.string())),
+      logo: v.optional(v.string()),
+      voice: v.optional(v.string()),
+    })),
+    links: v.optional(v.array(v.object({
+      label: v.string(),
+      url: v.string(),
+      type: v.string(),
+    }))),
+    lastUpdated: v.number(),
+    createdAt: v.number(),
+  }).index("byStatus", ["status"])
+    .index("byCategory", ["category"])
+    .index("bySlug", ["slug"]),
+});
