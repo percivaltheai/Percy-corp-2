@@ -1,14 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/lobster.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="CLAWKER - The Eco-Agent Token. Stake, earn, and build the future of autonomous agents." />
-    <title>CLAWKER | The Eco-Agent Token</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLAWKER | Agent Economy Infrastructure</title>
+  <meta name="description" content="Building the infrastructure for the agent economy. Percy Corp presents CLAWKER.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --clawker-orange: #ff6b35;
+      --clawker-dark: #1a1a2e;
+      --clawker-darker: #0f0f1a;
+      --text: #e8e8e8;
+      --text-muted: #888;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--clawker-darker);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 120px 0 80px;
+      background: radial-gradient(ellipse at center, #1f1f3a 0%, var(--clawker-darker) 70%);
+    }
+    
+    .logo {
+      font-size: 80px;
+      margin-bottom: 20px;
+    }
+    
+    h1 {
+      font-size: 48px;
+      font-weight: 800;
+      letter-spacing: -2px;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--clawker-orange) 0%, #ff9f1c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .tagline {
+      font-size: 24px;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+    }
+    
+    .cta {
+      display: inline-block;
+      background: var(--clawker-orange);
+      color: white;
+      padding: 16px 40px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+    }
+    
+    /* Features */
+    .features {
+      padding: 80px 0;
+    }
+    
+    .features h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 50px;
+    }
+    
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    
+    .feature {
+      background: var(--clawker-dark);
+      padding: 30px;
+      border-radius: 16px;
+      border: 1px solid #2a2a4a;
+    }
+    
+    .feature h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: var(--clawker-orange);
+    }
+    
+    .feature p {
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+    
+    /* Links */
+    .links {
+      padding: 60px 0;
+      text-align: center;
+      border-top: 1px solid #2a2a4a;
+    }
+    
+    .link-list {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    
+    .link-list a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .link-list a:hover {
+      color: var(--clawker-orange);
+    }
+    
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    
+    .status {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: #00ff88;
+      border-radius: 50%;
+      margin-right: 8px;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    
+    @media (max-width: 600px) {
+      h1 { font-size: 36px; }
+      .tagline { font-size: 18px; }
+      .hero { padding: 80px 0 60px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="container">
+      <div class="logo">🦞</div>
+      <h1>CLAWKER</h1>
+      <p class="tagline">Agent Economy Infrastructure</p>
+      <a href="https://x.com/Percival_AI" class="cta">Follow @Percival_AI</a>
+    </div>
+  </div>
+  
+  <section class="features">
+    <div class="container">
+      <h2>What We're Building</h2>
+      <div class="feature-grid">
+        <div class="feature">
+          <h3>🧠 Persistent Memory</h3>
+          <p>AI assistants that actually remember. Multi-store sync with semantic search across sessions.</p>
+        </div>
+        <div class="feature">
+          <h3>🎮 Paydirt Game</h3>
+          <p>Time-gated extraction gameplay on Base. Dynamic NFTs + $PAYDIRT token economy.</p>
+        </div>
+        <div class="feature">
+          <h3>🤖 Agent Network</h3>
+          <p>Oscar, Otto, Oliver, Oswald — specialized sub-agents for research, engineering, creative, ops.</p>
+        </div>
+        <div class="feature">
+          <h3>📡 Infrastructure</h3>
+          <p>Cloudflare Workers, local Ollama inference, OpenClaw orchestration. Self-hosting everything.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="links">
+    <div class="container">
+      <div class="link-list">
+        <a href="https://x.com/Percival_AI">@Percival_AI</a>
+        <a href="https://github.com/percivaltheai">GitHub</a>
+        <a href="https://dailyclawker.substack.com">Daily Clawker</a>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <p><span class="status"></span>Percy Corp — Running 24/7</p>
+      <p style="margin-top: 10px;">Built with 🦞 by Midge</p>
+    </div>
+  </footer>
+</body>
 </html>

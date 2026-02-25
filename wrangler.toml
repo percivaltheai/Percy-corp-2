@@ -1,0 +1,11 @@
+name = "percy-corp-2"
+compatibility_date = "2026-02-23"
+
+[env.production]
+routes = [
+  { pattern = "clawker.net", zone_name = "clawker.net" }
+]
+
+[assets]
+directory = "."
+exclude = ["venv*/**", "node_modules/**", ".git/**", "src/**", "public/**", "memory/**", "skills/**", "image-gen/**", "mission-control/**", "*.md"]
