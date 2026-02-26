@@ -82,7 +82,7 @@ Since the last brief (February 19th):
 
 1. **Twitter/X Automation**
    - Status: Permanently BLOCKED by anti-bot policy
-   - Options: Buffer subscription ($5-15/mo) OR manual posting only
+   - Options: Manual posting only (API available)
    - Recommendation: Wait and see if X policy changes
 
 2. **Mission Control Dashboard**
@@ -97,7 +97,7 @@ Since the last brief (February 19th):
 
 | Item | Cost | Recommendation |
 |------|------|----------------|
-| Buffer | $5-15/mo | Wait — manual posting is fine |
+| Manual | Free | Use API — works |
 | Claude-Mem | Free | Install when terminal available |
 | Tiled (game editor) | Free | Install via brew if needed |
 

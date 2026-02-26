@@ -8,7 +8,7 @@ X actively bans accounts that use browser automation (headless browsers, Seleniu
 
 - **Tweepy OAuth 1.0a** — works but API is restricted (no v2 access)
 - **Twitter API v2** — needs proper elevated access
-- **Third-party tools** — Buffer, Typefully, etc.
+- **Third-party tools** — Typefully, etc. (avoid)
 
 ## If browser is the only option
 

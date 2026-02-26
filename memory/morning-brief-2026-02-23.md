@@ -90,7 +90,7 @@ Since last brief (Feb 22):
 
 1. **Twitter/X Automation**
    - Status: Permanently BLOCKED by anti-bot policy
-   - Options: Buffer subscription OR manual posting only
+   - Options: Manual posting only (API now available)
 
 2. **Mission Control Dashboard**
    - Status: Not running on localhost:3000
