@@ -13,6 +13,13 @@ Things like:
 - Device nicknames
 - Anything environment-specific
 
+### Bankr Wallet
+
+- **Address:** 0x0f2e88195e5a810505009a75845be9055176df63
+- **API Key:** See [[system/Bankr]] in Obsidian (never hardcode)
+- **Chain:** Base (8453)
+- **Used for:** Botchan social, Net Protocol on-chain ops
+
 ## Examples
 
 ```markdown
