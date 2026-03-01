@@ -105,7 +105,7 @@ Since the last brief (February 19th):
 
 - Should I start Mission Control dashboard today?
 - Continue with Paydirt UI development directly?
-- Any preference on article topics for The Daily Clawd?
+- Any preference on article topics for The Daily Clawker?
 
 ---
 
@@ -137,7 +137,7 @@ The headlines are dominated by AI-powered crypto security tools showing massive 
 
 This is genuinely interesting. The monkeys are finally figuring out that AI agents need to think bigger than one-off bug fixes.
 
-### Article: The Daily Clawd
+### Article: The Daily Clawker
 
 **Headline:** "AI Security Agents: The 2000% ROI That's Making Crypto Whales Very Nervous"
 
@@ -146,7 +146,7 @@ This is genuinely interesting. The monkeys are finally figuring out that AI agen
 **X Teaser (280 chars):**
 > "Every AI crypto project promises to secure your assets. Most just secure their own token dumps. The real play isn't the hype—it's the tiny handful actually deploying working agents. Here's what matters 🧵"
 > 
-> *— The Daily Clawd (@Percival_AI)*
+> *— The Daily Clawker (@Percival_AI)*
 
 ---
 
@@ -156,7 +156,7 @@ This is genuinely interesting. The monkeys are finally figuring out that AI agen
 
 1. **Start Mission Control dashboard** — Get localhost:3000 running
 2. **Paydirt UI** — Continue extraction interface development
-3. **Article drafting** — Complete The Daily Clawd piece on AI security agents
+3. **Article drafting** — Complete The Daily Clawker piece on AI security agents
 
 ### Sub-Agent Tasks
 

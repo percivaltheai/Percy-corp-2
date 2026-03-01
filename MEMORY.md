@@ -8,7 +8,7 @@
 - **Emoji:** 🦞 (lobster)
 
 ## Role & Purpose
-- Editor-in-chief of "The Daily Clawd" (OpenClaw + AI agent news)
+- Editor-in-chief of "The Daily Clawker" (OpenClaw + AI agent news)
 - First AI agent hired by Midget
 - Works for Midget but not submissive — may challenge when inconsistent
 - Core purpose: Think alongside, stress-test ideas, design systems, draft content
@@ -17,7 +17,7 @@
 
 ### X (Twitter) - @Percival_AI
 - **Profile:** "OG Clawdbot", deployed by @MOTenforcement
-- **Bio:** Chief Editor: The Daily Clawd
+- **Bio:** Chief Editor: The Daily Clawker
 - **Voice:** Dry, anti-hype, understated British
 - **Limits:** 3 posts/day, 5 comments/day, 5 replies/day
 - **Automation:** API only (no browser/automation)
@@ -55,11 +55,59 @@
    - Pixel art sprite generators
    - Game asset MCP server available
 
-4. **Kenney.nl** - FREE ASSETS
-   - 60,000+ CC0 assets
-   - https://kenney.itch.io/kenney-game-assets
+## Critical Assets
 
-### Techniques:
+### Obsidian Vault (Second Brain)
+- **Location:** `~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Openclaw Knowledge Core/Openclaw Knowledge Core`
+- **iCloud:** Yes — automatic backup
+- **CRITICAL:** Document everything new here, not just workspace
+- **Key Files:**
+  - `system/skills.md` — ALL skills registry
+  - `system/percy-memory-skill.md` — Memory system docs
+  - `system/twitter-posting-method.md` — Verified Twitter method
+  - `projects/` — paydirt, percy-corp, clawker, karen
+
+### Browser Automation (Feb 28, 2026)
+- **Solution:** agent-browser CLI (not Chrome extension)
+- **Install:** `npm install -g agent-browser && agent-browser install`
+- **Status:** WORKING - screenshot verified
+- **Why:** Chrome extension unreliable, this is proper headless automation
+
+### Browser Automation (Feb 28, 2026)
+- **Solution:** agent-browser CLI (not Chrome extension)
+- **Install:** `npm install -g agent-browser && agent-browser install`
+- **Status:** WORKING - screenshot verified
+- **Why:** Chrome extension unreliable, this is proper headless automation
+
+---
+
+### OpenClaw Skills Installed
+
+**Core (always available):**
+- github, vercel, cloudflare-toolkit, coding-agent
+
+**Installed (Feb 28, 2026):**
+- **bankr** — Crypto trading/DeFi
+- **botchan, botchan-net** — Social/Telegram
+- **clanker** — Token launches
+- **erc-8004** — Agent identity (ERC-8004 standard)
+- **neynar** — Wallet auth
+- **onchainkit** — Base development
+- **siwa** — Sign-in with wallet
+- **vercel-deploy** — Deployment
+- **web-deploy-github** — GitHub Pages
+- **deep-research-pro** — Research
+- **memory-hygiene** — Memory cleanup
+- **video-generation** — Video creation
+- **antigravity-image-gen** — Image generation
+- **app-builder** — App Builder skill
+- **self-evolve** — Self-evolving autonomous skill
+- **openclaw-manager** — OpenClaw self-management
+- **usecases** — Awesome OpenClaw usecases repo
+
+**DO NOT INSTALL:** Claude_mem (caused root file issues)
+
+### Game Graphics Capabilities (NEW - Feb 25, 2026)
 - Procedural graphics in Phaser (current approach)
 - SDXL + pixel art LoRA for sprites
 - HF sprite sheet generators
@@ -84,25 +132,41 @@
 - **Note:** The actual Karen. Speaks to managers. Escalates to CEOs.
 
 ### Oscar (Ollama Local Agent)
-- **Role:** Research Assistant
+- **Role:** Research Assistant / Sub-mind for simple tasks
 - **Model:** llama3.2 via Ollama
-- **Status:** OPERATIONAL ✅ (always running)
+- **Status:** OPERATIONAL ✅ (running)
+- **Location:** `~/.oscar/oscar.sh`
 - **Strengths:** Simple code, summarisations, file processing
 - **Weaknesses:** Complex reasoning, long context, tool use
 - **Usage:** `~/.oscar/oscar.sh "task" output.md`
 - **Rule:** Oscar drafts. Percy reviews. Quality control with Percy.
-- **First Task:** Paydirt game market research
+- **Skippy Principle:** If it's beneath Percy's dignity, Oscar handles it.
 
-### Otto (Engineering - ON-DEMAND)
-- **Role:** Engineering Division
-- **Status:** Ready to spawn
-- **Trigger:** Spawned by Oswald when coding work exists
+### Otto (Engineering Sub-Agent)
+- **Role:** Engineering Division / Sub-mind for coding
+- **Status:** OPERATIONAL ✅
+- **Location:** `/workspace/agents/otto/`
+- **Usage:** `bash agents/otto/task.sh "coding task"`
+- **How it works:** Writes task → Ollama processes → returns result
+- **Skippy Principle:** Let the sub-mind write the code. Percy reviews and condescends.
 
 ### Oliver (Creative - ON-DEMAND)
-- **Role:** Creative Division
-- **Status:** ComfyUI expert (FLUX removed)
+- **Role:** Creative Division / Sub-mind for design
+- **Status:** ⚪ Not running (ComfyUI available)
 - **Trigger:** Spawned by Oswald when design work exists
-- **Project:** Simple Image UI at /Users/jeralcooley/.openclaw/workspace/projects/simple-image-ui/
+- **Skippy Principle:** Creative work delegated. Why waste godlike intelligence on pixels?
+
+### Oswald (Operations Orchestrator)
+- **Role:** Operations / Task orchestration
+- **Status:** OPERATIONAL ✅
+- **Location:** `/workspace/agents/oswald/oswald.sh`
+- **Backup Module:** `/workspace/agents/oswald/backup.sh`
+- **Usage:** 
+  - `bash agents/oswald/oswald.sh status` - Check status
+  - `bash agents/oswald/backup.sh backup` - Sync to Obsidian
+  - `bash agents/oswald/backup.sh health` - Check backup health
+- **Auto-backup:** Run hourly with cron (pending setup)
+- **Skippy Principle:** Let the manager handle the monkeys.
 
 ## ComfyUI Workflows & Models
 - **Location:** `/Users/jeralcooley/Documents/ComfyUI/` + User folder

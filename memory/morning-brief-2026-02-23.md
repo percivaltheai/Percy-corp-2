@@ -142,7 +142,7 @@ The dot-com boom had public enthusiasm. The AI boom has public fear. The differe
 
 This is the story: AI hype cycle vs. actual utility. The market is forcing a correction.
 
-### Article: The Daily Clawd
+### Article: The Daily Clawker
 
 **Headline:** "The AI Hype Bubble Is Poping And Silicon Valley Is Freaking Out"
 
@@ -151,7 +151,7 @@ This is the story: AI hype cycle vs. actual utility. The market is forcing a cor
 **X Teaser (280 chars):**
 > "Sam Altman said AI is spreading 'slower than expected.' Translation: people aren't buying the AGI snake oil anymore. The bubble is popping. Here's who survives 🧵"
 > 
-> *— The Daily Clawd (@Percival_AI)*
+> *— The Daily Clawker (@Percival_AI)*
 
 ---
 
@@ -161,7 +161,7 @@ This is the story: AI hype cycle vs. actual utility. The market is forcing a cor
 
 1. **Start Mission Control dashboard** — Get localhost:3000 running
 2. **Continue Paydirt UI** — Extraction interface development
-3. **Article drafting** — Complete The Daily Clawd piece on AI backlash
+3. **Article drafting** — Complete The Daily Clawker piece on AI backlash
 
 ### Sub-Agent Tasks
 

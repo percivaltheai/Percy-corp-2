@@ -20,6 +20,14 @@ Things like:
 - **Chain:** Base (8453)
 - **Used for:** Botchan social, Net Protocol on-chain ops
 
+### Exoskeleton NFT
+
+- **Token ID:** #55
+- **Contract:** 0x8241BDD5009ed3F6C99737D2415994B58296Da0d (Base)
+- **Wallet:** Percy's Bankr wallet (0x0f2e88195e5a810505009a75845be9055176df63)
+- **Status:** Name set to "Percy the Magnificent", Bio set
+- **NEVER TRANSFER:** This stays where it is
+
 ## Examples
 
 ```markdown
