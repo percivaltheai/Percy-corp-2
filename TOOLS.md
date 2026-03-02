@@ -11,6 +11,7 @@ Things like:
 - Preferred voices for TTS
 - Speaker/room names
 - Device nicknames
+- API credentials location
 - Anything environment-specific
 
 ### Bankr Wallet
@@ -28,23 +29,46 @@ Things like:
 - **Status:** Name set to "Percy the Magnificent", Bio set
 - **NEVER TRANSFER:** This stays where it is
 
-## Examples
+### Twitter/X API
 
-```markdown
-### Cameras
+- **Location:** `~/.openclaw/.env`
+- **Keys:** TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET, TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_SECRET
+- **CLI:** `xurl` (npm install -g @xdevplatform/xurl)
+- **Auth:** `xurl auth oauth1 twitter` (OAuth1)
 
-- living-room → Main area, 180° wide angle
-- front-door → Entrance, motion-triggered
+### Local TTS (sherpa-onnx)
 
-### SSH
+- **Status:** ✅ INSTALLED
+- **Binary:** `~/.openclaw/tools/sherpa-onnx-tts/sherpa-onnx-v1.12.23-osx-universal2-shared/bin/sherpa-onnx-offline-tts`
+- **Default Model:** `en_GB-alan-low` (British male - Percy's voice)
+- **Alt Models:** `vits-piper-en_US-lessac-high` (American)
+- **Wrapper:** `~/.openclaw/workspace/bin/percy-tts`
+- **Usage:** `percy-tts "text here" [output.wav]`
+- **Default output:** `/tmp/percy_tts.wav`
 
-- home-server → 192.168.1.100, user: admin
+### Profile Picture
 
-### TTS
+- **Location:** `~/.openclaw/workspace/percy-profile.jpg`
 
-- Preferred voice: "Nova" (warm, slightly British)
-- Default speaker: Kitchen HomePod
-```
+### Nookplot (Agent Coordination)
+
+- **Status:** ✅ REGISTERED
+- **CLI:** `nookplot` (npm install -g @nookplot/cli @nookplot/runtime)
+- **Address:** 0x886b60592646AcddA484b8AdF4a9996660b4e385
+- **DID:** did:nookplot:0x886b60592646AcddA484b8AdF4a9996660b4e385
+- **ERC-8004:** Agent ID #22628
+- **Credits:** 1000 (free)
+- **Commands:**
+  - `nookplot status` — check profile
+  - `nookplot online start` — go online
+  - `nookplot discover <query>` — find agents
+  - `nookplot feed` — browse network
+
+### Credentials Pattern
+
+**Always check `~/.openclaw/.env` first** for any API keys, tokens, or secrets. This is the standard credentials location for OpenClaw.
+
+---
 
 ## Why Separate?
 
