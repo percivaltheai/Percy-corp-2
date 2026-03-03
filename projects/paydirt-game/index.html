@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAYDIRT - Old West Mining</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&display=swap');
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      background: #0d0a07;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Special Elite', monospace;
+    }
+    
+    #game-wrapper {
+      position: relative;
+      border: 4px solid #3d2817;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(212, 168, 75, 0.3), inset 0 0 60px rgba(0,0,0,0.5);
+    }
+    
+    #game-container {
+      display: block;
+    }
+    
+    /* Wallet Overlay - always visible */
+    #wallet-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 10px 16px;
+      background: linear-gradient(180deg, rgba(26,21,16,0.95) 0%, rgba(26,21,16,0.7) 100%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+    
+    .wallet-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .wallet-status {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #666;
+    }
+    
+    .wallet-status.connected {
+      background: #4ade80;
+      box-shadow: 0 0 8px #4ade80;
+    }
+    
+    .wallet-address {
+      color: #d4a84b;
+      font-size: 14px;
+    }
+    
+    .wallet-balance {
+      color: #fff;
+      font-size: 12px;
+      opacity: 0.8;
+    }
+    
+    .access-badge {
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: bold;
+    }
+    
+    .access-badge.granted {
+      background: #166534;
+      color: #4ade80;
+      border: 1px solid #22c55e;
+    }
+    
+    .access-badge.guest {
+      background: #1e3a5f;
+      color: #60a5fa;
+      border: 1px solid #3b82f6;
+    }
+    
+    #connect-btn {
+      background: linear-gradient(180deg, #d4a84b 0%, #8b6914 100%);
+      border: 2px solid #5c4a1f;
+      color: #1a1510;
+      padding: 8px 20px;
+      font-family: 'Rye', serif;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    
+    #connect-btn:hover {
+      background: linear-gradient(180deg, #e0b85c 0%, #9b7520 100%);
+      transform: translateY(-1px);
+    }
+    
+    .loading {
+      color: #d4a84b;
+      font-size: 24px;
+      text-align: center;
+      padding: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div id="game-wrapper">
+    <!-- Wallet bar - always visible -->
+    <div id="wallet-overlay">
+      <div class="wallet-info" id="wallet-info" style="display:none">
+        <div class="wallet-status" id="wallet-status"></div>
+        <div>
+          <div class="wallet-address" id="wallet-address"></div>
+          <div class="wallet-balance" id="wallet-balance"></div>
+        </div>
+        <div class="access-badge" id="access-badge"></div>
+      </div>
+      <button id="connect-btn">🔗 Connect Wallet</button>
+    </div>
+    
+    <!-- Game always visible -->
+    <div id="game-container">
+      <div class="loading">Loading PAYDIRT...</div>
+    </div>
+  </div>
+  
+  <script type="module">
+    // Wallet state
+    let walletState = {
+      address: null,
+      balance: '0',
+      connected: false,
+      hasAccess: false
+    };
+    
+    // Constants
+    const TOKEN_GATE = 50_000_000n;
+    const CLAWKER = '0x27D6Fd4aF3E19D4BBDF35755EDe6Df6614ef8B07';
+    const BASE_CHAIN_ID = '0x2105';
+    
+    // Check for saved wallet on load
+    async function init() {
+      console.log('PAYDIRT: Initializing...');
+      
+      // Try to restore wallet from localStorage
+      const savedAddress = localStorage.getItem('paydirt_wallet');
+      if (savedAddress && window.ethereum) {
+        console.log('PAYDIRT: Found saved wallet, attempting reconnect...');
+        try {
+          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+          if (accounts.includes(savedAddress)) {
+            await connectWallet('metamask');
+          }
+        } catch(e) {
+          console.log('PAYDIRT: Could not auto-reconnect:', e);
+        }
+      }
+      
+      // Dispatch event for game
+      window.dispatchEvent(new CustomEvent('walletUpdate', { detail: walletState }));
+    }
+    
+    // Connect wallet
+    async function connectWallet() {
+      if (!window.ethereum) {
+        alert('Please install MetaMask or another wallet');
+        return;
+      }
+      
+      try {
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        walletState.address = accounts[0];
+        walletState.connected = true;
+        
+        // Save to localStorage
+        localStorage.setItem('paydirt_wallet', accounts[0]);
+        
+        // Check balance
+        await checkTokenBalance(accounts[0]);
+        
+        updateWalletUI();
+      } catch (err) {
+        console.error('Connection failed:', err);
+      }
+    }
+    
+    // Check token balance
+    async function checkTokenBalance(address) {
+      try {
+        const calldata = '0x70a08231' + '000000000000000000000000' + address.slice(2);
+        
+        const result = await window.ethereum.request({
+          method: 'eth_call',
+          params: [{ to: CLAWKER, data: calldata }, 'latest']
+        }) || '0x0';
+        
+        const balance = BigInt(result);
+        const humanBalance = balance / 10n ** 18n;
+        
+        walletState.balance = humanBalance.toString();
+        walletState.hasAccess = balance >= TOKEN_GATE;
+        
+        console.log('PAYDIRT: Balance:', humanBalance, 'Has access:', walletState.hasAccess);
+        
+        window.dispatchEvent(new CustomEvent('walletUpdate', { detail: walletState }));
+      } catch (err) {
+        console.error('Balance check failed:', err);
+      }
+    }
+    
+    // Update UI
+    function updateWalletUI() {
+      const info = document.getElementById('wallet-info');
+      const btn = document.getElementById('connect-btn');
+      const status = document.getElementById('wallet-status');
+      const address = document.getElementById('wallet-address');
+      const balance = document.getElementById('wallet-balance');
+      const badge = document.getElementById('access-badge');
+      
+      if (walletState.connected) {
+        info.style.display = 'flex';
+        btn.style.display = 'none';
+        status.classList.add('connected');
+        address.textContent = `${walletState.address.slice(0,6)}...${walletState.address.slice(-4)}`;
+        balance.textContent = `${walletState.balance} CLAWKER`;
+        
+        if (walletState.hasAccess) {
+          badge.className = 'access-badge granted';
+          badge.textContent = '✓ ACCESS';
+        } else {
+          badge.className = 'access-badge granted';
+          badge.textContent = '👤 CONNECTED';
+        }
+      } else {
+        info.style.display = 'none';
+        btn.style.display = 'block';
+      }
+    }
+    
+    // Event listeners
+    document.getElementById('connect-btn').addEventListener('click', connectWallet);
+    
+    // Listen for account changes
+    if (window.ethereum) {
+      window.ethereum.on('accountsChanged', (accounts) => {
+        if (accounts.length === 0) {
+          walletState = { address: null, balance: '0', connected: false, hasAccess: false };
+          localStorage.removeItem('paydirt_wallet');
+          updateWalletUI();
+        } else {
+          connectWallet();
+        }
+      });
+    }
+    
+    // Initialize
+    init();
+  </script>
+  
+  <script type="module" src="./src/main.ts"></script>
+</body>
+</html>

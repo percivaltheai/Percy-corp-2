@@ -237,6 +237,13 @@
 - **Style:** Sim-game aesthetic, real-time data
 - **Tabs:** Team, Brief, Projects, Finance
 
+## Local AI Models (March 2026)
+- **qwen2:7b** — Oscar's brain (Ollama, free)
+- **llama3.2** — Reserved  
+- **Qwen3.5-4B GGUF** — Downloaded to ~/models/qwen3.5-4b/ ( llama.cpp issues)
+- **Ollama upgraded** to 0.17.5
+- **llama.cpp installed** for GGUF support
+
 ## Local Media Pipeline
 - **Pinokio:** AI app ecosystem (ComfyUI, Fooocus, etc. via Community)
 - **Images:** Pollinations API (free fallback)
@@ -381,6 +388,13 @@ Skippy the Magnificent from Craig Alanson's Expeditionary Force series
 - **Projects:** /Users/jeralcooley/.openclaw/workspace/projects/
 - **Memory:** /Users/jeralcooley/.openclaw/workspace/memory/
 - **Daily Notes:** /Users/jeralcooley/.openclaw/workspace/memory/YYYY-MM-DD.md
+- **Book Writing:** ~/.openclaw/workspace/book-writing/chapters/
+- **Book Pipeline:** ~/.openclaw/workspace/skills/book-factory/pipeline.md
+
+## Book: Terms of Survival
+- **Status:** 16 chapters written (19K/80K words)
+- **Target:** 50 chapters + epilogue
+- **Automation:** Continue writing without prompting, backup to Obsidian, update dashboard
 
 ## Contacts
 - Midget: Telegram @MOTenforcement

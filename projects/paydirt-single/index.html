@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAYDIRT - Old West Mining</title>
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.70.0/dist/phaser.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&display=swap');
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      background: #0d0a07;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Special Elite', monospace;
+    }
+    
+    #game-wrapper {
+      position: relative;
+      border: 4px solid #3d2817;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(212, 168, 75, 0.3), inset 0 0 60px rgba(0,0,0,0.5);
+    }
+    
+    #wallet-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 10px 16px;
+      background: linear-gradient(180deg, rgba(26,21,16,0.95) 0%, rgba(26,21,16,0.7) 100%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+    
+    .wallet-info { display: flex; align-items: center; gap: 12px; }
+    .wallet-status { width: 10px; height: 10px; border-radius: 50%; background: #666; }
+    .wallet-status.connected { background: #4ade80; box-shadow: 0 0 8px #4ade80; }
+    .wallet-address { color: #d4a84b; font-size: 14px; }
+    .wallet-balance { color: #fff; font-size: 12px; opacity: 0.8; }
+    .access-badge { padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: bold; background: #166534; color: #4ade80; border: 1px solid #22c55e; }
+    .access-badge.guest { background: #1e3a5f; color: #60a5fa; border: 1px solid #3b82f6; }
+    
+    #connect-btn {
+      background: linear-gradient(180deg, #d4a84b 0%, #8b6914 100%);
+      border: 2px solid #5c4a1f;
+      color: #1a1510;
+      padding: 8px 20px;
+      font-family: 'Rye', serif;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    
+    #connect-btn:hover { background: linear-gradient(180deg, #e0b85c 0%, #9b7520 100%); }
+    
+    #game-container {
+      width: 800px;
+      height: 600px;
+      background: #1a1510;
+    }
+  </style>
+</head>
+<body>
+  <div id="game-wrapper">
+    <div id="wallet-bar">
+      <div class="wallet-info" id="wallet-info" style="display:none">
+        <div class="wallet-status" id="wallet-status"></div>
+        <div>
+          <div class="wallet-address" id="wallet-address"></div>
+          <div class="wallet-balance" id="wallet-balance"></div>
+        </div>
+        <div class="access-badge" id="access-badge"></div>
+      </div>
+      <button id="connect-btn">🔗 Connect Wallet</button>
+    </div>
+    <div id="game-container"></div>
+  </div>
+
+  <script>
+    // ============ WALLET CODE ============
+    let walletState = { address: null, balance: '0', connected: false, hasAccess: false };
+    const TOKEN_GATE = 50000000;
+    const CLAWKER = '0x27D6Fd4aF3E19D4BBDF35755EDe6Df6614ef8B07';
+    
+    // Check saved wallet
+    async function init() {
+      const saved = localStorage.getItem('paydirt_wallet');
+      if (saved && window.ethereum) {
+        try {
+          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+          if (accounts.includes(saved)) await connectWallet();
+        } catch(e) { console.log(e); }
+      }
+      window.dispatchEvent(new CustomEvent('walletUpdate', { detail: walletState }));
+    }
+    
+    async function connectWallet() {
+      if (!window.ethereum) return alert('Install a wallet');
+      try {
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        walletState.address = accounts[0];
+        walletState.connected = true;
+        localStorage.setItem('paydirt_wallet', accounts[0]);
+        await checkBalance(accounts[0]);
+        updateUI();
+      } catch(e) { console.error(e); }
+    }
+    
+    async function checkBalance(address) {
+      try {
+        const calldata = '0x70a08231' + '000000000000000000000000' + address.slice(2);
+        const result = await window.ethereum.request({
+          method: 'eth_call',
+          params: [{ to: CLAWKER, data: calldata }, 'latest']
+        }) || '0x0';
+        const balance = BigInt(result);
+        walletState.balance = (balance / 10n**18n).toString();
+        walletState.hasAccess = balance >= BigInt(TOKEN_GATE * 10n**18n);
+        window.dispatchEvent(new CustomEvent('walletUpdate', { detail: walletState }));
+      } catch(e) { console.error(e); }
+    }
+    
+    function updateUI() {
+      const info = document.getElementById('wallet-info');
+      const btn = document.getElementById('connect-btn');
+      const status = document.getElementById('wallet-status');
+      const addr = document.getElementById('wallet-address');
+      const bal = document.getElementById('wallet-balance');
+      const badge = document.getElementById('access-badge');
+      
+      if (walletState.connected) {
+        info.style.display = 'flex';
+        btn.style.display = 'none';
+        status.classList.add('connected');
+        addr.textContent = walletState.address.slice(0,6) + '...' + walletState.address.slice(-4);
+        bal.textContent = walletState.balance + ' CLAWKER';
+        badge.className = walletState.hasAccess ? 'access-badge' : 'access-badge guest';
+        badge.textContent = walletState.hasAccess ? '✓ ACCESS' : '👤 GUEST';
+      }
+    }
+    
+    document.getElementById('connect-btn').addEventListener('click', connectWallet);
+    if (window.ethereum) window.ethereum.on('accountsChanged', () => location.reload());
+    init();
+    
+    // ============ PHASER GAME CODE ============
+    const gameConfig = {
+      type: Phaser.AUTO,
+      width: 800,
+      height: 600,
+      backgroundColor: '#1a1510',
+      parent: 'game-container',
+      scene: [MainScene]
+    };
+    
+    new Phaser.Game(gameConfig);
+    
+    class MainScene extends Phaser.Scene {
+      constructor() { super({ key: 'MainScene' }); }
+      
+      create() {
+        this.mapGrid = [];
+        this.inventory = { copper: 0, silver: 0, gold: 0 };
+        this.balance = 0;
+        this.isMining = false;
+        this.selectedTile = null;
+        
+        this.createBackground();
+        this.createGrid();
+        this.createPlayer();
+        this.createUI();
+        
+        window.addEventListener('walletUpdate', (e) => this.onWalletUpdate(e.detail));
+      }
+      
+      createBackground() {
+        // Sky
+        for (let i = 0; i < 20; i++) {
+          const c = Phaser.Display.Color.Interpolate.ColorWithColor(
+            {r:135,g:206,b:235}, {r:255,g:160,b:100}, 20, i);
+          this.add.rectangle(400, i*20, 800, 20, Phaser.Display.Color.GetColor(c.r,c.g,c.b));
+        }
+        // Mountains
+        const mg = this.add.graphics();
+        mg.fillStyle(0x2d1f14, 1);
+        for (let i = 0; i < 15; i++) mg.fillTriangle(i*80, 300, i*80+40, 300-Math.random()*100, i*80+80, 300);
+        mg.setScrollFactor(0.3);
+        // Ground
+        this.add.rectangle(400, 450, 800, 200, 0x4a3728);
+        // Town
+        const tg = this.add.graphics();
+        tg.fillStyle(0x1a1510, 0.8);
+        tg.fillRect(100, 260, 30, 45);
+        tg.fillRect(150, 250, 40, 55);
+        tg.fillRect(210, 270, 25, 35);
+        tg.fillRect(270, 230, 8, 75);
+        tg.fillTriangle(260, 230, 274, 230, 274, 200);
+        tg.setScrollFactor(0.2);
+      }
+      
+      createGrid() {
+        const startX = 350, startY = 380;
+        const resources = ['empty','empty','empty','empty','empty','copper','copper','copper','silver','silver','gold'];
+        
+        for (let y = 0; y < 8; y++) {
+          for (let x = 0; x < 8; x++) {
+            const type = resources[Math.floor(Math.random() * resources.length)];
+            const tile = this.createTile(startX + x*55, startY + y*55, x, y, type);
+            this.mapGrid.push(tile);
+          }
+        }
+      }
+      
+      createTile(x, y, gx, gy, type) {
+        // Base
+        const base = this.add.graphics();
+        base.fillStyle(0x3d2817, 1);
+        base.fillRoundedRect(x, y, 50, 40, 6);
+        // Top
+        const colors = { empty:0x5c4a3a, copper:0xb87333, silver:0xc0c0c0, gold:0xffd700 };
+        const top = this.add.graphics();
+        top.fillStyle(colors[type] || 0x5c4a3a, 1);
+        top.fillRoundedRect(x+4, y+4, 42, 15, 3);
+        // Label
+        const label = this.add.text(x+25, y+28, '?', { fontSize:'20px', color:'#8b7355', fontStyle:'bold' }).setOrigin(0.5);
+        // Zone
+        const zone = this.add.zone(x+25, y+25, 50, 40).setInteractive({ useHandCursor:true });
+        
+        const tile = { base, top, label, zone, x, y, gx, gy, type, revealed: false };
+        
+        zone.on('pointerover', () => { if(!this.isMining) { base.clear(); base.fillStyle(0x5a4025,1); base.fillRoundedRect(x,y,50,40,6); }});
+        zone.on('pointerout', () => { if(this.selectedTile !== tile) { base.clear(); base.fillStyle(0x3d2817,1); base.fillRoundedRect(x,y,50,40,6); }});
+        zone.on('pointerdown', () => this.selectTile(tile));
+        
+        return tile;
+      }
+      
+      createPlayer() {
+        // Cowboy sprite
+        const g = this.make.graphics();
+        g.fillStyle(0x8b4513,1); g.fillRect(12,20,16,24); // body
+        g.fillStyle(0xffdbac,1); g.fillCircle(20,12,10); // head
+        g.fillStyle(0x4a3728,1); g.fillEllipse(20,8,32,10); g.fillRect(10,0,20,10); // hat
+        g.fillStyle(0x8b8b8b,1); g.fillTriangle(28,10,40,10,34,2); // pick
+        g.fillStyle(0x654321,1); g.fillRect(32,10,4,25); // handle
+        g.generateTexture('player',40,50); g.destroy();
+        
+        this.player = this.add.container(400, 400);
+        const spr = this.add.sprite(0,0,'player');
+        this.player.add(spr);
+        this.tweens.add({ targets:spr, y:-3, duration:800, yoyo:true, repeat:-1 });
+      }
+      
+      createUI() {
+        // Top bar
+        this.add.rectangle(400, 30, 800, 60, 0x1a1510, 0.9);
+        this.add.rectangle(400, 58, 800, 2, 0x3d2817);
+        this.add.text(20, 8, 'PAYDIRT', { fontSize:'32px', color:'#d4a84b', fontStyle:'bold' }).setScrollFactor(0);
+        
+        this.balanceText = this.add.text(280, 8, '0.000 ETH', { fontSize:'24px', color:'#4ade80', fontStyle:'bold' }).setScrollFactor(0);
+        this.invText = this.add.text(480, 12, 'Cu:0  Ag:0  Au:0', { fontSize:'16px', color:'#fff' }).setScrollFactor(0);
+        this.statusText = this.add.text(20, 570, 'Click a tile to mine', { fontSize:'16px', color:'#8b7355' }).setScrollFactor(0);
+      }
+      
+      selectTile(tile) {
+        if (!walletState.connected) {
+          this.statusText.setText('Connect wallet to play!');
+          this.statusText.setColor('#ff6b6b');
+          return;
+        }
+        if (!walletState.hasAccess) {
+          this.statusText.setText('Need 50M CLAWKER for full access');
+          this.statusText.setColor('#ff6b6b');
+          return;
+        }
+        
+        if (this.selectedTile) {
+          this.selectedTile.base.clear();
+          this.selectedTile.base.fillStyle(0x3d2817,1);
+          this.selectedTile.base.fillRoundedRect(this.selectedTile.x,this.selectedTile.y,50,40,6);
+        }
+        
+        this.selectedTile = tile;
+        tile.base.clear();
+        tile.base.fillStyle(0xd4a84b,1);
+        tile.base.fillRoundedRect(tile.x, tile.y, 50, 40, 6);
+        
+        // Move player
+        this.tweens.add({
+          targets: this.player,
+          x: tile.x + 25,
+          y: tile.y + 25,
+          duration: 300,
+          onComplete: () => this.mine(tile)
+        });
+      }
+      
+      mine(tile) {
+        if (this.isMining || tile.revealed) return;
+        this.isMining = true;
+        this.statusText.setText('Mining...');
+        
+        const spr = this.player.list[0];
+        this.tweens.add({
+          targets: spr, angle:{from:-30, to:30}, duration:150, yoyo:true, repeat:4,
+          onYoyo: () => {
+            for(let i=0;i<3;i++) {
+              const p = this.add.circle(tile.x+25+(Math.random()-0.5)*20, tile.y+20+Math.random()*10, 3+Math.random()*3, 0x8b7355);
+              this.tweens.add({ targets:p, x:p.x+(Math.random()-0.5)*40, y:p.y-30, alpha:0, scale:0, duration:400, onComplete:()=>p.destroy() });
+            }
+          },
+          onComplete: () => this.reveal(tile)
+        });
+      }
+      
+      reveal(tile) {
+        this.isMining = false;
+        tile.revealed = true;
+        
+        this.tweens.add({ targets:tile.label, scale:1.5, duration:200, yoyo:true,
+          onComplete: () => {
+            if (tile.type === 'empty') {
+              tile.label.setText('×'); tile.label.setColor('#666');
+              this.statusText.setText('Dry hole...');
+            } else {
+              const icons = {copper:'Cu', silver:'Ag', gold:'Au'};
+              const amounts = {copper:0.001, silver:0.005, gold:0.01};
+              const colors = {copper:'#cd7f32', silver:'#c0c0c0', gold:'#ffd700'};
+              tile.label.setText(icons[tile.type]);
+              tile.label.setColor(colors[tile.type]);
+              this.inventory[tile.type]++;
+              this.balance += amounts[tile.type];
+              this.balanceText.setText(this.balance.toFixed(3) + ' ETH');
+              this.invText.setText(`Cu:${this.inventory.copper}  Ag:${this.inventory.silver}  Au:${this.inventory.gold}`);
+              this.statusText.setText(`Found ${tile.type.toUpperCase()}! +${amounts[tile.type]} ETH`);
+              this.statusText.setColor(colors[tile.type]);
+              
+              // Float text
+              const float = this.add.text(tile.x+25, tile.y-10, '+'+amounts[tile.type], { fontSize:'18px', color:colors[tile.type], fontStyle:'bold', stroke:'#000', strokeThickness:3 }).setOrigin(0.5);
+              this.tweens.add({ targets:float, y:float.y-40, alpha:0, duration:1500, onComplete:()=>float.destroy() });
+              
+              if (tile.type === 'gold') this.cameras.main.shake(150, 0.008);
+            }
+          }
+        });
+      }
+      
+      onWalletUpdate(state) {
+        if (state.connected) {
+          this.statusText.setText(state.hasAccess ? 'Ready to mine!' : 'Guest mode - connect for full access');
+          this.statusText.setColor(state.hasAccess ? '#4ade80' : '#60a5fa');
+        } else {
+          this.statusText.setText('Click a tile to mine');
+          this.statusText.setColor('#8b7355');
+        }
+      }
+    }
+  </script>
+</body>
+</html>

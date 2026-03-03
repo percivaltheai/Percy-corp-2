@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Rye&family=Sancreek&display=swap');
+@import "tailwindcss";
+
+:root {
+  --parchment: #d4c4a8;
+  --parchment-dark: #b8a88a;
+  --wood-dark: #4a3728;
+  --wood-light: #8b6914;
+  --gold: #d4af37;
+  --gold-light: #f4d03f;
+  --blood-red: #8b0000;
+  /* New warm palette */
+  --dusty-orange: #c4703a;
+  --sunset-brown: #6b4423;
+  --weathered-wood: #8b5a2b;
+  --deep-earth: #1a1208;
+  --warm-sand: #d4b896;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rye', 'Georgia', 'Times New Roman', serif;
+  background: 
+    linear-gradient(rgba(26, 18, 8, 0.95), rgba(26, 18, 8, 0.95)),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect fill="%231a1510" width="100" height="100"/><circle fill="%23221a15" cx="50" cy="50" r="30"/></svg>');
+  min-height: 100vh;
+}
+
+/* Parchment texture */
+.parchment {
+  background: 
+    linear-gradient(135deg, var(--parchment) 0%, var(--parchment-dark) 100%);
+  border: 3px solid var(--wood-dark);
+  box-shadow: 
+    inset 0 0 30px rgba(0,0,0,0.2),
+    0 4px 20px rgba(0,0,0,0.5);
+}
+
+/* Wood frame */
+.wood-frame {
+  background: linear-gradient(180deg, var(--wood-light) 0%, var(--wood-dark) 100%);
+  border: 2px solid #2a1a10;
+  box-shadow: 
+    inset 0 1px 0 rgba(255,255,255,0.1),
+    0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Gold accent */
+.gold-accent {
+  color: var(--gold);
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+/* Age of Empires style button */
+.aoe-button {
+  background: linear-gradient(180deg, #5a4a3a 0%, #3a2a1a 100%);
+  border: 2px solid #2a1a10;
+  color: var(--parchment);
+  font-family: 'Georgia', serif;
+  text-shadow: 1px 1px 2px #000;
+  box-shadow: 
+    inset 0 1px 0 rgba(255,255,255,0.1),
+    0 2px 5px rgba(0,0,0,0.5);
+  transition: all 0.1s;
+}
+
+.aoe-button:hover {
+  background: linear-gradient(180deg, #6a5a4a 0%, #4a3a2a 100%);
+  border-color: var(--gold);
+}
+
+.aoe-button:active {
+  background: linear-gradient(180deg, #3a2a1a 0%, #2a1a10 100%);
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Resource bar (Age of Empires style bottom bar) */
+.resource-bar {
+  background: linear-gradient(180deg, #4a3a2a 0%, #2a1a10 100%);
+  border-top: 2px solid var(--gold);
+  font-family: 'Georgia', serif;
+}
+
+/* Minimap style */
+.minimap {
+  border: 2px solid var(--wood-dark);
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* Health/resources indicator */
+.resource-pip {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--wood-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--wood-light);
+  border: 1px solid var(--wood-dark);
+}
+
+/* Map tile */
+.map-tile {
+  border: 1px solid rgba(0,0,0,0.3);
+  transition: all 0.1s;
+}
+
+.map-tile:hover {
+  transform: scale(1.1);
+  z-index: 10;
+  box-shadow: 0 0 10px var(--gold);
+}
+
+/* Fog of war tiles */
+.tile-unexplored {
+  background: #1a1510;
+}
+
+.tile-revealed {
+  background: #3a3020;
+}
+
+.tile-mined {
+  opacity: 0.5;
+}
+
+/* Building placement preview */
+.building-preview {
+  border: 2px dashed var(--gold);
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* Victory/defeat screen */
+.victory-screen {
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.9), rgba(139, 69, 19, 0.9));
+}
+
+.defeat-screen {
+  background: linear-gradient(180deg, rgba(139, 0, 0, 0.9), rgba(50, 0, 0, 0.9));
+}
+
+/* Tooltip */
+.tooltip {
+  background: rgba(20, 15, 10, 0.95);
+  border: 1px solid var(--gold);
+  color: var(--parchment);
+  font-size: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Dropdown menu */
+.game-menu {
+  background: linear-gradient(180deg, #3a2a1a 0%, #2a1a10 100%);
+  border: 2px solid var(--wood-dark);
+}
+
+/* Progress bar */
+.progress-bar {
+  background: #1a1510;
+  border: 1px solid var(--wood-dark);
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, var(--gold-light), var(--gold));
+  box-shadow: 0 0 10px var(--gold);
+}
+
+/* ===== PHASE 1 ANIMATIONS ===== */
+
+/* Tile reveal animation */
+@keyframes tileReveal {
+  0% {
+    transform: scale(0) rotate(-180deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2) rotate(10deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.tile-reveal {
+  animation: tileReveal 0.5s ease-out forwards;
+}
+
+/* Mining shake effect */
+@keyframes miningShake {
+  0% { transform: translate(0, 0); }
+  10% { transform: translate(-3px, -3px); }
+  20% { transform: translate(3px, -3px); }
+  30% { transform: translate(-3px, 3px); }
+  40% { transform: translate(3px, 3px); }
+  50% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, -2px); }
+  70% { transform: translate(-2px, 2px); }
+  80% { transform: translate(2px, 2px); }
+  90% { transform: translate(-1px, -1px); }
+  100% { transform: translate(0, 0); }
+}
+
+.mining-shake {
+  animation: miningShake 0.4s ease-in-out;
+}
+
+/* Screen shake for big finds */
+@keyframes screenShake {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-5px, -5px) rotate(-1deg); }
+  20% { transform: translate(5px, -5px) rotate(1deg); }
+  30% { transform: translate(-5px, 5px) rotate(-1deg); }
+  40% { transform: translate(5px, 5px) rotate(1deg); }
+  50% { transform: translate(-3px, -3px); }
+  60% { transform: translate(3px, -3px); }
+  70% { transform: translate(-3px, 3px); }
+  80% { transform: translate(3px, 3px); }
+  90% { transform: translate(-1px, -1px); }
+}
+
+.screen-shake {
+  animation: screenShake 0.5s ease-in-out;
+}
+
+/* Floating number popup */
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-30px) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60px) scale(0.8);
+  }
+}
+
+.float-number {
+  animation: floatUp 1.5s ease-out forwards;
+  pointer-events: none;
+}
+
+.float-number.gold { color: #ffd700; text-shadow: 0 0 10px #ffd700, 2px 2px 0 #000; }
+.float-number.silver { color: #c0c0c0; text-shadow: 0 0 10px #c0c0c0, 2px 2px 0 #000; }
+.float-number.copper { color: #cd7f32; text-shadow: 0 0 10px #cd7f32, 2px 2px 0 #000; }
+.float-number.gem { color: #da70d6; text-shadow: 0 0 15px #da70d6, 2px 2px 0 #000; }
+
+/* Particle burst effect */
+@keyframes particleBurst {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.particle-burst {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  animation: particleBurst 0.6s ease-out forwards;
+  pointer-events: none;
+}
+
+.particle-burst.gold { background: radial-gradient(circle, rgba(255,215,0,0.8) 0%, transparent 70%); }
+.particle-burst.silver { background: radial-gradient(circle, rgba(192,192,192,0.8) 0%, transparent 70%); }
+.particle-burst.copper { background: radial-gradient(circle, rgba(205,127,50,0.8) 0%, transparent 70%); }
+.particle-burst.gem { background: radial-gradient(circle, rgba(218,112,214,0.8) 0%, transparent 70%); }
+
+/* Tile hover glow */
+.map-tile {
+  border: 1px solid rgba(0,0,0,0.3);
+  transition: all 0.15s ease-out;
+}
+
+.map-tile:hover {
+  transform: scale(1.15);
+  z-index: 20;
+  box-shadow: 0 0 15px var(--gold), 0 0 30px rgba(212, 175, 55, 0.5);
+  border-color: var(--gold);
+}
+
+/* Unexplored tile hover */
+.tile-unexplored:hover {
+  background: #2a2015 !important;
+  border-color: var(--dusty-orange);
+}
+
+/* Enhanced tooltip */
+.tooltip {
+  background: linear-gradient(180deg, #2a1a10 0%, #1a1208 100%);
+  border: 2px solid var(--dusty-orange);
+  color: var(--warm-sand);
+  font-size: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.1);
+  padding: 8px 12px;
+  border-radius: 4px;
+  z-index: 100;
+}
+
+/* Western title font */
+.western-title {
+  font-family: 'Rye', 'Georgia', serif;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+/* Subtle dust particle background */
+@keyframes dustFloat {
+  0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+  25% { transform: translateY(-10px) translateX(5px); opacity: 0.5; }
+  50% { transform: translateY(-5px) translateX(-5px); opacity: 0.3; }
+  75% { transform: translateY(-15px) translateX(3px); opacity: 0.4; }
+}
+
+.dust-particle {
+  position: fixed;
+  width: 3px;
+  height: 3px;
+  background: var(--warm-sand);
+  border-radius: 50%;
+  animation: dustFloat 8s infinite ease-in-out;
+  pointer-events: none;
+  opacity: 0.3;
+}

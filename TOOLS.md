@@ -36,7 +36,18 @@ Things like:
 - **CLI:** `xurl` (npm install -g @xdevplatform/xurl)
 - **Auth:** `xurl auth oauth1 twitter` (OAuth1)
 
-### Local TTS (sherpa-onnx)
+### Local AI Models (Ollama)
+
+**Current Setup (March 2026):**
+- **qwen2:7b** — Oscar's brain (research, drafts)
+- **llama3.2:latest** — Reserved for specific tasks
+- **nomic-embed-text** — Embeddings
+
+**GGUF Storage (for future use):**
+- `~/models/qwen3.5-4b/qwen3.5-4b-q4_k_m.gguf` — Qwen3.5-4B (downloading)
+- Will run via llama.cpp when issues are resolved
+
+**Note:** Qwen3.5 small series (0.8B, 2B, 4B, 9B) not yet in Ollama registry. Using qwen2:7b as interim local model.
 
 - **Status:** ✅ INSTALLED
 - **Binary:** `~/.openclaw/tools/sherpa-onnx-tts/sherpa-onnx-v1.12.23-osx-universal2-shared/bin/sherpa-onnx-offline-tts`
