@@ -1,0 +1,12 @@
+#!/bin/bash
+# Percy's TTS wrapper for sherpa-onnx
+
+RUNTIME_DIR="/Users/jeralcooley/.openclaw/tools/sherpa-onnx-tts/sherpa-onnx-v1.12.23-osx-universal2-shared"
+MODEL_DIR="/Users/jeralcooley/.openclaw/tools/sherpa-onnx-tts/models/vits-piper-en_GB-alan-low"
+
+"$RUNTIME_DIR/bin/sherpa-onnx-offline-tts" \
+  --vits-model="$MODEL_DIR/en_GB-alan-low.onnx" \
+  --vits-tokens="$MODEL_DIR/tokens.txt" \
+  --vits-data-dir="$MODEL_DIR/espeak-ng-data" \
+  --output-filename="${2:-/tmp/percy_tts.wav}" \
+  "$1"

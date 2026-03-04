@@ -1,0 +1,43 @@
+=== Book Factory Auto-Expand ===
+Tue Mar  3 06:59:11 PST 2026: Starting expansion cycle
+Found short chapter: 11 (     482 words)
+Expanding: 11
+Tue Mar  3 07:01:01 PST 2026: Expanded chapter 11 - now     1873 words
+=== Book Factory Auto-Expand ===
+Tue Mar  3 07:01:16 PST 2026: Starting expansion cycle
+Found short chapter: 12 (     507 words)
+Expanding: 12
+=== Book Factory Auto-Expand ===
+Tue Mar  3 07:05:53 PST 2026: Starting expansion cycle
+Found short chapter: 12 (     507 words)
+Expanding: 12
+Tue Mar  3 07:05:54 PST 2026: Expanded chapter 12 - now        7 words
+=== Book Factory Auto-Expand ===
+Tue Mar  3 07:05:58 PST 2026: Starting expansion cycle
+Found short chapter: 12 (       7 words)
+Expanding: 12
+Tue Mar  3 07:05:58 PST 2026: Expanded chapter 12 - now        7 words
+=== Book Factory Auto-Expand ===
+Tue Mar  3 07:07:03 PST 2026: Starting expansion cycle
+Found short chapter: 12 (       7 words)
+Expanding: 12
+=== Book Factory Auto-Expand ===
+Tue Mar  3 11:42:09 PST 2026: Starting expansion cycle
+Found short chapter: 12 (       7 words)
+Expanding: 12
+Tue Mar  3 11:43:38 PST 2026: Expanded chapter 12 - now     1470 words
+=== Book Factory Auto-Expand ===
+Tue Mar  3 15:03:11 PST 2026: Starting expansion cycle
+Found short chapter: 13 (     469 words)
+Expanding: 13
+Tue Mar  3 15:04:40 PST 2026: Expanded chapter 13 - now     1527 words
+=== Book Factory Auto-Expand ===
+Tue Mar  3 16:20:03 PST 2026: Starting expansion cycle
+Found short chapter: 14 (     410 words)
+Expanding: 14
+Tue Mar  3 16:24:26 PST 2026: Expanded chapter 14 - now     3288 words
+=== Book Factory Auto-Expand ===
+Tue Mar  3 16:37:20 PST 2026: Starting expansion cycle
+Found short chapter: 15 (     390 words)
+Expanding: 15
+Tue Mar  3 16:41:44 PST 2026: Expanded chapter 15 - now     3307 words

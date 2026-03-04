@@ -1,0 +1,120 @@
+#!/bin/bash
+# Percy's Book Factory CLI
+# Usage: book-factory <command> [args]
+
+NOVEL_DIR="$HOME/.openclaw/workspace/novels/the-last-tide"
+DASHBOARD_DIR="$HOME/.openclaw/workspace/projects/percy-book-factory"
+BIBLE="$NOVEL_DIR/bible/bible.json"
+
+# Colors
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+RED='\033[0;31m'
+NC='\033[0m'
+
+log() { echo -e "${GREEN}[BookFactory]${NC} $1"; }
+warn() { echo -e "${YELLOW}[BookFactory]${NC} $1"; }
+err() { echo -e "${RED}[BookFactory]${NC} $1"; }
+
+case "$1" in
+  status)
+    log "THE LAST TIDE - Status"
+    echo "Target: 80,000 words"
+    WORDS=$(jq -r '.current_words' "$BIBLE")
+    echo "Written: $WORDS words"
+    CHAPTERS=$(jq -r '.chapter_outline | map(select(.status == "done")) | length' "$BIBLE")
+    echo "Chapters done: $CHAPTERS"
+    ;;
+    
+  chapter:add)
+    NUM=$2
+    TITLE=$3
+    if [ -z "$NUM" ] || [ -z "$TITLE" ]; then
+      err "Usage: book-factory chapter:add <num> <title>"
+      exit 1
+    fi
+    jq --arg num "$NUM" --arg title "$TITLE" \
+       '.chapter_outline += [{"num": ($num | tonumber), "title": $title, "status": "planned", "words": 0}]' \
+       "$BIBLE" > tmp.$$.json && mv tmp.$$.json "$BIBLE"
+    log "Added Chapter $NUM: $TITLE"
+    ;;
+    
+  chapter:done)
+    NUM=$2
+    WORDS=$3
+    if [ -z "$NUM" ] || [ -z "$WORDS" ]; then
+      err "Usage: book-factory chapter:done <num> <word_count>"
+      exit 1
+    fi
+    jq --arg num "$NUM" --arg words "$WORDS" \
+       '.chapter_outline |= map(if (.num == ($num | tonumber)) then .status = "done" | .words = ($words | tonumber) else . end)' \
+       "$BIBLE" > tmp.$$.json && mv tmp.$$.json "$BIBLE"
+    # Update total words
+    TOTAL=$(jq '[.chapter_outline[].words] | add' "$BIBLE")
+    jq --arg total "$TOTAL" '.current_words = ($total | tonumber)' "$BIBLE" > tmp.$$.json && mv tmp.$$.json "$BIBLE"
+    log "Chapter $NUM marked done ($WORDS words, total: $TOTAL)"
+    ;;
+    
+  character:add)
+    NAME=$2
+    ROLE=$3
+    DESC=$4
+    if [ -z "$NAME" ]; then
+      err "Usage: book-factory character:add <name> [role] [description]"
+      exit 1
+    fi
+    jq --arg name "$NAME" --arg role "${ROLE:-character}" --arg desc "${DESC:-}" \
+       '.characters += [{"name": $name, "role": $role, "description": $desc, "first_appearance": "TBD", "traits": []}]' \
+       "$BIBLE" > tmp.$$.json && mv tmp.$$.json "$BIBLE"
+    log "Added character: $NAME"
+    ;;
+    
+  event:log)
+    CHAPTER=$2
+    EVENT=$3
+    SUMMARY=$4
+    if [ -z "$CHAPTER" ] || [ -z "$EVENT" ]; then
+      err "Usage: book-factory event:log <chapter> <event> [summary]"
+      exit 1
+    fi
+    jq --arg chapter "$CHAPTER" --arg event "$EVENT" --arg summary "${SUMMARY:-}" \
+       '.events += [{"chapter": ($chapter | tonumber), "event": $event, "summary": $summary}]' \
+       "$BIBLE" > tmp.$$.json && mv tmp.$$.json "$BIBLE"
+    log "Logged event in Chapter $CHAPTER"
+    ;;
+    
+  dashboard:update)
+    log "Updating dashboard..."
+    # Read current data
+    CURRENT_WORDS=$(jq -r '.current_words' "$BIBLE")
+    CHAPTERS_DONE=$(jq -r '.chapter_outline | map(select(.status == "done")) | length' "$BIBLE")
+    TOTAL_CHAPTERS=$(jq -r '.chapter_outline | length' "$BIBLE")
+    CHAR_COUNT=$(jq -r '.characters | length' "$BIBLE")
+    WORLD_COUNT=$(jq -r '.world_rules | length' "$BIBLE")
+    EVENT_COUNT=$(jq -r '.events | length' "$BIBLE")
+    
+    # Update dashboard HTML - update the embedded JS data
+    sed -i '' "s/currentWords: [0-9]*/currentWords: $CURRENT_WORDS/" "$DASHBOARD_DIR/index.html"
+    sed -i '' "s/chaptersDone\": [0-9]*/chaptersDone\": $CHAPTERS_DONE/" "$DASHBOARD_DIR/index.html"
+    sed -i '' "s/characters\": [0-9]*/characters\": $CHAR_COUNT/" "$DASHBOARD_DIR/index.html"
+    sed -i '' "s/worldRules\": [0-9]*/worldRules\": $WORLD_COUNT/" "$DASHBOARD_DIR/index.html"
+    sed -i '' "s/events\": [0-9]*/events\": $EVENT_COUNT/" "$DASHBOARD_DIR/index.html"
+    
+    # Also update chapter list in JS (simplified - just rebuild)
+    # For now, the dashboard updates on next push
+    
+    log "Dashboard data updated. Push to deploy: git -C $DASHBOARD_DIR add -A && git -C $DASHBOARD_DIR commit -m 'Update progress' && git -C $DASHBOARD_DIR push"
+    ;;
+    
+  *)
+    echo "Percy's Book Factory CLI"
+    echo ""
+    echo "Commands:"
+    echo "  status                    - Show book status"
+    echo "  chapter:add <num> <title> - Add new chapter"
+    echo "  chapter:done <num> <words> - Mark chapter complete"
+    echo "  character:add <name> [role] [desc] - Add character"
+    echo "  event:log <ch> <event> [summary] - Log event"
+    echo "  dashboard:update         - Update progress dashboard"
+    ;;
+esac

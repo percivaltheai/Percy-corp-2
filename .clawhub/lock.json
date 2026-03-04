@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "skills": {
+    "github": {
+      "version": "1.0.0",
+      "installedAt": 1771825272338
+    },
+    "cloudflare-toolkit": {
+      "version": "1.5.0",
+      "installedAt": 1771825274594
+    },
+    "vercel": {
+      "version": "1.0.1",
+      "installedAt": 1771825275820
+    },
+    "agent-outlier": {
+      "version": "1.0.0",
+      "installedAt": 1772243949026
+    },
+    "web-deploy-github": {
+      "version": "1.0.0",
+      "installedAt": 1772295674177
+    },
+    "deep-research-pro": {
+      "version": "1.0.2",
+      "installedAt": 1772295733249
+    },
+    "memory-hygiene": {
+      "version": "1.0.0",
+      "installedAt": 1772295740060
+    },
+    "video-generation": {
+      "version": "1.0.0",
+      "installedAt": 1772295753602
+    },
+    "antigravity-image-gen": {
+      "version": "2.0.0",
+      "installedAt": 1772295761379
+    },
+    "mcp-app-builder": {
+      "version": "0.1.0",
+      "installedAt": 1772295781663
+    },
+    "vercel-deploy": {
+      "version": "1.0.0",
+      "installedAt": 1772295792411
+    },
+    "app-builder": {
+      "version": "1.0.0",
+      "installedAt": 1772300088399
+    },
+    "self-evolve": {
+      "version": "1.0.0",
+      "installedAt": 1772300106529
+    },
+    "agent-browser": {
+      "version": "0.2.0",
+      "installedAt": 1772302621267
+    },
+    "writing-assistant": {
+      "version": "0.1.0",
+      "installedAt": 1772309161566
+    },
+    "book-writing": {
+      "version": "1.0.0",
+      "installedAt": 1772401029514
+    },
+    "book-cover-generation": {
+      "version": "1.0.0",
+      "installedAt": 1772401034806
+    },
+    "story-cog": {
+      "version": "1.0.1",
+      "installedAt": 1772401045755
+    }
+  }
+}

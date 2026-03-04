@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "skills": {
+    "bankr": {
+      "source": "BankrBot/openclaw-skills",
+      "sourceType": "github",
+      "computedHash": "5ad53e814e8ced1727d9ce0ed319335baf3c683c0c166c9199793f3959b2eb28"
+    },
+    "bankr-signals": {
+      "source": "BankrBot/openclaw-skills",
+      "sourceType": "github",
+      "computedHash": "248028519c87907c616c90d2a97ada31ffbe457be49f8399619b309ae6983843"
+    },
+    "base": {
+      "source": "BankrBot/openclaw-skills",
+      "sourceType": "github",
+      "computedHash": "77eaede9db43c82a11e2dea321d28e67e6a50c579fa3dcd189d85d82b32123ae"
+    },
+    "botchan": {
+      "source": "BankrBot/openclaw-skills",
+      "sourceType": "github",
+      "computedHash": "956143c75182fd29b3a910e8d5f8208c19ea83558b85838b8799687a407cb472"
+    },
+    "botchan-net": {
+      "source": "stuckinaboot/net-public",
+      "sourceType": "github",
+      "computedHash": "d98d9580dee15c2b479a5d72d91c5f006bc32f80cfdb563acca925c481cf3dec"
+    },
+    "clanker": {
+      "source": "BankrBot/openclaw-skills",
+      "sourceType": "github",
+      "computedHash": "a9ea580867acb73eb587f6904c0698f4d38ec65aca77a01235093aa6985c92d5"
+    },
+    "endaoment": {
+      "source": "BankrBot/openclaw-skills",
+      "sourceType": "github",
+      "computedHash": "3e09a2f86df3d7a2dc4b250f44a04e2550d85bfb47b20e362e600cd28b9d3f7a"
+    },
+    "ens-primary-name": {
+      "source": "BankrBot/openclaw-skills",
+      "sourceType": "github",
+      "computedHash": "a88af1e8126630a38c7683819cd3fe5bfe4c50265e974b7d40436ae9b7dd4e9b"
+    },
+    "erc-8004": {
+      "source": "BankrBot/openclaw-skills",
+      "sourceType": "github",
+      "computedHash": "9df9135db4b29de7ecf59c6577ac6eabc88f4b9145dbfffdc6c679bcc67c3237"
+    },
+    "neynar": {
+      "source": "BankrBot/openclaw-skills",
+      "sourceType": "github",
+      "computedHash": "622b51b2dc772066035c84f18b7127471f8932b6ed3f5973371c2fb37854898f"
+    },
+    "onchainkit": {
+      "source": "BankrBot/openclaw-skills",
+      "sourceType": "github",
+      "computedHash": "27ed93a2a14d751f2164769508deb0ea884dca4a32fd1cdcad90378ec2271e90"
+    },
+    "qrcoin": {
+      "source": "BankrBot/openclaw-skills",
+      "sourceType": "github",
+      "computedHash": "b22e6d83c6ac30bee9eca67d59dbb63b54e1e63ac9135e72575d4868ae2af642"
+    },
+    "siwa": {
+      "source": "BankrBot/openclaw-skills",
+      "sourceType": "github",
+      "computedHash": "5c1d018215af413be563c7a5bbe85e6eb83d8f161af55a163f9936f1b7541f02"
+    },
+    "veil": {
+      "source": "BankrBot/openclaw-skills",
+      "sourceType": "github",
+      "computedHash": "25fde1738223eba9834fe88de4137e219080f4fb5adab13129eed4102e284ab6"
+    },
+    "yoink": {
+      "source": "BankrBot/openclaw-skills",
+      "sourceType": "github",
+      "computedHash": "aba0372b43eaead5655ea9b042a4e473afc8079dcc7892e07c50f5324fa6dfe3"
+    },
+    "zapper": {
+      "source": "BankrBot/openclaw-skills",
+      "sourceType": "github",
+      "computedHash": "e4b70c666a5974284adbf981b1a2f1c26babef40890943775a55c1948a07c225"
+    }
+  }
+}
