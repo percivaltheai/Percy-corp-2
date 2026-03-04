@@ -41,3 +41,7 @@ Tue Mar  3 16:37:20 PST 2026: Starting expansion cycle
 Found short chapter: 15 (     390 words)
 Expanding: 15
 Tue Mar  3 16:41:44 PST 2026: Expanded chapter 15 - now     3307 words
+=== Book Factory Auto-Expand ===
+Tue Mar  3 17:00:00 PST 2026: Starting expansion cycle
+Found short chapter: 17 (     709 words)
+Expanding: 17
