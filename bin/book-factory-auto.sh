@@ -66,10 +66,22 @@ CRITICAL TECHNIQUES:
 CURRENT CONTENT TO EXPAND:
 $CONTENT
 
-Expand to at least 2,500 words. Add scenes, dialogue, sensory details. Keep Connor's voice consistent. Start directly with story — no intro, no preamble."
+Expand to at least 2,500 words. Add scenes, dialogue, sensory details. 
 
-# Run expansion
+IMPORTANT: Write MUCH more than the original. The goal is 2,500+ words minimum — expand significantly.
+
+Keep Connor's voice consistent. Start directly with story — no intro, no preamble.
+
+OUTPUT ONLY THE EXPANDED STORY."
+
+# Run expansion twice for longer output
 OUTPUT=$(echo "$PROMPT" | $OLLAMA run $MODEL 2>&1)
+OUTPUT2=$(echo "$PROMPT" | $OLLAMA run $MODEL 2>&1)
+
+# Combine if needed
+if [ ${#OUTPUT2} -gt ${#OUTPUT} ]; then
+    OUTPUT="$OUTPUT2"
+fi
 
 # Save
 if [ "$EXPAND_THIS" = "epilogue" ]; then

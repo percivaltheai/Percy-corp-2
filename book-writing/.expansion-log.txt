@@ -75,3 +75,13 @@ Tue Mar  3 17:30:33 PST 2026: Expanded chapter 21 - now     1021 words
 Tue Mar  3 17:33:03 PST 2026: Starting expansion cycle
 Expanding: Chapter 23 (current:       59 words)
 Tue Mar  3 17:33:37 PST 2026: Expanded chapter 23 - now      769 words
+=== Book Factory Auto-Expand ===
+Tue Mar  3 17:34:19 PST 2026: Starting expansion cycle
+Expanding: Chapter 24 (current:       61 words)
+=== Book Factory Auto-Expand ===
+Tue Mar  3 17:45:00 PST 2026: Starting expansion cycle
+Expanding: Chapter 24 (current:       61 words)
+=== Book Factory Auto-Expand ===
+Tue Mar  3 17:45:10 PST 2026: Starting expansion cycle
+Expanding: Chapter 24 (current:       61 words)
+Tue Mar  3 17:48:38 PST 2026: Expanded chapter 24 - now     2436 words
