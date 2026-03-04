@@ -74,14 +74,12 @@ Keep Connor's voice consistent. Start directly with story — no intro, no pream
 
 OUTPUT ONLY THE EXPANDED STORY."
 
-# Run expansion twice for longer output
-OUTPUT=$(echo "$PROMPT" | $OLLAMA run $MODEL 2>&1)
-OUTPUT2=$(echo "$PROMPT" | $OLLAMA run $MODEL 2>&1)
+# Run expansion (use --quiet to reduce ANSI, then strip all codes)
+OUTPUT=$(echo "$PROMPT" | OLLAMA_HOST=127.0.0.1:11434 $OLLAMA run $MODEL --quiet 2>&1)
 
-# Combine if needed
-if [ ${#OUTPUT2} -gt ${#OUTPUT} ]; then
-    OUTPUT="$OUTPUT2"
-fi
+# Strip ALL ANSI escape codes from output
+OUTPUT=$(echo "$OUTPUT" | sed 's/\x1b\[[0-9;]*[a-zA-Z]//g')
+OUTPUT=$(echo "$OUTPUT" | tr -d '\033')
 
 # Save
 if [ "$EXPAND_THIS" = "epilogue" ]; then
