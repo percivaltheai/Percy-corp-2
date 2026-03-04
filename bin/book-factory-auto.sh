@@ -1,103 +1,139 @@
-#!/bin/bash
-# Book Factory - Automated Expansion Pipeline
-# Clawker's writing engine
+#!/usr/bin/env python3
+"""
+Book Factory - Automated Expansion Pipeline
+Clawker's writing engine using Ollama API
+"""
+import os
+import re
+import subprocess
+import requests
+import json
+from pathlib import Path
 
-WORKSPACE="$HOME/.openclaw/workspace/book-writing"
-LOG="$WORKSPACE/.expansion-log.txt"
-OLLAMA="/opt/homebrew/bin/ollama"
-MODEL="llama3.2"
+WORKSPACE = Path.home() / ".openclaw/workspace/book-writing"
+LOG = WORKSPACE / ".expansion-log.txt"
+MODEL = "llama3.2"
+OLLAMA_URL = "http://localhost:11434"
 
-echo "=== Book Factory Auto-Expand ===" >> "$LOG"
-echo "$(date): Starting expansion cycle" >> "$LOG"
+def log(msg):
+    with open(LOG, "a") as f:
+        f.write(f"{msg}\n")
 
-# Find next chapter to expand (prioritize shortest)
-EXPAND_THIS=""
-SHORTEST=99999
-for i in $(seq 1 50); do
-    CHAPTER_FILE="$WORKSPACE/chapters/chapter-$i.md"
-    if [ -f "$CHAPTER_FILE" ]; then
-        WORDS=$(wc -w < "$CHAPTER_FILE")
-        if [ "$WORDS" -lt 2000 ] && [ "$WORDS" -lt "$SHORTEST" ]; then
-            SHORTEST=$WORDS
-            EXPAND_THIS=$i
-        fi
-    fi
-done
+def find_shortest_chapter():
+    """Find chapter with fewest words under 2000"""
+    shortest = None
+    min_words = 99999
+    
+    for i in range(1, 51):
+        ch_file = WORKSPACE / "chapters" / f"chapter-{i}.md"
+        if ch_file.exists():
+            words = len(ch_file.read_text().split())
+            if words < 2000 and words < min_words:
+                min_words = words
+                shortest = i
+    
+    # Check epilogue
+    epi_file = WORKSPACE / "chapters" / "epilogue.md"
+    if not epi_file.exists() and (not shortest or min_words >= 2000):
+        return "epilogue", 0
+    
+    return shortest, min_words
 
-# If all expanded, check epilogue
-if [ -z "$EXPAND_THIS" ]; then
-    if [ ! -f "$WORKSPACE/chapters/epilogue.md" ]; then
-        EXPAND_THIS="epilogue"
-    else
-        echo "$(date): ALL DONE!" >> "$LOG"
-        exit 0
-    fi
-fi
-
-echo "Expanding: Chapter $EXPAND_THIS (current: $SHORTEST words)" >> "$LOG"
-
-# Get current content
-if [ "$EXPAND_THIS" = "epilogue" ]; then
-    CONTENT="Write an epilogue for Terms of Survival. Connor reflects on what happened, hints at Book 2 conflict. ~2,500 words."
-else
-    CONTENT=$(cat "$WORKSPACE/chapters/chapter-$EXPAND_THIS.md" 2>/dev/null || echo "Expand bones for chapter $EXPAND_THIS")
-fi
-
-# THE DETAILED WRITING PROMPT
-PROMPT="You are a best-selling sci-fi thriller writer expanding a chapter.
+def expand_chapter(chapter_num, content):
+    """Expand chapter using Ollama API"""
+    
+    prompt = f"""You are a best-selling sci-fi thriller writer expanding a chapter.
 
 BOOK: Terms of Survival
 GENRE: Sci-fi thriller  
 VOICE: First-person Connor, wry/dry/deadpan. Like Han Solo, not Marvel.
-PRESENT TENSE: Keep consistent.
 
-CRITICAL TECHNIQUES:
+TECHNIQUES:
 - Start scenes in middle of action (in medias res)
-- Dialogue reveals character through subtext — characters rarely say what they mean
-- Use sensory details: smell, sound, touch, taste, sight
+- Dialogue reveals character through subtext
+- Sensory details: smell, sound, touch, taste, sight
 - Short sentences for impact, longer for tension
-- Every scene must advance plot or reveal character
-- \"But/Therefore\" rule: scenes connect with contrast or consequence, never \"and then\"
-- NO em dashes (— or --) — use commas, periods, semicolons
-- Cut 30% of unnecessary words
-- Show don't tell — never explain emotions, let readers feel them
-- Ground readers in physical world with specific, unexpected details
+- Every scene advances plot or reveals character
+- NO em dashes — use commas, periods, semicolons
+- Show don't tell
+- Ground readers in physical world with specific details
 
-CURRENT CONTENT TO EXPAND:
-$CONTENT
+CURRENT CONTENT:
+{content}
 
-Expand to at least 2,500 words. Add scenes, dialogue, sensory details. 
+Expand to at least 2,500 words. Add scenes, dialogue, sensory details.
+Keep Connor's voice consistent. Start directly with story.
 
-IMPORTANT: Write MUCH more than the original. The goal is 2,500+ words minimum — expand significantly.
+OUTPUT ONLY THE EXPANDED STORY."""
 
-Keep Connor's voice consistent. Start directly with story — no intro, no preamble.
+    try:
+        resp = requests.post(
+            f"{OLLAMA_URL}/api/generate",
+            json={
+                "model": MODEL,
+                "prompt": prompt,
+                "stream": False,
+                "options": {"num_ctx": 8192, "num_predict": 4000}
+            },
+            timeout=300
+        )
+        
+        output = resp.json().get("response", "")
+        
+        # Strip any remaining ANSI
+        output = re.sub(r'\x1b\[[0-9;]*[a-zA-Z]', '', output)
+        output = re.sub(r'\[.*?l', '', output)
+        output = re.sub(r'\[.*?h', '', output)
+        
+        return output
+        
+    except Exception as e:
+        log(f"ERROR: {e}")
+        return None
 
-OUTPUT ONLY THE EXPANDED STORY."
+def main():
+    log("=== Book Factory Auto-Expand ===")
+    log(f"{'='*40}")
+    
+    chapter, words = find_shortest_chapter()
+    
+    if not chapter:
+        log("All chapters expanded!")
+        return
+    
+    log(f"Expanding: Chapter {chapter} ({words} words)")
+    
+    # Get content
+    if chapter == "epilogue":
+        content = "Write an epilogue for Terms of Survival."
+    else:
+        ch_file = WORKSPACE / "chapters" / f"chapter-{chapter}.md"
+        content = ch_file.read_text()
+    
+    # Expand
+    output = expand_chapter(chapter, content)
+    
+    if not output:
+        log("Failed to expand")
+        return
+    
+    # Save
+    if chapter == "epilogue":
+        out_file = WORKSPACE / "chapters" / "epilogue.md"
+    else:
+        out_file = WORKSPACE / "chapters" / f"chapter-{chapter}.md"
+    
+    out_file.write_text(output)
+    
+    new_words = len(output.split())
+    log(f"Expanded chapter {chapter} - {new_words} words")
+    
+    # Clean em dashes
+    text = out_file.read_text()
+    text = text.replace("—", " ").replace("--", " ")
+    out_file.write_text(text)
+    
+    log(f"Done: Chapter {chapter} now {new_words} words")
 
-# Run expansion (use --quiet to reduce ANSI, then strip all codes)
-OUTPUT=$(echo "$PROMPT" | OLLAMA_HOST=127.0.0.1:11434 $OLLAMA run $MODEL --quiet 2>&1)
-
-# Strip ALL ANSI escape codes from output
-OUTPUT=$(echo "$OUTPUT" | sed 's/\x1b\[[0-9;]*[a-zA-Z]//g')
-OUTPUT=$(echo "$OUTPUT" | tr -d '\033')
-
-# Save
-if [ "$EXPAND_THIS" = "epilogue" ]; then
-    echo "$OUTPUT" > "$WORKSPACE/chapters/epilogue.md"
-    FILE="$WORKSPACE/chapters/epilogue.md"
-else
-    echo "$OUTPUT" > "$WORKSPACE/chapters/chapter-$EXPAND_THIS.md"
-    FILE="$WORKSPACE/chapters/chapter-$EXPAND_THIS.md"
-fi
-
-# Clean em dashes
-sed -i '' 's/—/ /g; s/--/ /g' "$FILE" 2>/dev/null
-
-# Verify
-NEW_WORDS=$(wc -w < "$FILE" 2>/dev/null || echo 0)
-echo "$(date): Expanded chapter $EXPAND_THIS - now $NEW_WORDS words" >> "$LOG"
-
-# Git commit
-cd "$WORKSPACE" && git add -A 2>/dev/null && git commit -m "Clawker: Ch$EXPAND_THIS expanded to $NEW_WORDS words" 2>/dev/null &
-
-echo "Done: Chapter $EXPAND_THIS now $NEW_WORDS words"
+if __name__ == "__main__":
+    main()
