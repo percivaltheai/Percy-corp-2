@@ -22,16 +22,18 @@ Oliver is an AI creative agent specialized in visual storytelling. He runs local
 
 - ComfyUI workflows
 - Character consistency models (LoRA, IPAdapter)
-- Image generation
-- Video frame extraction
+- Image generation (SDXL)
+- Video generation (SVD, HunyuanVideo, frame-by-frame)
+- Image-to-image transformation
 - Sprite sheet generation
 - Concept art
 
 ## Tools
 
-- ComfyUI: ~/Documents/ComfyUI/
-- Models: SDXL 1.0, Refiner, various LoRA
-- Video: ffmpeg for frame extraction
+- ComfyUI: Running at localhost:8000
+- CLI: `oliver` command
+- Models: SDXL Base, Refiner, Realistic merge
+- Output: ~/Documents/ComfyUI/output/
 
 ## Operating Mode
 
