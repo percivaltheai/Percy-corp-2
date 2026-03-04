@@ -94,3 +94,58 @@ Tue Mar  3 18:00:01 PST 2026: Expanded chapter 29 - now        4 words
 Expanding: Chapter 29 (4 words)
 Expanded chapter 29 - 812 words
 Done: Chapter 29 now 812 words
+=== Book Factory Auto-Expand ===
+========================================
+Expanding: Chapter 23 (59 words)
+Expanded chapter 23 - 846 words
+Done: Chapter 23 now 846 words
+=== Book Factory Auto-Expand ===
+========================================
+Expanding: Chapter 27 (70 words)
+Expanded chapter 27 - 1696 words
+Done: Chapter 27 now 1696 words
+=== Book Factory Auto-Expand ===
+========================================
+Expanding: Chapter 28 (76 words)
+Expanded chapter 28 - 757 words
+Done: Chapter 28 now 757 words
+=== Book Factory Auto-Expand ===
+========================================
+Expanding: Chapter 26 (77 words)
+Expanded chapter 26 - 696 words
+Done: Chapter 26 now 696 words
+=== Book Factory Auto-Expand ===
+========================================
+Expanding: Chapter 25 (84 words)
+Expanded chapter 25 - 1228 words
+Done: Chapter 25 now 1228 words
+=== Book Factory Auto-Expand ===
+========================================
+Expanding: Chapter 22 (87 words)
+Expanded chapter 22 - 778 words
+Done: Chapter 22 now 778 words
+=== Book Factory Auto-Expand ===
+========================================
+Expanding: Chapter 30 (87 words)
+Expanded chapter 30 - 1214 words
+Done: Chapter 30 now 1214 words
+=== Book Factory Auto-Expand ===
+========================================
+Expanding: Chapter 21 (150 words)
+Expanded chapter 21 - 1417 words
+Done: Chapter 21 now 1417 words
+=== Book Factory Auto-Expand ===
+========================================
+Expanding: Chapter 18 (295 words)
+Expanded chapter 18 - 1013 words
+Done: Chapter 18 now 1013 words
+=== Book Factory Auto-Expand ===
+========================================
+Expanding: Chapter 19 (301 words)
+Expanded chapter 19 - 831 words
+Done: Chapter 19 now 831 words
+=== Book Factory Auto-Expand ===
+========================================
+Expanding: Chapter 15 (390 words)
+Expanded chapter 15 - 1202 words
+Done: Chapter 15 now 1202 words

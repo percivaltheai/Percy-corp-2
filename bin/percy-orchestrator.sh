@@ -132,12 +132,12 @@ while true; do
     HOUR=$(date +%H)
     MINUTE=$(date +%M)
     
-    # Clawker: Every 30 minutes during work hours (8am-10pm)
-    if [ "$HOUR" -ge 8 ] && [ "$HOUR" -le 22 ]; then
+    # Clawker: Every 30 minutes, 24/7 (book doesn't sleep)
+    # if [ "$HOUR" -ge 8 ] && [ "$HOUR" -le 22 ]; then
         if [ "$((MINUTE % 30))" -eq 0 ]; then
             run_clawker
         fi
-    fi
+    # fi
     
     # Obsidian/Git: Every hour
     if [ "$MINUTE" -eq 0 ]; then
