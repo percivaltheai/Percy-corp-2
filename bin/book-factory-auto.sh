@@ -73,7 +73,7 @@ OUTPUT ONLY THE EXPANDED STORY."""
                 "model": MODEL,
                 "prompt": prompt,
                 "stream": False,
-                "options": {"num_ctx": 8192, "num_predict": 4000}
+                "options": {"num_ctx": 8192, "num_predict": 8192}
             },
             timeout=300
         )
