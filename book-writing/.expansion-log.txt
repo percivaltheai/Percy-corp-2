@@ -207,3 +207,46 @@ Done: Chapter 19 now 1198 words
 === Book Factory Auto-Expand ===
 ========================================
 Expanding: Chapter 23 (847 words)
+=== Book Factory Auto-Expand ===
+========================================
+Expanding: Chapter 23 (847 words)
+Expanded chapter 23 - 1473 words
+Done: Chapter 23 now 1473 words
+=== Book Factory Auto-Expand ===
+========================================
+Expanding: Chapter 26 (1072 words)
+Expanded chapter 26 - 1677 words
+Done: Chapter 26 now 1677 words
+=== Book Factory Auto-Expand ===
+========================================
+Expanding: Chapter 20 (1106 words)
+Expanded chapter 20 - 1482 words
+Done: Chapter 20 now 1482 words
+=== Book Factory Auto-Expand ===
+========================================
+Expanding: Chapter 19 (1198 words)
+Expanded chapter 19 - 2061 words
+Done: Chapter 19 now 2061 words
+=== Book Factory Auto-Expand ===
+========================================
+Expanding: Chapter 30 (1218 words)
+Expanded chapter 30 - 1374 words
+Done: Chapter 30 now 1374 words
+=== Book Factory Auto-Expand ===
+========================================
+Expanding: Chapter 25 (1228 words)
+Expanded chapter 25 - 1435 words
+Done: Chapter 25 now 1435 words
+=== Book Factory Auto-Expand ===
+========================================
+Expanding: Chapter 30 (1374 words)
+Expanded chapter 30 - 1409 words
+Done: Chapter 30 now 1409 words
+=== Book Factory Auto-Expand ===
+========================================
+Expanding: Chapter 24 (1409 words)
+Expanded chapter 24 - 2086 words
+Done: Chapter 24 now 2086 words
+=== Book Factory Auto-Expand ===
+========================================
+Expanding: Chapter 30 (1409 words)
