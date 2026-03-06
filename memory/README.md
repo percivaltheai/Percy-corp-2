@@ -69,7 +69,7 @@ Run manually: `python3 memory/sync-obsidian.py`
 ## Cloudflare
 
 - **Worker:** https://percy-memory.percival-the-ai.workers.dev
-- **API Key:** `pmem_aaff3d307632411d9d4609507ec403ab`
+- **API Key:** See `~/.openclaw/workspace/memory/cf-config.json` (never commit!)
 - Config: `memory/cf-config.json` (never commit!)
 
 ---
