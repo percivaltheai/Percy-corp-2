@@ -1,0 +1,67 @@
+# Dixxxney Channel — MVP Configuration
+
+## Project Info
+name: "Dixxxney Channel"
+version: "0.1.0-mvp"
+description: "Lightweight generative media studio for Mac Mini"
+
+## Hardware Targets
+mac_mini: true
+gpu: "Apple Metal (M-series)"
+max_vram: "24GB (unified)"
+
+## Paths
+studio_root: "~/studio-dixxxney"
+characters_dir: "characters"
+datasets_dir: "datasets"
+models_dir: "models"
+scripts_dir: "scripts"
+generation_dir: "generation"
+episodes_dir: "episodes"
+
+## Generation Settings (Mac Mini Optimized)
+default_model: "sd15"  # SD 1.5 instead of SDXL for speed
+sdxl_available: false   # Too slow on Mac Mini
+animation: false       # Skip I2V for MVP
+upscale: false         # Skip upscale for MVP
+
+generation:
+  batch_size: 1
+  steps: 20             # Lower for speed
+  width: 512            # Lower resolution
+  height: 512
+  cfg_scale: 7.5
+  sampler: "euler"
+
+## LoRA Training (Lightweight)
+training:
+  method: "lora"
+  base_model: "sd15"
+  max_steps: 500        # Reduced for speed
+  learning_rate: 1e-4
+  batch_size: 1
+  rank: 16             # Smaller LoRA
+  gradient_accumulation: 4
+
+## Character Registry
+# Format: character_name -> {trigger, lora_path, description}
+characters: {}
+
+## Pipeline Stages
+stages:
+  - ingest     # Collect images
+  - prepare    # Clean/crop
+  - caption   # Auto-tag
+  - train     # LoRA training
+  - generate  # Create scenes
+  - assemble  # Build episode
+  - export    # Final output
+
+## Automation
+auto_caption: true
+auto_assemble: false  # Manual review first
+background_train: true
+
+## Logging
+log_level: "info"
+log_dir: "logs"

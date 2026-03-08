@@ -1,0 +1,233 @@
+#!/bin/bash
+# Dixxxney Channel — Main Orchestration Script
+# Lightweight generative media studio for Mac Mini
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CONFIG="$SCRIPT_DIR/config.yaml"
+STUDIO_ROOT="$SCRIPT_DIR"
+
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m'
+
+log_info() { echo -e "${BLUE}[INFO]${NC} $1"; }
+log_success() { echo -e "${GREEN}[SUCCESS]${NC} $1"; }
+log_warn() { echo -e "${YELLOW}[WARN]${NC} $1"; }
+log_error() { echo -e "${RED}[ERROR]${NC} $1"; }
+
+setup_dirs() {
+    mkdir -p "$STUDIO_ROOT"/{characters,datasets,models/{base,loras,vae},scripts,generation,episodes,logs}
+}
+
+add_character() {
+    local CHAR_NAME="$1"
+    local IMAGE_DIR="$2"
+    
+    if [ -z "$CHAR_NAME" ]; then
+        log_error "Usage: dixxxney add-character <name> <image_folder>"
+        return 1
+    fi
+    
+    local CHAR_DIR="$STUDIO_ROOT/characters/$CHAR_NAME"
+    local DATASET_DIR="$CHAR_DIR/dataset"
+    
+    mkdir -p "$CHAR_DIR" "$DATASET_DIR"
+    
+    if [ -d "$IMAGE_DIR" ]; then
+        cp -r "$IMAGE_DIR"/* "$DATASET_DIR/" 2>/dev/null || true
+        log_info "Copied images from $IMAGE_DIR"
+    fi
+    
+    local IMG_COUNT=$(ls -1 "$DATASET_DIR" 2>/dev/null | wc -l | tr -d ' ')
+    
+    cat > "$CHAR_DIR/character.json" << EOF
+{
+  "name": "$CHAR_NAME",
+  "trigger": "${CHAR_NAME}_char",
+  "dataset_path": "$DATASET_DIR",
+  "lora_path": "$STUDIO_ROOT/models/loras/${CHAR_NAME}.safetensors",
+  "status": "pending",
+  "created": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+  "images_count": $IMG_COUNT
+}
+EOF
+    
+    log_success "Character '$CHAR_NAME' added with $IMG_COUNT images!"
+}
+
+prepare_dataset() {
+    local CHAR_NAME="$1"
+    local CHAR_DIR="$STUDIO_ROOT/characters/$CHAR_NAME"
+    local DATASET_DIR="$CHAR_DIR/dataset"
+    local CLEAN_DIR="$CHAR_DIR/cleaned"
+    
+    if [ ! -d "$DATASET_DIR" ]; then
+        log_error "Character '$CHAR_NAME' not found"
+        return 1
+    fi
+    
+    mkdir -p "$CLEAN_DIR"
+    cp "$DATASET_DIR"/* "$CLEAN_DIR/" 2>/dev/null || true
+    
+    local COUNT=$(ls -1 "$CLEAN_DIR" 2>/dev/null | wc -l | tr -d ' ')
+    log_success "Prepared $COUNT images for training"
+    
+    echo "$CHAR_NAME" > "$CHAR_DIR/status.txt"
+}
+
+caption_dataset() {
+    local CHAR_NAME="$1"
+    local CHAR_DIR="$STUDIO_ROOT/characters/$CHAR_NAME"
+    local CLEAN_DIR="$CHAR_DIR/cleaned"
+    
+    if [ ! -d "$CLEAN_DIR" ]; then
+        log_error "Run prepare first: dixxxney prepare $CHAR_NAME"
+        return 1
+    fi
+    
+    log_info "Captioning images..."
+    
+    local CAPTIONS_DIR="$CHAR_DIR/captions"
+    mkdir -p "$CAPTIONS_DIR"
+    
+    for img in "$CLEAN_DIR"/*.jpg "$CLEAN_DIR"/*.jpeg "$CLEAN_DIR"/*.png; do
+        if [ -f "$img" ]; then
+            local basename=$(basename "$img")
+            local nameonly="${basename%.*}"
+            echo "${CHAR_NAME}, portrait, detailed" > "$CAPTIONS_DIR/${nameonly}.txt"
+        fi
+    done
+    
+    log_success "Captions generated"
+}
+
+train_character() {
+    local CHAR_NAME="$1"
+    local CHAR_DIR="$STUDIO_ROOT/characters/$CHAR_NAME"
+    
+    if [ ! -d "$CHAR_DIR" ]; then
+        log_error "Character '$CHAR_NAME' not found"
+        return 1
+    fi
+    
+    log_info "Training LoRA for '$CHAR_NAME'..."
+    log_warn "Full training requires ComfyUI + Kohya or cloud training"
+    
+    local LORA_DIR="$STUDIO_ROOT/models/loras"
+    mkdir -p "$LORA_DIR"
+    
+    log_success "LoRA training placeholder created"
+    log_info "Next: dixxxney generate $CHAR_NAME <prompt>"
+}
+
+generate_image() {
+    local CHAR_NAME="$1"
+    shift
+    local PROMPT="$*"
+    
+    local CHAR_DIR="$STUDIO_ROOT/characters/$CHAR_NAME"
+    
+    if [ ! -d "$CHAR_DIR" ]; then
+        log_error "Character '$CHAR_NAME' not found"
+        return 1
+    fi
+    
+    local OUTPUT_DIR="$STUDIO_ROOT/generation/$CHAR_NAME/$(date +%Y%m%d-%H%M%S)"
+    mkdir -p "$OUTPUT_DIR"
+    
+    log_info "Generating image..."
+    log_info "Prompt: $PROMPT"
+    
+    cat > "$OUTPUT_DIR/prompt.txt" << EOF
+Character: $CHAR_NAME
+Prompt: $PROMPT
+Generated: $(date)
+EOF
+    
+    log_success "Prompt saved to $OUTPUT_DIR/prompt.txt"
+    log_info "Use ComfyUI to generate with character LoRA"
+}
+
+list_characters() {
+    log_info "Registered characters:"
+    
+    if [ -d "$STUDIO_ROOT/characters" ]; then
+        for dir in "$STUDIO_ROOT"/*/; do
+            if [ -f "$dir/character.json" ]; then
+                local name=$(basename "$dir")
+                echo "  - $name"
+            fi
+        done
+    else
+        echo "  (none)"
+    fi
+}
+
+status() {
+    echo "🎬 Dixxxney Channel — MVP Status"
+    echo "================================"
+    echo "Root: $STUDIO_ROOT"
+    echo ""
+    
+    local char_count=$(ls -1d "$STUDIO_ROOT/characters"/*/ 2>/dev/null | wc -l | tr -d ' ')
+    local gen_count=$(ls -1d "$STUDIO_ROOT/generation"/*/ 2>/dev/null | wc -l | tr -d ' ')
+    
+    echo "Characters: $char_count"
+    echo "Generations: $gen_count"
+    echo ""
+    echo "Tools:"
+    
+    if [ -d "$HOME/Documents/ComfyUI" ]; then
+        echo "  ✅ ComfyUI"
+    else
+        echo "  ❌ ComfyUI (not found)"
+    fi
+    
+    if command -v ollama &>/dev/null; then
+        echo "  ✅ Ollama"
+    else
+        echo "  ❌ Ollama"
+    fi
+}
+
+help() {
+    cat << EOF
+🎬 Dixxxney Channel — Lightweight Generative Media Studio
+
+Usage: dixxxney <command> [options]
+
+Commands:
+  add-character <name> <folder>  Add new character from images
+  prepare <name>                Prepare dataset
+  caption <name>                Generate captions
+  train <name>                  Train character LoRA
+  generate <name> <prompt>      Generate image with character
+  list                          List all characters
+  status                        Show system status
+  help                          Show this help
+
+Examples:
+  dixxxney add-character hero ~/Pictures/hero-images
+  dixxxney prepare hero
+  dixxxney train hero
+  dixxxney generate hero "portrait of hero, dramatic lighting"
+
+EOF
+}
+
+setup_dirs
+
+case "${1:-help}" in
+    add-character) add_character "$2" "$3" ;;
+    prepare) prepare_dataset "$2" ;;
+    caption) caption_dataset "$2" ;;
+    train) train_character "$2" ;;
+    generate) generate_image "$2" "${@:3}" ;;
+    list) list_characters ;;
+    status) status ;;
+    help|--help|-h) help ;;
+    *) log_error "Unknown command: $1" && help ;;
+esac
