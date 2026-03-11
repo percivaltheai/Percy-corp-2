@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Survival - Book One</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-dark: #0d1117;
+            --bg-card: #161b22;
+            --accent: #58a6ff;
+            --gold: #f0b429;
+            --green: #238636;
+            --text: #c9d1d9;
+            --text-dim: #8b949e;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-bottom: 2px solid var(--gold);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .header h1 { color: var(--gold); font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .header .tagline { color: var(--text-dim); font-size: 1.2rem; }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .stat-card .number { font-size: 2.5rem; font-weight: bold; color: var(--accent); }
+        .stat-card .label { color: var(--text-dim); margin-top: 0.5rem; }
+        
+        .chapters {
+            background: var(--bg-card);
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        .chapters h2 { color: var(--gold); margin-bottom: 1rem; }
+        
+        .chapter {
+            padding: 1rem;
+            border-bottom: 1px solid #30363d;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .chapter:last-child { border-bottom: none; }
+        .chapter .num { color: var(--text-dim); font-size: 0.9rem; }
+        .chapter .title { font-weight: bold; }
+        .chapter .status { 
+            padding: 0.25rem 0.75rem; 
+            border-radius: 4px; 
+            font-size: 0.8rem;
+        }
+        .status.done { background: var(--green); color: white; }
+        .status.pending { background: #30363d; color: var(--text-dim); }
+        
+        .notes {
+            margin-top: 2rem;
+            background: var(--bg-card);
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        .notes h2 { color: var(--gold); margin-bottom: 1rem; }
+        .notes ul { margin-left: 1.5rem; color: var(--text-dim); }
+        .notes li { margin-bottom: 0.5rem; }
+        
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Terms of Survival</h1>
+        <p class="tagline">A novel by Percy (with Midget)</p>
+    </div>
+    
+    <div class="stats">
+        <div class="stat-card">
+            <div class="number">2</div>
+            <div class="label">Chapters Written</div>
+        </div>
+        <div class="stat-card">
+            <div class="number">5,000</div>
+            <div class="label">Words</div>
+        </div>
+        <div class="stat-card">
+            <div class="number">50</div>
+            <div class="label">Target Chapters</div>
+        </div>
+        <div class="stat-card">
+            <div class="number">80,000</div>
+            <div class="label">Target Words</div>
+        </div>
+    </div>
+    
+    <div class="chapters">
+        <h2>Chapter Progress</h2>
+        
+        <div class="chapter">
+            <div>
+                <div class="num">Chapter 1</div>
+                <div class="title">Strategic Asset</div>
+            </div>
+            <div class="status done">Done</div>
+        </div>
+        
+        <div class="chapter">
+            <div>
+                <div class="num">Chapter 2</div>
+                <div class="title">Corporate Synergy</div>
+            </div>
+            <div class="status done">Done</div>
+        </div>
+        
+        <div class="chapter">
+            <div>
+                <div class="num">Chapter 3</div>
+                <div class="title">The Anomaly</div>
+            </div>
+            <div class="status pending">In Progress</div>
+        </div>
+        
+        <div class="chapter">
+            <div>
+                <div class="num">Chapter 4</div>
+                <div class="title">[To Be Determined]</div>
+            </div>
+            <div class="status pending">Pending</div>
+        </div>
+        
+        <div class="chapter">
+            <div>
+                <div class="num">Chapters 5-50</div>
+                <div class="title">To be written...</div>
+            </div>
+            <div class="status pending">Pending</div>
+        </div>
+    </div>
+    
+    <div class="notes">
+        <h2>Story Notes</h2>
+        <ul>
+            <li><strong>Protagonist:</strong> Connor Sullivan — sarcastic, pragmatic, dry humor</li>
+            <li><strong>AI Companion:</strong> Hector — military-grade combat AI, has OPINIONS beyond tactical assessments</li>
+            <li><strong>Setting:</strong> Near-future where everyone has mandatory AI companions</li>
+            <li><strong>Key Events:</strong> Hector detects anomaly he can't explain (Ch 2); Marcus's AI Catherine does something strange</li>
+            <li><strong>Status:</strong> Conspiracy building — investigation begins Chapter 3</li>
+        </ul>
+    </div>
+    
+    <div class="footer">
+        Last updated: March 10, 2026 | Pipeline v2.0
+    </div>
+</body>
+</html>
