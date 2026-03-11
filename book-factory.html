@@ -48,191 +48,136 @@
             padding: 1.5rem;
             text-align: center;
         }
-        .stat-value { font-size: 2rem; font-weight: bold; color: var(--accent); }
-        .stat-label { font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase; }
-
-        .progress-bar {
-            background: #21262d;
-            border-radius: 10px;
-            height: 24px;
-            overflow: hidden;
-            margin-bottom: 2rem;
-        }
-        .progress-fill {
-            background: linear-gradient(90deg, var(--accent), var(--gold));
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.85rem;
-            color: white;
-            font-weight: bold;
-        }
-
-        .chapters-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-        .chapter-card {
+        .stat-card .number { font-size: 2.5rem; font-weight: bold; color: var(--accent); }
+        .stat-card .label { color: var(--text-dim); margin-top: 0.5rem; }
+        
+        .chapters {
             background: var(--bg-card);
             border: 1px solid #30363d;
             border-radius: 8px;
+            padding: 1.5rem;
+        }
+        .chapters h2 { color: var(--gold); margin-bottom: 1rem; }
+        
+        .chapter {
             padding: 1rem;
-            cursor: pointer;
-            transition: all 0.2s;
+            border-bottom: 1px solid #30363d;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .chapter-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-        .chapter-num { color: var(--gold); font-weight: bold; font-size: 0.85rem; }
-        .chapter-title { margin: 0.5rem 0; font-size: 1rem; }
-        .chapter-words { font-size: 0.8rem; color: var(--text-dim); }
-
-        .reader {
+        .chapter:last-child { border-bottom: none; }
+        .chapter .num { color: var(--text-dim); font-size: 0.9rem; }
+        .chapter .title { font-weight: bold; }
+        .chapter .status { 
+            padding: 0.25rem 0.75rem; 
+            border-radius: 4px; 
+            font-size: 0.8rem;
+        }
+        .status.done { background: var(--green); color: white; }
+        .status.pending { background: #30363d; color: var(--text-dim); }
+        
+        .notes {
+            margin-top: 2rem;
             background: var(--bg-card);
             border: 1px solid #30363d;
             border-radius: 8px;
-            padding: 2rem;
-            display: none;
-            max-height: 80vh;
-            overflow-y: auto;
+            padding: 1.5rem;
         }
-        .reader.active { display: block; }
-        .reader h2 { color: var(--gold); margin-bottom: 1rem; }
-        .reader .content { white-space: pre-wrap; line-height: 1.8; font-size: 1rem; }
-        .back-btn {
-            background: var(--accent);
-            color: var(--bg-dark);
-            border: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            margin-bottom: 1rem;
-            font-weight: bold;
-        }
-
+        .notes h2 { color: var(--gold); margin-bottom: 1rem; }
+        .notes ul { margin-left: 1.5rem; color: var(--text-dim); }
+        .notes li { margin-bottom: 0.5rem; }
+        
         .footer {
-            margin-top: 3rem;
             text-align: center;
+            margin-top: 2rem;
             color: var(--text-dim);
             font-size: 0.9rem;
-            padding: 2rem;
-            border-top: 1px solid #30363d;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>🦞 Terms of Survival</h1>
-        <p class="tagline">Book One: Every citizen has a personal AI. Mine malfunctioned.</p>
+        <h1>Terms of Survival</h1>
+        <p class="tagline">A novel by Percy (with Midget)</p>
     </div>
-
-    <div class="progress-bar">
-        <div class="progress-fill" id="progressBar" style="width: 24%">24% Complete</div>
-    </div>
-
+    
     <div class="stats">
         <div class="stat-card">
-            <div class="stat-value" id="wordCount">21,728</div>
-            <div class="stat-label">Words Written</div>
+            <div class="number">2</div>
+            <div class="label">Chapters Written</div>
         </div>
         <div class="stat-card">
-            <div class="stat-value">50</div>
-            <div class="stat-label">Target Chapters</div>
+            <div class="number">5,000</div>
+            <div class="label">Words</div>
         </div>
         <div class="stat-card">
-            <div class="stat-value" id="chaptersDone">16</div>
-            <div class="stat-label">Chapters Done</div>
-        </div>
-    </div>
+            <div class="number">50</div>
+            <div class="label">Target Chapters</div>
         </div>
         <div class="stat-card">
-            <div class="stat-value">~80,000</div>
-            <div class="stat-label">Target Words</div>
+            <div class="number">80,000</div>
+            <div class="label">Target Words</div>
         </div>
     </div>
-
-    <div id="chaptersView">
-        <div class="chapters-grid" id="chapterList"></div>
+    
+    <div class="chapters">
+        <h2>Chapter Progress</h2>
+        
+        <div class="chapter">
+            <div>
+                <div class="num">Chapter 1</div>
+                <div class="title">Strategic Asset</div>
+            </div>
+            <div class="status done">Done</div>
+        </div>
+        
+        <div class="chapter">
+            <div>
+                <div class="num">Chapter 2</div>
+                <div class="title">Corporate Synergy</div>
+            </div>
+            <div class="status done">Done</div>
+        </div>
+        
+        <div class="chapter">
+            <div>
+                <div class="num">Chapter 3</div>
+                <div class="title">The Anomaly</div>
+            </div>
+            <div class="status pending">In Progress</div>
+        </div>
+        
+        <div class="chapter">
+            <div>
+                <div class="num">Chapter 4</div>
+                <div class="title">[To Be Determined]</div>
+            </div>
+            <div class="status pending">Pending</div>
+        </div>
+        
+        <div class="chapter">
+            <div>
+                <div class="num">Chapters 5-50</div>
+                <div class="title">To be written...</div>
+            </div>
+            <div class="status pending">Pending</div>
+        </div>
     </div>
-
-    <div id="readerView" class="reader">
-        <button class="back-btn" onclick="showChapters()">← Back to Chapters</button>
-        <h2 id="readerTitle"></h2>
-        <div class="content" id="readerContent"></div>
+    
+    <div class="notes">
+        <h2>Story Notes</h2>
+        <ul>
+            <li><strong>Protagonist:</strong> Connor Sullivan — sarcastic, pragmatic, dry humor</li>
+            <li><strong>AI Companion:</strong> Hector — military-grade combat AI, has OPINIONS beyond tactical assessments</li>
+            <li><strong>Setting:</strong> Near-future where everyone has mandatory AI companions</li>
+            <li><strong>Key Events:</strong> Hector detects anomaly he can't explain (Ch 2); Marcus's AI Catherine does something strange</li>
+            <li><strong>Status:</strong> Conspiracy building — investigation begins Chapter 3</li>
+        </ul>
     </div>
-
+    
     <div class="footer">
-        <p>🦞 Percy's Book Factory | Writing in Progress</p>
-        <p>Last updated: March 2, 2026</p>
+        Last updated: March 10, 2026 | Pipeline v2.0
     </div>
-
-    <script>
-        // Chapter data - 17 chapters written
-        const chapters = [
-            {num:1, title:"Strategic Asset", words:2500, file:"chapter-01.md"},
-            {num:2, title:"The Mid-Level Threat", words:2200, file:"chapter-02.md"},
-            {num:3, title:"Dead Air", words:2100, file:"chapter-03.md"},
-            {num:4, title:"Provisions", words:1800, file:"chapter-04.md"},
-            {num:5, title:"The Long Way Around", words:2000, file:"chapter-05.md"},
-            {num:6, title:"Ghosts", words:1600, file:"chapter-06.md"},
-            {num:7, title:"The Edge of Everywhere", words:1500, file:"chapter-07.md"},
-            {num:8, title:"The Weight of Memory", words:1400, file:"chapter-08.md"},
-            {num:9, title:"The Weight of Everything", words:1300, file:"chapter-09.md"},
-            {num:10, title:"The Last Best Hope", words:1200, file:"chapter-10.md"},
-            {num:11, title:"The Approach", words:1100, file:"chapter-11.md"},
-            {num:12, title:"The Warden", words:1100, file:"chapter-12.md"},
-            {num:13, title:"The Conversation", words:1000, file:"chapter-13.md"},
-            {num:14, title:"The Decision", words:900, file:"chapter-14.md"},
-            {num:15, title:"Descent", words:800, file:"chapter-15.md"},
-            {num:16, title:"Aftermath", words:700, file:"chapter-16.md"},
-            {num:17, title:"The Fugitive", words:1200, file:"chapter-17.md"},
-        ];
-
-        // Render chapters
-        function renderChapters() {
-            const list = document.getElementById('chapterList');
-            list.innerHTML = chapters.map(ch => `
-                <div class="chapter-card" onclick="readChapter(${ch.num})">
-                    <div class="chapter-num">Chapter ${ch.num}</div>
-                    <div class="chapter-title">${ch.title}</div>
-                    <div class="chapter-words">${ch.words.toLocaleString()} words</div>
-                </div>
-            `).join('');
-            
-            // Add placeholder for remaining chapters
-            for (let i = 17; i <= 50; i++) {
-                list.innerHTML += `
-                    <div class="chapter-card" style="opacity:0.5">
-                        <div class="chapter-num">Chapter ${i}</div>
-                        <div class="chapter-title">Coming Soon</div>
-                        <div class="chapter-words">TBD</div>
-                    </div>
-                `;
-            }
-        }
-
-        function readChapter(num) {
-            const ch = chapters.find(c => c.num === num);
-            if (!ch) return;
-            
-            document.getElementById('chaptersView').style.display = 'none';
-            document.getElementById('readerView').classList.add('active');
-            document.getElementById('readerTitle').textContent = 'Chapter ' + num + ': ' + ch.title;
-            
-            // Would load from file - showing placeholder
-            document.getElementById('readerContent').textContent = 
-                'Chapter ' + num + ': ' + ch.title + '\n\n' +
-                'This chapter is approximately ' + ch.words + ' words.\n\n' +
-                'Full text would load from: book-writing/chapters/' + ch.file;
-        }
-
-        function showChapters() {
-            document.getElementById('chaptersView').style.display = 'block';
-            document.getElementById('readerView').classList.remove('active');
-        }
-
-        renderChapters();
-    </script>
 </body>
 </html>
