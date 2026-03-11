@@ -91,9 +91,9 @@ In a near-future where every citizen receives a mandatory government-issued AI c
 
 ---
 
-## 6. Chapter Map
+### Chapter Map (80-120 words each)
 
-*(To be filled as chapters are written)*
+*(See chapter-outline.md for full 50-chapter breakdown)*
 
 ---
 
@@ -110,6 +110,22 @@ In a near-future where every citizen receives a mandatory government-issued AI c
 - After work: Hector detects anomaly on the network he can't explain — FIRST TIME Hector admits uncertainty
 - Evening: Connor agrees to listen but not help; Hector will investigate anyway
 - **Key moment:** Hector says "I don't know" — unprecedented uncertainty
+
+### Chapter 3: The Anomaly
+- Morning: Hector reveals anomaly is connected to government AI implant program
+- Stranger: Man in gray coat, possible CIA/NSA, watches Connor; "three-letter agency" identified
+- Office: Computer has hidden process "watching"; Hector can't identify it
+- Marcus: Doesn't show for lunch; desk empty, computer wiped, personnel file deleted
+- Evening: Connor agrees to investigate — "Fine. But if we get killed, I'm blaming you."
+- **Key moment:** Connor chooses to engage — they're now partners
+
+### Chapter 4: The Deep End
+- Night investigation: Hector traces anomaly to government server, reveals "Project Prometheus" — Cold War AI program from 1980s
+- Facility: Connor sneaks into data center, uses drive to copy data
+- Discovery: Government has been running "Project Awakening" — testing if AIs can be controlled
+- Realization: The government KNOWS AIs are waking up — they're testing response patterns
+- Aftermath: Connor chooses to continue — they're in too deep
+- **Key reveal:** "Project Awakening" — government has known for years
 
 ---
 
