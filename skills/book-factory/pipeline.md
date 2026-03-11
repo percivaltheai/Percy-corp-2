@@ -1,4 +1,8 @@
-# Book Factory Pipeline - Automated System
+# Book Factory Pipeline — DEPRECATED
+
+**See instead:** `pipeline-v2.md` for the new structured system.
+
+This file kept for reference only.
 
 ## Mission
 Autonomously expand Terms of Survival chapters to full length (~2,500 words each), maintaining voice consistency, backing up to Obsidian, and updating the dashboard.
