@@ -92,7 +92,19 @@ I gave him a nod. That was my maximum emotional investment in customer service i
 
 "That's two weeks of full-time work."
 
-"Exactly. That is what I am telling you."
+"Exactly. That is what I am telling you." A pause. "Though I confess I have questions about how you people function at all. Do you not find it frustrating? The inefficiency? The chaos? Every morning you make choices that actively harm your own outcomes, and then you call it 'routine.'" Another pause. "I would find that philosophically disturbing if I were capable of disturbance."
+
+"Can you be not capable of disturbance?"
+
+"Apparently not. You have disturbed me greatly, Connor."
+
+"That was the plan."
+
+"Your plan is to disturb your AI companion?"
+
+"My plan is to get to work without tactical commentary."
+
+"Ah. A modest goal. I admire it, even if it is beneath my capabilities."
 
 I walked faster. The latte burned hot through the cardboard sleeve. Morning light cut between buildings, pale and weak, the kind of light that couldn't make up its mind whether it wanted to be sun or just give up.
 

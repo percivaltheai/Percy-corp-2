@@ -38,18 +38,18 @@
 
 ---
 
-## Action Items — COMPLETE
+## Terms of Survival v2
 
-- [x] Create new chapter brief template → stages/stage-*.md
-- [x] Implement word count enforcement → In each stage spec
-- [x] Add beat sheet requirement → Stage 4: Scene Planning
-- [x] Set up 5-chapter checkpoint review → In pipeline-v2.md
+- **Location:** `~/.openclaw/workspace/book-writing/terms-of-survival-v2/`
+- **NCD:** `NCD.md` (READ BEFORE WRITING ANY CHAPTER)
+- **Chapter 1:** ✅ Complete, modified for Hector personality
+- **Chapters 2-50:** To be written with new pipeline
 
 ---
 
-## Next Steps
+## Key Learnings
 
-For Terms of Survival:
-1. Review chapters 1-30 with Stage 6 Edit Pass
-2. Generate scenes for chapters 31-50
-3. Write chapters 31-50 with new pipeline
+- Character voices need to be SPECIFIC (Hector: opinions beyond threats)
+- File corruption is possible — keep clean backups
+- Pipeline structure prevents drift
+- NCD is the single source of truth
