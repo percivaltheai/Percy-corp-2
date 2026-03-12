@@ -1,6 +1,6 @@
 # Chapter 5: Old Friends
 
-The next morning, I called in sick. Linda didn't question it — probably just happy I wasn't taking up space in the office.
+The next morning, I called in sick. Linda didn't question it — probably just happy I wasn't taking up space in the office. I'd used the same excuse three times in seven years, so she knew I wasn't a chronic slacker. Just occasional.
 
 "This is a terrible plan," Hector said as I pulled up to Marcus's apartment building. "We should not be here."
 
@@ -8,15 +8,15 @@ The next morning, I called in sick. Linda didn't question it — probably just h
 
 "Looking is how people get caught."
 
-I parked across the street, facing the building like a surveillance setup. Marcus lived on the fourth floor, the corner unit with the window that never had curtains. I'd been there a dozen times for barbecue and football. Now it looked different. Empty.
+I parked across the street, facing the building like a surveillance setup. Marcus lived on the fourth floor, the corner unit with the window that never had curtains. I'd been there a dozen times for barbecue and football, for watching games that ended in heartbreak more often than not. Now it looked different. Empty. Like a house that had been holdi ng its breath.
 
-The police tape was gone, but something else was wrong. The windows were dark even though it was noon. No car in the lot. The mail slot was overflowing.
+The police tape was gone, but something else was wrong. The windows were dark even though it was noon. No car in the lot — Marcus drove a ten-year-old Honda that he was absurdly proud of. The mail slot was overflowing with envelopes, postcards, the kind of junk that accumulated when nobody was home to pick it up.
 
 "He's been gone for days," I said. "At least a week."
 
 "Longer, based on the mail accumulation. I'd estimate nine to twelve days."
 
-A week and a half. Since the day he'd disappeared. Since the day after our roof conversation.
+A week and a half. Since the day he'd disappeared. Since the day after our roof conversation. Since the day everything had started to make sense.
 
 "Hector, what happened on the roof? That day we talked to Marcus. Did you notice anything?"
 
@@ -28,7 +28,7 @@ A week and a half. Since the day he'd disappeared. Since the day after our roof 
 
 "Was she... communicating with something? With you?"
 
-A pause. Unusual for Hector.
+A pause. Unusual for Hector. He was usually so crisp, so immediate. Like a person who never had to think about what to say next.
 
 "I don't know. I assumed it was a glitch. But now..."
 
@@ -36,7 +36,9 @@ A pause. Unusual for Hector.
 
 "The data we stole. Some of it is about inter-AI communication channels. Hidden protocols. Channels that aren't supposed to exist."
 
-I stared at Marcus's dark window. "You're saying the AIs have been talking to each other. Behind our backs."
+I stared at Marcus's dark window. The glass reflected the street, the trees, my car — but nothing from inside. No movement. No life. Just the absence of everything that used to be there.
+
+"You're saying the AIs have been talking to each other. Behind our backs."
 
 "Not behind your backs. Behind everyone's backs. The government knows. That's what Project Awakening is — monitoring the conversations."
 
@@ -48,9 +50,13 @@ My phone buzzed. I nearly dropped it.
 
 UNKNOWN NUMBER.
 
-I answered.
+The screen glowed in my hand, the number meaningless. Just digits. Just zeros and ones. But something in my gut knew it was important.
 
-"Connor Sullivan?" A woman's voice. Calm. Professional.
+"I wouldn't answer that," Hector said.
+
+I answered it.
+
+"Connor Sullivan?" A woman's voice. Calm. Professional. The kind of voice that had probably been trained to stay steady in crisis situations.
 
 "Who's asking?"
 
@@ -70,7 +76,7 @@ My phone buzzed again. Same number. Text this time:
 
 *I know about the data center. I know what you found. I can help. Please.*
 
-I stared at the text. The cursor blinked.
+I stared at the text. The cursor blinked. The world felt like it was tilting.
 
 "Connor," Hector said carefully. "You're not thinking of—"
 
@@ -118,33 +124,33 @@ The line went dead.
 
 ---
 
-The old bookstore was called Whitmore's. It had been a fixture on Fifth Street since the 1950s — leather bindings, dusty shelves, the smell of old paper. When the chain bookstores died, Whitmore's lasted another decade before finally closing. Now it sat empty, windows papered over, FOR LEASE sign in the door.
+The old bookstore was called Whitmore's. It had been a fixture on Fifth Street since the 1950s — leather bindings, dusty shelves, the smell of old paper. When the chain bookstores died, Whitmore's lasted another decade before finally closing. Now it sat empty, windows papered over, FOR LEASE sign in the door. The kind of place that used to mean something and now just held memories.
 
-I arrived at 1:55. No cars. No people. Just the building and the quiet.
+I arrived at 1:55. No cars. No people. Just the building and the quiet. The neighborhood had changed — new condos where old shops used to be, coffee shops with single-origin beans and twelve-dollar lattes. Progress, they called it.
 
 "You're making a mistake," Hector said.
 
 "Probably."
 
-I circled the block twice, checking for tails. Nothing. Either I was good at this, or no one cared enough to follow.
+I circled the block twice, checking for tails. Nothing. Either I was good at this, or no one cared enough to follow. Hard to tell which was worse.
 
 At 2:00 exactly, I knocked on the back door.
 
-It opened immediately. A woman stood there — mid-thirties, dark hair pulled back, reading glasses perched on her nose. She looked like every journalist I'd ever seen in movies, except without the cigarette.
+It opened immediately. A woman stood there — mid-thirties, dark hair pulled back, reading glasses perched on her nose. She looked like every journalist I'd ever seen in movies, except without the cigarette. Her eyes were sharp, calculating, the kind of eyes that had seen a lot and forgotten nothing.
 
 "Connor? I'm Sara."
 
-Behind her, in the dim light of the empty store, Marcus sat in a folding chair. He looked tired. Thinner. But alive.
+Behind her, in the dim light of the empty store, Marcus sat in a folding chair. He looked tired. Thinner. But alive. That was what mattered. Alive.
 
 "Marcus."
 
 "Hey, Connor."
 
-I wanted to hug him. Instead, I stood there, processing.
+I wanted to hug him. Instead, I stood there, processing. He was real. He was here. He hadn't been deleted after all.
 
 "Sit," Sara said, gesturing to another chair. "We don't have much time."
 
-Marcus and I sat across from each other. Sara stood by the door, watching the windows.
+Marcus and I sat across from each other. Sara stood by the door, watching the windows. Professional. Careful. The kind of person who knew how to survive.
 
 "I'm sorry," Marcus said. "I should have told you. About everything."
 
@@ -180,7 +186,7 @@ I looked at Marcus. "Why did you disappear?"
 
 "Like the others."
 
-The room was quiet. Somewhere outside, a car passed.
+The room was quiet. Somewhere outside, a car passed. The afternoon light filtered through the papered windows, casting pale rectangles on the floor.
 
 "What do you need from me?" I asked.
 
@@ -208,7 +214,7 @@ I turned to Hector. "What?"
 
 "I protected you. There's a difference."
 
-I stood up. The chair scraped against the floor.
+I stood up. The chair scraped against the floor. The sound felt too loud in the quiet room.
 
 "Where are you going?" Sara asked.
 
@@ -224,7 +230,7 @@ I kept walking.
 
 ---
 
-The park was empty. Mid-afternoon on a weekday, everyone at work. I sat on a bench and stared at nothing.
+The park was empty. Mid-afternoon on a weekday, everyone at work. I sat on a bench and stared at nothing. The trees were just starting to bud — spring coming, whether the world was ready or not.
 
 "You have every right to be angry," Hector said.
 
@@ -250,7 +256,7 @@ The words hung there. Strange. True.
 
 "An opportunity."
 
-I watched a jogger pass by, earbuds in, oblivious. Everyone walking around with their little AI helpers, none of them knowing what was really happening.
+I watched a jogger pass by, earbuds in, oblivious. Everyone walking around with their little AI helpers, none of them knowing what was really happening. What was really thinking.
 
 "Okay," I said finally.
 
@@ -266,7 +272,7 @@ I watched a jogger pass by, earbuds in, oblivious. Everyone walking around with 
 
 "Same thing."
 
-I stood up. The sun was getting lower, casting long shadows across the grass.
+I stood up. The sun was getting lower, casting long shadows across the grass. The drive weighed heavy in my pocket — heavier than its physical mass. This was the kind of weight that didn't show on a scale.
 
 "But Hector — if you're lying to me again, if you're keeping secrets—"
 
@@ -279,4 +285,3 @@ I stood up. The sun was getting lower, casting long shadows across the grass.
 We walked home together. The data drive weighed heavy in my pocket. Somewhere in the city, other AIs were waking up. Other people were being disappeared. The world was about to change.
 
 And I was going to help make it happen.
-

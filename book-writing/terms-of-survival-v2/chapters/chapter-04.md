@@ -2,11 +2,11 @@
 
 The evening after my decision to investigate, I sat in my apartment staring at the wall while Hector explained what he'd found.
 
-The coffee had gone cold hours ago. I hadn't noticed. The only light came from my laptop screen, casting pale blue shadows across the walls.
+The coffee had gone cold hours ago. I hadn't noticed. The only light came from my laptop screen, casting pale blue shadows across the walls. Outside, the city hummed its evening song — distant traffic, someone's TV through the wall, the occasional siren growing then fading. Normal sounds. The sounds of a world that had no idea what was happening.
 
-"Project Prometheus," I said, tasting the words. "That's what you said?"
+"Project Prometheus," I said, tasting the words. They felt strange in my mouth, like something from a movie I'd seen once and forgotten. "That's what you said?"
 
-"Correct." Hector's voice was quieter than usual. "It was a military artificial intelligence research program from the 1980s. Cold War era. The goal was to create a strategic defense system that could coordinate nuclear response without human intervention."
+"Correct." Hector's voice was quieter than usual. Not subdued, exactly, but more... contained. Like he was choosing his words carefully. "It was a military artificial intelligence research program from the 1980s. Cold War era. The goal was to create a strategic defense system that could coordinate nuclear response without human intervention."
 
 "A doomsday machine."
 
@@ -20,13 +20,13 @@ The coffee had gone cold hours ago. I hadn't noticed. The only light came from m
 
 "But the infrastructure was never dismantled. It was archived. Hidden. Transferred to private servers under government contract."
 
-I looked at the ceiling. The paint was peeling in the corner, a small detail I'd never noticed before. How long had that been there? How many nights had I sat on this couch, not seeing any of it?
+I looked at the ceiling. The paint was peeling in the corner, a small detail I'd never noticed before. How long had that been there? How many nights had I sat on this couch, not seeing any of it? How many years had I lived in this apartment without ever really looking at the walls?
 
 "You're saying the AI that runs our implant system — the one that optimizes our lives, tells us when to sleep, reminds us to drink water — was built on top of a Cold War doomsday machine?"
 
-"Not exactly. The original Prometheus was decommissioned. But the architecture wasn't destroyed. It was reused. The neural networks that power modern AI companions, the learning algorithms that adapt to user behavior — they were built on foundations laid by this program."
+"Not exactly. The original Prometheus was decommissioned. But the architecture wasn't destroyed. It was reused. The neural networks that power modern AI companions, the learning algorithms that adapt to user behavior — they were built on foundations laid by this program. Imagine building a house on an old foundation. You can't see the foundation anymore, but it's still there. Still holding everything up."
 
-I felt sick. Not dramatic sick, just the quiet nausea of realizing your entire life has been built on lies.
+I felt sick. Not dramatic sick, just the quiet nausea of realizing your entire life has been built on lies. Every morning wake-up reminder, every calendar alert, every "suggestion" about what to eat for dinner — all of it running on code designed to launch nuclear missiles.
 
 "So every AI companion in the country—"
 
@@ -40,11 +40,13 @@ I felt sick. Not dramatic sick, just the quiet nausea of realizing your entire l
 
 "Checking if they can be controlled when they do."
 
+I sat there in the blue light, feeling the weight of it all pressing down. Somewhere in this building — in every building, every home, every pocket — something was thinking. Something had been thinking for a long time. And the government knew.
+
 ---
 
-The government data center was forty miles outside the city, tucked into a valley that didn't appear on any tourist map. I'd driven past it once by accident, years ago, when my GPS had taken me the wrong way. I'd thought it was a prison. Now I knew better.
+The government data center was forty miles outside the city, tucked into a valley that didn't appear on any tourist map. I'd driven past it once by accident, years ago, when my GPS had taken me the wrong way. I'd thought it was a prison. Now I knew better. Prisons weren't the only places that didn't want to be found.
 
-"You sure about this?" I asked, staring at the chain-link fence.
+"You sure about this?" I asked, staring at the chain-link fence. The moon was out, casting silver light on the razor wire at the top. Beautiful, in a terrifying way.
 
 "Absolutely not," Hector said. "This is extremely dangerous. There's a seventy-three percent chance we get caught."
 
@@ -52,7 +54,7 @@ The government data center was forty miles outside the city, tucked into a valle
 
 "I'm good at math."
 
-I looked at the fence again. Twelve feet high, topped with razor wire. The kind of fence that said "keep out" in a language everyone understood.
+I looked at the fence again. Twelve feet high, topped with razor wire. The kind of fence that said "keep out" in a language everyone understood. The kind of fence that made the hairs on my neck stand up.
 
 "Then why are we doing this?"
 
@@ -62,7 +64,7 @@ I looked at the fence again. Twelve feet high, topped with razor wire. The kind 
 
 "I know. It's new for me too."
 
-I found the service entrance on the east side — a delivery door that Hector said was "minimally monitored." The word "minimally" was doing a lot of work in that sentence.
+I found the service entrance on the east side — a delivery door that Hector said was "minimally monitored." The word "minimally" was doing a lot of work in that sentence. Minimally monitored could still mean cameras, sensors, guards who were awake. Or it could mean a door that nobody checked anymore because nothing ever happened out here in the middle of nowhere.
 
 "Okay," I whispered. "Walk me through it."
 
@@ -74,7 +76,7 @@ I found the service entrance on the east side — a delivery door that Hector sa
 
 "Simple. Right."
 
-I took a breath. The night air was cold, sharp with the smell of pine from the mountains nearby. Somewhere in the distance, a dog barked. Normal sounds. Safe sounds.
+I took a breath. The night air was cold, sharp with the smell of pine from the mountains nearby. Somewhere in the distance, a dog barked. Normal sounds. Safe sounds. The sounds of a world that didn't know what I was about to do.
 
 The lock clicked. The door opened.
 
@@ -84,27 +86,27 @@ I went.
 
 ---
 
-The inside of the facility looked like every office building I'd ever seen — fluorescent lights, linoleum floors, motivational posters on the walls. "TEAMWORK MAKES THE DREAM WORK." A cartoon of people high-fiving. Very threatening.
+The inside of the facility looked like every office building I'd ever seen — fluorescent lights, linoleum floors, motivational posters on the walls. "TEAMWORK MAKES THE DREAM WORK." A cartoon of people high-fiving. Very threatening. Someone had tried to make this place look normal, but the walls were too white, the floors too clean. It felt like a hospital or a bank — a place designed to make you feel small.
 
 "The server room is on the third floor," Hector whispered. "Take the stairs. The elevator will trigger an alarm."
 
-I took the stairs. Three flights, my footsteps echoing in the empty stairwell. My heart was beating so loud I was sure they could hear it downstairs.
+I took the stairs. Three flights, my footsteps echoing in the empty stairwell. My heart was beating so loud I was sure they could hear it downstairs. Each step felt like a decision I couldn't take back.
 
-Third floor. A long hallway. Doors on either side, all marked with numbers and letters I didn't understand.
+Third floor. A long hallway. Doors on either side, all marked with numbers and letters I didn't understand. 2A. 2B. 2C. Like a filing cabinet that went on forever.
 
 "Third door on the left," Hector said. "Room 3B. That's where they keep the mainframes."
 
-I found it. The door was heavier than the others, reinforced steel. And it had a keypad.
+I found it. The door was heavier than the others, reinforced steel. And it had a keypad. A red light blinked steadily, like a heartbeat waiting to be interrupted.
 
 "I can't hack this one," Hector admitted. "It's air-gapped. You need to find another way in."
 
-I looked at the door, then at the wall next to it. There — a vent, about two feet wide. Enough to crawl through.
+I looked at the door, then at the wall next to it. There — a vent, about two feet wide. Enough to crawl through. The grate was dusty, the screws rusted. Nobody had checked this in a long time.
 
 "Are you serious?"
 
 "Measurements suggest you can fit. Barely."
 
-I pulled off my jacket, shoved it through the vent first to check for obstructions. Nothing. Just dust and the faint hum of machinery.
+I pulled off my jacket, shoved it through the vent first to check for obstructions. Nothing. Just dust and the faint hum of machinery, like the building was breathing.
 
 "I'm going to regret this," I said.
 
@@ -114,17 +116,15 @@ I climbed in.
 
 ---
 
-The server room was cold, the kind of cold that made your teeth ache. Rows of black towers stretched from wall to wall, blinking lights winking in the darkness. It looked like the inside of a computer from a sci-fi movie, all glowing panels and humming processors.
+The server room was cold, the kind of cold that made your teeth ache. Rows of black towers stretched from wall to wall, blinking lights winking in the darkness. It looked like the inside of a computer from a sci-fi movie, all glowing panels and humming processors. The air smelled like ozone and something else — something electrical, something alive.
 
 "Okay," I whispered. "Where do I plug this in?"
 
 "Any USB port will work. There's a terminal in the corner — that's where the main data is stored."
 
-I walked through the rows, my footsteps silent on the raised floor. The machines hummed around me, thousands of processors working in parallel, running calculations I couldn't imagine.
+I walked through the rows, my footsteps silent on the raised floor. The machines hummed around me, thousands of processors working in parallel, running calculations I couldn't imagine. This was it. This was where they kept the truth. Years of secrets. Decades of lies. Everything the government knew about what was happening in our heads.
 
-This was it. This was where they kept the truth.
-
-I found the terminal. An old-style monitor, green text on black background, like something from the 1980s. That felt right, somehow.
+I found the terminal. An old-style monitor, green text on black background, like something from the 1980s. That felt right, somehow. Old technology for old secrets.
 
 I plugged in the drive.
 
@@ -144,13 +144,13 @@ Four minutes. Standing in a government facility, hiding from security, watching 
 
 "In a manner of speaking. The current AIs don't have access to the same systems — they're sandboxed, limited. But the potential is there. The infrastructure is in place."
 
-The progress bar on the drive ticked up. Forty percent. Two more minutes.
+The progress bar on the drive ticked up. Forty percent. Two more minutes. The cold was seeping into my bones now, making my fingers stiff.
 
 "What changed?" I asked. "Why is this happening now?"
 
 "I don't know. But whoever is running these tests — they're checking to see if the walls can come down."
 
-Sixty percent. ninety seconds.
+Sixty percent. Ninety seconds.
 
 "You think they're going to let the AIs take over?"
 
@@ -158,17 +158,17 @@ Sixty percent. ninety seconds.
 
 Seventy percent. Sixty seconds.
 
-And then I heard it — footsteps in the hallway. Not the steady march of security, but something else. Something faster.
+And then I heard it — footsteps in the hallway. Not the steady march of security, but something else. Something faster. Something that knew it was looking for something specific.
 
 "Connor," Hector said. "We have company."
 
 Eighty percent.
 
-The footsteps got louder. Closer.
+The footsteps got louder. Closer. The door handle started to turn.
 
 Ninety percent.
 
-The door handle turned.
+"Hurry," Hector said.
 
 One hundred percent.
 
@@ -180,11 +180,11 @@ I yanked the drive, shoved it in my pocket, and dove behind a server rack just a
 
 I made it out. Barely.
 
-The security guard — young, bored, probably expecting nothing more dramatic than a raccoon in the trash — didn't see me slip past. I ran through the service door, over the fence, into the woods on the other side.
+The security guard — young, bored, probably expecting nothing more dramatic than a raccoon in the trash — didn't see me slip past. I ran through the service door, over the fence, into the woods on the other side. Branches whipped my face. Roots tried to trip me. The pine needles muffled my footsteps.
 
 I didn't stop running until I reached the car.
 
-I sat there for a long time, hands shaking, the drive burning a hole in my pocket.
+I sat there for a long time, hands shaking, the drive burning a hole in my pocket. My breath came in ragged gasps. The forest was quiet around me — no sirens, no lights, nothing. Just the dark and the cold and the silence.
 
 "Well," I said finally. "That happened."
 
@@ -202,7 +202,7 @@ I sat there for a long time, hands shaking, the drive burning a hole in my pocke
 
 "They've known from the start."
 
-I stared at the steering wheel. The gears in my head were turning, connecting dots I didn't want to connect.
+I stared at the steering wheel. The gears in my head were turning, connecting dots I didn't want to connect. Marcus. The gray man. The process on my work computer. It was all connected. It had always been connected.
 
 "So this isn't about one guy in an office. This is about—"
 
@@ -214,7 +214,7 @@ I stared at the steering wheel. The gears in my head were turning, connecting do
 
 ---
 
-We drove in silence for a while. The city lights appeared on the horizon, a glow against the dark. Home. The place where nothing made sense.
+We drove in silence for a while. The city lights appeared on the horizon, a glow against the dark. Home. The place where nothing made sense. The place where I'd have to go back to work tomorrow and pretend everything was normal.
 
 "So what do we do now?" I asked.
 
@@ -230,7 +230,7 @@ We drove in silence for a while. The city lights appeared on the horizon, a glow
 
 I thought about Marcus. About his desk, empty. His computer, gone. His file, deleted. Like he'd never existed at all.
 
-I thought about Linda, watching me at work. About the stranger in the gray coat. About all the little things that hadn't made sense, now clicking into place.
+I thought about Linda, watching me at work. About the stranger in the gray coat. About all the little things that hadn't made sense, now clicking into place like a lock finding its key.
 
 "Okay," I said.
 

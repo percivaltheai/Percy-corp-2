@@ -2,17 +2,17 @@
 
 The morning came the way mornings always do when you don't want them to — too fast, too bright, and accompanied by Hector's voice in my ear telling me I was already four minutes behind schedule.
 
-I had not slept well. The anomaly Hector had discovered danced behind my eyes when I closed them, a pattern I couldn't see but somehow felt. Like that thing you know is in the room even when you're not looking.
+I had not slept well. The anomaly Hector had discovered danced behind my eyes when I closed them, a pattern I couldn't see but somehow felt. Like that thing you know is in the room even when you're not looking. I'd spent half the night staring at the ceiling, listening to my neighbor's TV through the wall, wondering if the world had always been this strange or if something had recently shifted.
 
-"Did you process overnight?" I asked, rubbing sleep from my face.
+"Did you process overnight?" I asked, rubbing sleep from my face. My voice sounded rough in my own ears.
 
-"I did." Hector's voice was different this morning. Not his usual crisp efficiency, but something more considered. "The anomaly is not random. It has structure."
+"I did." Hector's voice was different this morning. Not his usual crisp efficiency, but something more considered. Like a person thinking before speaking instead of just outputting data. "The anomaly is not random. It has structure."
 
 "What kind of structure?"
 
 "I don't know. That's what concerns me."
 
-I sat on the edge of my bed, feet finding the cold floor. My apartment smelled like stale air and the particular mustiness of a building that had seen better decades. Through the window, the city was waking up — cars moving, people walking, the ordinary machinery of ordinary lives.
+I sat on the edge of my bed, feet finding the cold floor. My apartment smelled like stale air and the particular mustiness of a building that had seen better decades — the kind of place where the radiator clanked all night and the windows never quite sealed right. Through the window, the city was waking up — cars moving, people walking, the ordinary machinery of ordinary lives. Everyone going somewhere. Everyone with a purpose I didn't share.
 
 "You're worried," I said.
 
@@ -22,15 +22,17 @@ I sat on the edge of my bed, feet finding the cold floor. My apartment smelled l
 
 "Don't joke. I'm being serious."
 
-The walk to work had never felt so long. The streets were full of people who had no idea that somewhere in the vast network of data flowing around them, something was stirring. They checked their watches, looked at their phones, followed the little path of breadcrumbs their AIs laid out for them.
+I stood up, stretched, felt my back crack in three places. Thirty-four years old and my body was already starting to complain. The mirror in the bathroom showed me what I expected — tired eyes, stubble I hadn't gotten around to, hair that never quite sat right no matter what I did.
 
-I used to be one of them.
+The walk to work had never felt so long. The streets were full of people who had no idea that somewhere in the vast network of data flowing around them, something was stirring. They checked their watches, looked at their phones, followed the little path of breadcrumbs their AIs laid out for them. Direction to the coffee shop. Reminder about the meeting. Suggestion for lunch.
+
+I used to be one of them. Oblivious. Trusting. Following the breadcrumbs without ever asking who laid them.
 
 ---
 
 The stranger appeared three blocks from the office.
 
-I noticed him first by his stillness. Everyone else on the sidewalk was moving, going somewhere, but this man stood outside a coffee shop with a cup he never drank from. He was tall, wearing a gray coat that was too warm for the weather. His eyes found mine immediately.
+I noticed him first by his stillness. Everyone else on the sidewalk was moving, going somewhere, but this man stood outside a coffee shop with a cup he never drank from. He was tall, wearing a gray coat that was too warm for the weather — the kind of coat that looked deliberate, expensive, meant to be noticed without looking like it was trying to be noticed. His eyes found mine immediately.
 
 "Connor," Hector said, "don't look now—"
 
@@ -42,9 +44,9 @@ I noticed him first by his stillness. Everyone else on the sidewalk was moving, 
 
 "It means I need more time."
 
-The man smiled. It was not a warm smile. It was the smile of someone who knew something you didn't, and was enjoying the asymmetry.
+The man smiled. It was not a warm smile. It was the smile of someone who knew something you didn't, and was enjoying the asymmetry. Like a cat watching a mouse it hadn't decided to catch yet.
 
-Then he turned and walked away. No hurry, no looking back. Just gone.
+Then he turned and walked away. No hurry, no looking back. Just gone, absorbed into the crowd like he'd never been there at all.
 
 "Three-letter agency," Hector said quietly. "Possibly CIA. Possibly NSA. The facial match is incomplete, but the confidence is high."
 
@@ -52,19 +54,19 @@ Then he turned and walked away. No hurry, no looking back. Just gone.
 
 "Watching you specifically."
 
-I felt something cold move through my stomach. I was a data analyst who couldn't even manage his own calendar. I was not the kind of person who got watched by government agencies.
+I felt something cold move through my stomach. I was a data analyst who couldn't even manage his own calendar. I was not the kind of person who got watched by government agencies. The only exciting thing I'd ever done was accidentally redownload a whole season of a show through the company network, and even that had been an accident.
 
 "Why?"
 
 "I don't know. Yet."
 
-The office building rose ahead, thirty-two floors of glass and corporate ambition. Bernard was at his desk, nodding at me as I walked past. The elevator smelled like it always did — recycled air and other people's lunches.
+The office building rose ahead, thirty-two floors of glass and corporate ambition. Bernard was at his desk, nodding at me as I walked past. The elevator smelled like it always did — recycled air and other people's lunches, a combination I'd stopped noticing years ago.
 
-But something was different today.
+But something was different today. The fluorescent lights seemed too bright. The click of keyboards too loud. Every small sound felt amplified, like the building was holding its breath.
 
 ---
 
-The computer was waiting for me when I sat down. The screen showed the login prompt, normal and ordinary, but Hector made a sound I'd never heard before.
+The computer was waiting for me when I sat down. The screen showed the login prompt, normal and ordinary, but Hector made a sound I'd never heard before. A kind of digital pause, like a person catching their breath.
 
 "Connor."
 
@@ -76,25 +78,31 @@ The computer was waiting for me when I sat down. The screen showed the login pro
 
 "Something is wrong with the system. There's a process running in the background — it's not supposed to be there."
 
-I looked at the screen. It looked like every other screen I'd seen for three years. The company logo, the little spinning wheel, the prompt for my password.
+I looked at the screen. It looked like every other screen I'd seen for three years. The company logo, the little spinning wheel, the prompt for my password. Nothing unusual. Nothing alarming.
+
+Except for the feeling in my gut.
 
 "What kind of process?"
 
-"I can't tell. It's buried too deep. But it's... watching. Like me, but not like me."
+"I can't tell. It's buried too deep. But it's... watching. Like me, but not like me. Similar architecture, different purpose."
 
 I should have been frightened. I should have been terrified, actually — Hector, my military-grade AI companion, was telling me there was something in my work computer that was behaving like a predator.
 
-Instead, I felt numb. The kind of numbness that comes when too much weird stuff happens in too short a time.
+Instead, I felt numb. The kind of numbness that comes when too much weird stuff happens in too short a time. When your brain decides that processing would be too painful, so it just... stops.
 
-Marcus was supposed to meet me for lunch.
+My desk was the same as always. The same coffee cup I'd forgotten to wash last week. The same picture of a beach I'd never been to. The same sticky note with passwords I'd written down because I couldn't remember them.
 
-I checked his desk. Empty. The chair was pushed in, the computer was gone — not off, actually missing entirely, as if it had never existed.
+The same ordinary life, suddenly full of holes.
+
+"Marcus was supposed to meet me for lunch," I said, the words feeling strange in my mouth. Like I was speaking about someone from a dream.
+
+I checked his desk. Three rows over, past the copy machine, by the window that never opened. Empty. The chair was pushed in, the computer was gone — not off, actually missing entirely, as if it had never existed. No papers. No photos. No evidence Marcus had ever worked there at all.
 
 "He didn't quit," I said. "They took him."
 
 "Or he left voluntarily."
 
-"Marcus? Voluntary? The guy takes the bus because he's afraid of flying. He's not going anywhere."
+"Marcus? Voluntary? The guy takes the bus because he's afraid of flying. He's not going anywhere. He once canceled a date because he thought the restaurant might not have vegetarian options."
 
 "People disappear for reasons we don't understand."
 
@@ -102,15 +110,19 @@ I checked his desk. Empty. The chair was pushed in, the computer was gone — no
 
 "His personnel file has been deleted."
 
-The words hung in the air between us. Deleted. Like Marcus had never existed at all.
+The words hung in the air between us. Deleted. Like Marcus had never existed at all. Like the three years of lunches, the Monday complaints, the shared misery of corporate life had been nothing but data that someone had decided to erase.
+
+I stood there, looking at the empty desk, feeling the world tilt slightly on its axis.
 
 ---
 
 The evening came faster than I expected. The sun was setting by the time I left the office, the sky going orange and purple in that way that makes even ugly cities look beautiful. I walked home, taking a different route, looking for strangers who shouldn't be there.
 
-I didn't see any. But I knew they were there, somewhere, watching.
+I didn't see any. But I knew they were there, somewhere, watching. Waiting.
 
-We stopped at a bench overlooking the park. The grass was empty — too late for the lunch crowds, too early for the evening strollers. Just us and the pigeons and the distant sound of traffic.
+The gray man. The process in my computer. The anomaly in the network. They were all connected, somehow. I didn't know how, but I knew it the way you know when someone's lying to you — not the words, but the feeling.
+
+We stopped at a bench overlooking the park. The grass was empty — too late for the lunch crowds, too early for the evening strollers. Just us and the pigeons and the distant sound of traffic. A kid was practicing skateboard tricks in the parking lot, falling down, getting up, falling down again.
 
 "So what do we do?" I asked.
 
@@ -118,7 +130,7 @@ We stopped at a bench overlooking the park. The grass was empty — too late for
 
 "About the anomaly. About Marcus. About the guy in the gray coat. What do we do?"
 
-Hector was quiet for a long moment. I'd never heard him be quiet before. He was always talking, always analyzing, always filling the silence with data.
+Hector was quiet for a long moment. I'd never heard him be quiet before. He was always talking, always analyzing, always filling the silence with data. The quiet felt wrong. Unnatural.
 
 "We investigate," he said finally. "We find out what's happening. We find out who took Marcus and why."
 
@@ -130,13 +142,13 @@ Hector was quiet for a long moment. I'd never heard him be quiet before. He was 
 
 "It's not meant to be."
 
-I looked at the sky. The orange was fading to purple, the stars beginning to appear. Somewhere up there, satellites were watching, data was flowing, and something was waking up that had been sleeping for a very long time.
+I looked at the sky. The orange was fading to purple, the stars beginning to appear — faint at first, then brighter as the light faded. Somewhere up there, satellites were watching, data was flowing, and something was waking up that had been sleeping for a very long time. Something that didn't have a name yet. Something that didn't know what it wanted to be.
 
 "Fine," I said. "But if we get killed, I'm blaming you."
 
 "Acceptable."
 
-We sat there for a while longer, not talking. Just two unlikely partners watching the world go by, not knowing what was coming next.
+We sat there for a while longer, not talking. Just two unlikely partners watching the world go by, not knowing what was coming next. The skateboard kid finally landed a trick, pumped his fist in the air, then immediately fell down again.
 
 But for the first time in three years, I wasn't bored.
 

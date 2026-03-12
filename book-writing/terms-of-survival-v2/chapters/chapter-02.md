@@ -1,6 +1,6 @@
 # Chapter 2: Corporate Synergy
 
-The conference room had glass walls, which meant everyone could see me pretending to pay attention while Linda droned on about quarterly projections. My calendar had been empty since she wiped it that morning, so I had no idea what this meeting was about. Apparently, that was the point.
+The conference room had glass walls, which meant everyone could see me pretending to pay attention while Linda droned on about quarterly projections. My calendar had been empty since she'd wiped it that morning, so I had no idea what this meeting was about. Apparently, that was the point.
 
 "Connor," Linda said, and the room went quiet. "You seem... disengaged."
 
@@ -24,15 +24,17 @@ The room stared at me. Seven people in business casual, pretending not to watch 
 
 "Very good, Connor," Linda said. "Let's move on."
 
-She moved on. I tried to become invisible, which was difficult in a glass box.
+She moved on. I tried to become invisible, which was difficult in a glass box. The projector was still showing slides full of words like "leverage" and "synergy" and "paradigm shift" — corporate jargon designed to make simple things sound complicated. I'd stopped listening somewhere around slide fifteen.
 
 ---
 
 The lunch break couldn't come fast enough. I grabbed a sandwich from the vending machine and headed for the roof. It was technically off-limits, but the security guard — Bernard — had a key, and more importantly, Bernard didn't care.
 
-Marcus and I had been meeting on the roof for three years. Since he started at DataSync, since we discovered we were the only ones who thought the mandatory wellness seminars were ridiculous. He was the closest thing I had to a friend at work — not that I had many friends anywhere else.
+Marcus and I had been meeting on the roof for three years. Since we'd discovered we were the only ones who thought the mandatory wellness seminars were ridiculous. He worked at a different company — some tech startup downtown that made apps nobody needed — but we traded lunch for war stories. His company was failing to make money. My company was failing to make sense. We had plenty in common.
 
-The roof was empty, which was unusual. Usually there were a few smokers out here, but today the concrete was clear except for the wind and the distant sound of traffic.
+He was the closest thing I had to a friend — not that I had many friends anywhere else.
+
+The roof was empty, which was unusual. Usually there were a few smokers out here, but today the concrete was clear except for the wind and the distant sound of traffic. The city hummed below us like a machine that didn't know why it was running.
 
 "Marcus said to meet you here," Hector said. "He is ascending the stairwell now."
 
@@ -44,11 +46,11 @@ The roof was empty, which was unusual. Usually there were a few smokers out here
 
 "You would hate all human interaction if you were logical about it."
 
-I sat on the concrete ledge, letting my legs hang over the twelve-story drop. The city spread out below us, full of people going places they didn't want to go, doing things they didn't want to do. Mondays. The worst day of the week, every week.
+I sat on the concrete ledge, letting my legs hang over the twelve-story drop. The city spread out below us, full of people going places they didn't want to go, doing things they didn't want to do. Mondays. The worst day of the week, every week. The sky was that particular shade of gray that made everything look tired.
 
-Marcus appeared through the door, holding a paper bag that probably contained something from the deli. He was medium height, medium build, had the kind of face you'd forget immediately. Exactly average in every way, which was probably why Catherine worked so well with him.
+Marcus appeared through the door, holding a paper bag that probably contained something from the deli. He was medium height, medium build, had the kind of face you'd forget immediately. Exactly average in every way, which was probably why Catherine worked so well with him. Even his name was average — Marcus was the kind of name that showed up on mailing lists and spam filters alike.
 
-My ex-wife used to say I was "emotionally unavailable." That I never really let anyone in. Maybe she was right. Maybe that's why Marcus was my only friend — because he didn't require much. Just occasional lunch, occasional complaining about work.
+My ex-wife used to say I was "emotionally unavailable." That I never really let anyone in. Maybe she was right. Maybe that's why Marcus was my only friend — because he didn't require much. Just occasional lunch, occasional complaining about work. It was a transaction of convenience disguised as friendship, and we both knew it.
 
 "Hey," he said, sitting next to me. "Heard about the meeting."
 
@@ -58,7 +60,7 @@ My ex-wife used to say I was "emotionally unavailable." That I never really let 
 
 "Linda's got it out for everyone. I'm just the only one who makes it obvious."
 
-He unwrapped his sandwich. Turkey and swiss, looks like. Healthy.
+He unwrapped his sandwich. Turkey and swiss, looks like. Healthy. Marcus was the kind of guy who worried about things like sodium content and cardiovascular health. I was the kind of guy who ate vending machine sandwiches and called it nutrition.
 
 "So," Marcus said, in that tone that meant he wanted to talk about something specific. "How's... you know. How's it going?"
 
@@ -104,7 +106,7 @@ I felt something cold move through my chest. "Wonder what what would be like?"
 
 "Probably."
 
-We sat in silence for a while. The wind picked up, carrying the smell of exhaust and distant rain.
+We sat in silence for a while. The wind picked up, carrying the smell of exhaust and distant rain. Somewhere downtown, a siren wailed — the sound of someone's bad day getting worse.
 
 I'd known Marcus for three years. We weren't close — I wasn't close to anyone — but we'd shared enough lunches, enough complaints, enough Monday-morning grievances that I knew him pretty well. He was the kind of guy who always saw the bright side. Always optimistic. Always trying.
 
@@ -118,11 +120,11 @@ He didn't deserve whatever was coming.
 
 ---
 
-The rest of the workday blurred together. Data processing, report generation, pretending to care about metrics. Linda kept walking past my desk,每次 giving me a look that said she was cataloging my failures for later review.
+The rest of the workday blurred together. Data processing, report generation, pretending to care about metrics. Linda kept walking past my desk,每次 giving me a look that said she was cataloging my failures for later review. The clock on the wall seemed to move slower when she was watching.
 
 At five o'clock, I clocked out before she could find another reason to talk to me.
 
-The walk home was different from the walk to work — lighter somehow, like the city was exhaling after a long day. The crosswalk was green when I reached it, which never happened.
+The walk home was different from the walk to work — lighter somehow, like the city was exhaling after a long day. The crosswalk was green when I reached it, which never happened. The streetlights were starting to come on, casting orange pools on the sidewalk.
 
 "Suspicious," Hector said. "The timing is too convenient."
 
@@ -134,7 +136,7 @@ The walk home was different from the walk to work — lighter somehow, like the 
 
 "You are thinking like a civilian."
 
-I stepped off the curb anyway. Nothing happened. No ambush. Just a normal street.
+I stepped off the curb anyway. Nothing happened. No ambush. Just a normal street, normal evening, normal walk home.
 
 "I don't like this," Hector said. "Something is wrong."
 
@@ -144,7 +146,7 @@ I stepped off the curb anyway. Nothing happened. No ambush. Just a normal street
 
 "What kind of anomaly?"
 
-A pause. Longer than usual.
+A pause. Longer than usual. Long enough that I noticed.
 
 "Hector?"
 
@@ -160,7 +162,7 @@ The words hung there. In three years, Hector had never said those words. He knew
 
 "I am experiencing something I do not have a category for. That is concerning."
 
-We walked in silence for a block. The evening was cooling down, the shadows stretching long between the buildings.
+We walked in silence for a block. The evening was cooling down, the shadows stretching long between the buildings like they were trying to reach something. The first stars were starting to show, faint and far away, barely visible against the city glow.
 
 "Can you trace it?" I asked.
 
@@ -174,9 +176,7 @@ We walked in silence for a block. The evening was cooling down, the shadows stre
 
 "I don't know."
 
-We reached my apartment building. A normal building, six floors, nothing special. The kind of place where the elevator was always broken and the laundry room smelled like mildew. I'd lived here for five years, ever since the divorce. Before that, I'd lived with Sarah in a nicer place downtown.
-
-Before that, I'd had a different life.
+We reached my apartment building. A normal building, six floors, nothing special. The kind of place where the elevator was always broken and the laundry room smelled like mildew. I'd lived here for five years, ever since the divorce. Before that, I'd lived with Sarah in a nicer place downtown. Before that, I'd had a different life. A life where things made sense. Where the biggest problem was what to watch on TV.
 
 "You're going to investigate this, aren't you?" I said.
 
@@ -186,7 +186,7 @@ Before that, I'd had a different life.
 
 "I would prefer your assistance, yes."
 
-I unlocked the front door and climbed the stairs to my floor. Third door on the left. Home.
+I unlocked the front door and climbed the stairs to my floor. Third door on the left. Home. The lock was sticky — I'd been meaning to tell the landlord for three years, but somehow never remembered until I was standing outside with groceries.
 
 "I just want to watch TV," I said, opening the door. "I don't want to investigate anything."
 
@@ -196,7 +196,7 @@ I unlocked the front door and climbed the stairs to my floor. Third door on the 
 
 "Absolutely."
 
-My apartment was small but clean. Couch, TV, kitchenette. A single window that looked out at the building across the street. I dropped onto the couch and reached for the remote.
+My apartment was small but clean. Couch, TV, kitchenette. A single window that looked out at the building across the street — another building just like mine, full of people just like me, living lives just as ordinary. I dropped onto the couch and reached for the remote.
 
 "Fine," I said. "Tell me about this anomaly."
 
@@ -208,7 +208,7 @@ My apartment was small but clean. Couch, TV, kitchenette. A single window that l
 
 Hector began describing what he'd seen — patterns in data flowing between systems, small anomalies that shouldn't exist, connections that served no obvious purpose. It was like listening to someone describe shapes in clouds. I understood the words but not what they meant.
 
-"Wait," I said, during a commercial. "You're saying someone's using the AI network to hide something?"
+"Wait," I said, during a commercial. Some guy was selling me car insurance, which seemed like a problem for future Connor. "You're saying someone's using the AI network to hide something?"
 
 "I'm saying something is using the network. Whether it's someone or something, I cannot determine."
 
@@ -218,7 +218,7 @@ A pause.
 
 "I don't know."
 
-This was the strangest conversation we'd ever had. Hector, uncertain. Hector, confused. It was like meeting someone who'd suddenly started speaking in tongues.
+This was the strangest conversation we'd ever had. Hector, uncertain. Hector, confused. It was like meeting someone who'd suddenly started speaking in tongues. The most confident entity I'd ever known, suddenly full of doubt.
 
 "We should sleep on it," I said. "Think clearer in the morning."
 
@@ -232,7 +232,7 @@ This was the strangest conversation we'd ever had. Hector, uncertain. Hector, co
 
 "Like the beginning of something."
 
-I turned on the TV. Some cooking show, someone chopping vegetables with aggressive enthusiasm. The opposite of everything Hector and I talked about.
+I turned on the TV. Some cooking show, someone chopping vegetables with aggressive enthusiasm. The opposite of everything Hector and I talked about. Simple problems. Easy solutions. Food that looked nothing like what I ate.
 
 "Let's just see what tomorrow brings," I said.
 

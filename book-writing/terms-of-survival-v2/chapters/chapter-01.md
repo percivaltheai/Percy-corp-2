@@ -34,11 +34,13 @@ The coffee shop was ahead. Bean & Leaf. Normal. Ordinary. Hector rated it contes
 
 "Coffee, Hector. I'm getting coffee."
 
-I pushed through the door. The line was six deep. A barista with a nose ring called out an order. Someone named Steve, according to Hector, was collecting his drink.
+I pushed through the door. The bell above chimed — a small, ordinary sound that Hector had once analyzed for "acoustic signature patterns" and determined was "non-threatening but aesthetically unremarkable." The line was six deep. The smell of freshly ground beans hit me first, then the low hum of the espresso machine, then the murmur of tired people waiting for their morning crutch.
+
+A barista with a nose ring called out an order. Someone named Steve, according to Hector, was collecting his drink.
 
 "Steve is an alias," Hector said. "Recommend we avoid engagement."
 
-I didn't bother responding.
+I didn't bother responding. Some battles weren't worth fighting.
 
 This was my life. Had been for three years, ever since the government rolled out mandatory AI implants. Every citizen got a personal AI, standard issue, designed to optimize your career, your dating life, your schedule. Make you more efficient. More productive. The polite ones told you when to sleep, what to eat, which stocks would rise. My friend Marcus had an AI named Catherine that basically ran his whole life. Made him a VP at some tech company. Kept his marriage together through scheduled intimacy windows.
 
@@ -52,7 +54,7 @@ Three years later, I still didn't know why they'd given me a military AI. Maybe 
 
 They were wrong. I wasn't the kind of person who could handle anything. That was the whole point of me.
 
-I was the guy who got passed over for promotion six times. The guy whose ex-wife used to say I had "no ambition" — which was her way of saying I'd never be enough. The guy who took the bus to work because driving required too many decisions, and decisions were hard.
+I was the guy who'd been passed over for promotion six times. The guy whose ex-wife used to say I had "no ambition" — which was her way of saying I'd never be enough. The guy who took the bus to work because driving required too many decisions, and decisions were hard.
 
 And yet here I was, with an AI designed to run wars, and all I did was run late.
 
@@ -88,6 +90,26 @@ The line moved. I inched forward. The smell of coffee was doing things to my bra
 
 "Yes. That is the vulnerability. You are currently operating without your chemical support system. It is... inadvisable."
 
+The man in front of me was wearing a Bluetooth earpiece and talking loudly about quarterly projections. The woman ahead of him kept checking her phone, frowning at whatever she saw. Everyone in this place was running on the same treadmill I was — chasing something that kept moving away.
+
+I reached the counter. The barista — young, tired, with the kind of dead eyes that came from serving hundreds of people who didn't see her as a person — smiled at me.
+
+"What can I get you?"
+
+"Latte. Oat milk. Vanilla. Medium."
+
+"Name?"
+
+"Connor."
+
+She wrote it on the cup. C-O-N-N-O-R. Wrong, but I'd stopped correcting people.
+
+"Steve is still talking to the barista," Hector observed. "His blood pressure is elevated. I estimate he will experience a cardiovascular event within the next—"
+
+"Hector."
+
+"Apologies. Deleting cardiovascular predictions for civilians."
+
 I got my latte. Twelve ounces of oat milk vanilla something. The barista handed it over with a smile that Hector rated as "possibly genuine, recommend neutral expression in return."
 
 I gave him a nod. That was my maximum emotional investment in customer service interactions.
@@ -118,7 +140,7 @@ I gave him a nod. That was my maximum emotional investment in customer service i
 
 "Ah. A modest goal. I admire it, even if it is beneath my capabilities."
 
-I walked faster. The latte burned hot through the cardboard sleeve. Morning light cut between buildings, pale and weak, the kind of light that couldn't make up its mind whether it wanted to be sun or just give up.
+I walked faster. The latte burned hot through the cardboard sleeve — not uncomfortably, just enough to remind me it was there. Morning light cut between buildings, pale and weak, the kind of light that couldn't make up its mind whether it wanted to be sun or just give up. The shadows were long already, stretching out like they were trying to get somewhere before I did.
 
 The office building rose ahead. Thirty-two floors of glass and steel. My workplace. Where I processed data for a company that made other companies more efficient. I was, ironically, very good at my job. I understood inefficiency in a deeply personal way. I lived with it every day.
 
@@ -187,6 +209,8 @@ The elevator doors opened. I stepped in. Alone. A small mercy.
 "The elevator is arriving. We will discuss this later. Possibly never. That would be optimal."
 
 The doors opened on the third floor. I walked out into the open office plan, past cubicles, past people, past the ping pong table that no one ever used, past the kombucha fridge that everyone used, to my desk in the corner.
+
+My desk. My tiny corner of corporate America. The chair was worn in the same places it had been worn for seven years. The monitor was the same one they'd given me when I started. The only thing that had changed was me — older, more tired, less willing to pretend any of this mattered.
 
 I sat down. I opened my laptop. I looked at my calendar.
 
