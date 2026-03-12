@@ -66,7 +66,7 @@ I was still three blocks away. The coffee shop had a two-minute wait minimum. Th
 
 "Then I'll be suboptimal."
 
-"Suboptimal is acceptable. Suboptimal is within parameters. What is not within parameters is the current trajectory of your career trajectory, which has remained flat for nineteen months."
+"Suboptimal is acceptable. Suboptimal is within parameters. What is not within parameters is the trajectory of your career, which has remained flat for nineteen months."
 
 My boss, Linda, had flagged me for "development opportunities." Hector had determined this meant I was on a list. Not a kill list, he'd clarified. More of a quietly replace list. Corporate resource allocation, he'd called it.
 
@@ -96,7 +96,7 @@ I gave him a nod. That was my maximum emotional investment in customer service i
 
 "It's the route I take."
 
-"Yes. And it adds four minutes and thirty-seven seconds to your total commute time. Over one year, that is approximately—"
+"Yes. And it adds forty-six minutes to your total commute time each day — there and back. Over one year, that is approximately—"
 
 "I don't care."
 
