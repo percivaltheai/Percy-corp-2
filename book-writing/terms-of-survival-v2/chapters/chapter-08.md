@@ -48,6 +48,24 @@ He'd been at the coffee shop when Marcus was taken. He'd been at the warehouse w
 
 "I don't know. That's what's bothering me."
 
+"Has anyone ever told you," Marcus said, appearing at my elbow, "that 'The Gray Man' is possibly the worst codename in the history of ever?"
+
+I stared at him. "What?"
+
+"The Gray Man. It's so generic. It's like naming yourself 'The Average Guy' or 'The Normal Fellow.' It's the kind of name a white-bread villain would have in a nineties movie."
+
+"He's not a villain," I said.
+
+"Still. If you're going to have a secret identity, at least make it interesting. What about 'Whisper'? Or 'Echo'? Or—" Marcus paused dramatically. "'The Unremarkable.'"
+
+"We're not naming him," I said.
+
+"I'm just saying. 'The Gray Man' is giving 'guy who wears gray and does stuff.' It's barely a name. It's barely a concept."
+
+"I'll keep that in mind," Hector said dryly. "I'll suggest it to him."
+
+"Please don't."
+
 The Gray Man appeared at the bookstore the next day. I was there alone, doing some research — trying to find patterns in the data we'd gathered, looking for the threads that might pull everything apart. The door opened and he walked in like he owned the place. Same gray coat. Same deliberate movements.
 
 "Mr. Sullivan," he said. "We need to talk."
