@@ -76,6 +76,14 @@
     "byterover": {
       "version": "2.0.0",
       "installedAt": 1773363071182
+    },
+    "cloudflare-integration": {
+      "version": "1.0.0",
+      "installedAt": 1773439646232
+    },
+    "x402-enhanced": {
+      "version": "1.0.1",
+      "installedAt": 1773439698051
     }
   }
 }
