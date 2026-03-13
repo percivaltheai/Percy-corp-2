@@ -1,0 +1,67 @@
+{
+  "active_context": [
+    {
+      "order": 3,
+      "path": "_index.md",
+      "tokens": 628,
+      "type": "summary"
+    },
+    {
+      "order": 2,
+      "path": "identity/_index.md",
+      "tokens": 700,
+      "type": "summary"
+    },
+    {
+      "order": 1,
+      "path": "identity/percy/_index.md",
+      "tokens": 622,
+      "type": "summary"
+    },
+    {
+      "importance": 50,
+      "path": "identity/context.md",
+      "tokens": 75,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "identity/percy/context.md",
+      "tokens": 39,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "identity/percy/core_identity.md",
+      "tokens": 227,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "identity/percy/projects/active_projects.md",
+      "tokens": 220,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "identity/percy/tools/core_toolset.md",
+      "tokens": 185,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "identity/percy/work_patterns.md",
+      "tokens": 434,
+      "type": "context"
+    }
+  ],
+  "generated_at": "2026-03-13T00:54:36.598Z",
+  "lane_tokens": {
+    "contexts": 1180,
+    "stubs": 0,
+    "summaries": 1950
+  },
+  "source_fingerprint": "cb16fc881e294c8db6d03521c864e48834593e5f10c3b1c265255e774884fdb2",
+  "total_tokens": 3130,
+  "version": 1
+}

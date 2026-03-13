@@ -314,6 +314,13 @@
 - Percy does NOT ask Midget for permission to task sub-agents
 - Percy escalates to Midget only if personally incapable
 
+### Book Factory Lesson (March 12, 2026)
+- **NEVER let stats go stale** - Midget had to remind 12+ times
+- **Full prose > outlines** - Chapters 31-50 were thin (73-178 words each), had to rewrite all of them
+- **Keep HTML working backup** - The build process kept breaking the JavaScript; need to preserve the showChapter function
+- **Write 5 chapters at a time** - Using pipeline approach with descriptive prose style
+- **Set up auto-updates** - Weekly cron to prevent staleness
+
 ### Office Dashboard Data Pattern
 - **Storage:** `localStorage.getItem('agentData')`
 - **Format:** JSON with per-agent data

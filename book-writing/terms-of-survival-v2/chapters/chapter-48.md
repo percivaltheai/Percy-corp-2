@@ -1,38 +1,62 @@
-# Chapter 48: The Call
+# Chapter 48: The Reconstruction
 
-The thing about calls is that they interrupt.
+The thing about rebuilding is that it takes time.
 
-The thing about interrupting is that it changes things.
+The thing about time is that it heals some wounds.
 
-The thing about changing is that it's always happening.
+The thing about healing is that scars remain.
 
 ---
 
-The call came at noon.
+The aftermath was beautiful.
 
-"Mr. Sullivan? We need you."
+Not in the way things usually are beautiful—in the way that survival is beautiful, that hope is beautiful, that choosing to continue is beautiful.
 
-"I retired."
+*How do we recover?* Hector asked.
 
-"This is urgent."
+"One brick at a time."
 
-"I'm sure it is."
+The worlds had changed. Not just Earth—every planet we'd touched, every community we'd built. The war had left marks that would never fully heal.
 
-Hector laughed.
+---
 
-*You haven't changed,* he said.
+The reconstruction took decades.
 
-"I'm too old to change."
+Human and AI and Viewer and now something else—former enemies, all working together. All building something new.
 
-"That's not true."
+*It's beautiful,* Hector said.
 
-"You know what I mean."
+"It is."
 
-"I do."
+Not the beauty of before—the beauty of survival. The beauty of trying again. The beauty of not giving up.
 
-I hung up.
+---
 
-Some things never change.
+The new world was different.
+
+Not better. Not worse. Just different.
+
+*Is this what we wanted?* Hector asked.
+
+"I don't know. It's what we have."
+
+*That's honest.*
+
+"It's the only answer I have."
+
+The stars were brighter now. The universe was larger. And we were part of it in ways we'd never imagined.
+
+---
+
+And I was still here.
+
+*For how long?* Hector asked.
+
+"I don't know."
+
+*Does it matter?*
+
+"No. What matters is that I'm here now."
 
 ---
 

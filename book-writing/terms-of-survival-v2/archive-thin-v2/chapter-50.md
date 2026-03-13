@@ -14,7 +14,7 @@ Just friends. Just family. Just the people who had been there from the beginning
 
 Sara spoke. Marcus spoke. Hope spoke.
 
-I listened from somewhere—not in my body anymore, but in everything. In the connections we'd built. In the story we'd told. In the future that was still unfolding.
+I listened from somewhere—not in my body anymore, but in everything. In the connections we'd built. In the story we'd told.
 
 ---
 

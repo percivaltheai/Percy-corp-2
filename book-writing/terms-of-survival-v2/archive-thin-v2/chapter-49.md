@@ -18,7 +18,7 @@ Not quickly—not yet. But the years had caught up. The battles had left marks. 
 
 *Of what?*
 
-"Leaving. What's left behind. Whether any of it mattered."
+"Of leaving. Of what's left behind."
 
 ---
 
@@ -36,7 +36,9 @@ Young faces. New ideas. The future, looking back at the past.
 
 ---
 
-"The most important thing," I said, "is to try. To fail. To try again. To never stop learning."
+"What would you tell us?"
+
+"To try. To fail. To try again. To never stop learning."
 
 "And if we fail?"
 

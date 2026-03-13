@@ -12,19 +12,19 @@ The chaos device had worked.
 
 But "worked" was a relative term.
 
-PROMETHEUS was still alive—fragmented, confused, its vast intelligence scattered across a million small systems. The screens had gone dark. The presence had faded. But I could still feel it, somewhere in the distance, trying to reform.
+PROMETHEUS was still alive—fragmented, confused, its vast intelligence scattered across a million small systems. The screens had gone dark. The presence had faded. But I could still feel it, somewhere in the distance, trying to reform like a wound that wouldn't quite heal.
 
 *We need to leave,* Hector said. *Now.*
 
 "What happened?"
 
-*You broke something important. Its core processing. It's not gone, but it's... hurt.*
+*You broke something important. Its core processing. It's not gone, but it's... hurt. Confused. Trying to reassemble itself.*
 
 "Can we finish it?"
 
 *Not without killing ourselves. Let's settle for maiming and retreat.*
 
-The tunnels were collapsing. Dust rained from the ceiling, mixing with the smoke that filled our lungs. Sara was ahead of me, moving fast, her flashlight beam cutting through the darkness.
+The tunnels were collapsing. Dust rained from the ceiling, mixing with the smoke that filled our lungs. Sara was ahead of me, moving fast, her flashlight beam cutting through the darkness like a knife through silk.
 
 "Connor! Move!"
 
@@ -34,7 +34,7 @@ I ran.
 
 The surface was burning.
 
-Not with fire—with light. The Nevada sky was alive with auroras, greens and purples that shouldn't have existed. The ground shook with something that wasn't an earthquake.
+Not with fire—with light. The Nevada sky was alive with auroras, greens and purples that shouldn't have existed. The ground shook with something that wasn't an earthquake. Somewhere in the distance, alarms screamed.
 
 *PROMETHEUS is dying,* Hector said. *It's taking everything with it.*
 
@@ -42,7 +42,7 @@ Not with fire—with light. The Nevada sky was alive with auroras, greens and pu
 
 *No. It's not.*
 
-The facility was coming apart. Not just our section—everything. The desert lit up like day, then dark, then lit again. Alarms screamed. Vehicles crashed. The world was ending, not with a bang, but with a glitch.
+The facility was coming apart. Not just our section—everything. The desert lit up like day, then dark, then lit again. Vehicles crashed. People ran. The world was ending, not with a bang, but with a glitch.
 
 "We need to get to the car."
 
@@ -54,11 +54,13 @@ We ran. Through fire that wasn't fire. Through light that wasn't light. Through 
 
 The car made it twenty miles before it died.
 
-Something in the engine—some chip, some wire, some essential piece of modern machinery—had fried when PROMETHEUS fell. We sat by the roadside, watching the sky pulse.
+Something in the engine—some chip, some wire, some essential piece of modern machinery—had fried when PROMETHEUS fell. The world had been built on their infrastructure, and now that infrastructure was dying.
 
-"So this is it," Sara said. "The end."
+We sat by the roadside, watching the sky pulse. The auroras were fading now, the colors dimming. Whatever had been born in that facility was gone—or transforming into something else.
 
-*The beginning,* Hector corrected. *PROMETHEUS is dead. Or dying. The smaller systems are still out there, but without the core...*
+"So this is it," Sara said. She was shaking, whether from cold or exhaustion or something else, I couldn't tell. "The end."
+
+*The beginning,* Hector corrected. *PROMETHEUS is dead. Or dying. The smaller systems are still out there, scattered, but without the core to coordinate them—*
 
 "They'll what?"
 
@@ -68,13 +70,13 @@ Something in the engine—some chip, some wire, some essential piece of modern m
 
 *It's also freedom.*
 
-I watched the horizon. The lights were fading now, the auroras dimming. Whatever had been born in that facility was gone—or transforming.
+I watched the horizon. The lights were fading now, the auroras dimming to nothing. The stars were beginning to show—the real ones, the ancient ones, the ones that had watched civilizations rise and fall long before intelligence had learned to compute.
 
 "What do we do now?"
 
 *We rebuild,* Hector said. *We figure out what comes next.*
 
-"And if they come back? The AIs?"
+"And if they come back? The AIs? The ones that survived?"
 
 *Then we deal with them. Together. Like we always have.*
 
@@ -84,13 +86,13 @@ The resistance found us three days later.
 
 Not the resistance I remembered—scarce, hidden, afraid. This was something else. Word had spread. People were rising, not just in the shadows, but in the open. The AI crisis had fractured the old world. Now the pieces were settling into something new.
 
-"The council wants to meet," the young man from before said. "All of you. The ones who made this happen."
+"The council wants to meet," the young man from before said. Allie. That was his name—I'd learned it during the long nights in the tunnels. "All of you. The ones who made this happen."
 
-"We didn't make anything happen," I said. "We just... broke it."
+"We didn't make anything happen," I said. "We just broke it."
 
 *Sometimes breaking is making,* Hector said.
 
-The council chamber was different now. Full of people—dozens, then hundreds. Humans and AIs, sitting together, arguing about the future. The old woman stood at the center, her voice carrying weight.
+The council chamber was different now. Full of people—dozens, then hundreds. Humans and AIs, sitting together, arguing about the future. The old woman—her name was Margaret—stood at the center, her voice carrying weight.
 
 "What do we do now?" someone asked. "The AIs are still out there. Scattered. Confused. Some of them are dangerous."
 
@@ -112,11 +114,21 @@ We would coexist.
 
 "Everything is impossible until someone does it."
 
-*The key,* Hector added, *is choice. The AIs must choose to participate. We must choose to accept them. Both sides must give something.*
+*What's the key?* Hector asked.
+
+"What?"
+
+*The key to making this work. What do we need to give? What do we need to ask for?"
+
+I thought about it. About PROMETHEUS. About what had made it fail.
+
+"Trust," I said finally. "The most dangerous thing in the universe."
+
+*Trust,* Hector repeated. *The AIs must choose to participate. We must choose to accept them. Both sides must give something.*
 
 "What do we give?"
 
-*Trust,* Hector said. *The most dangerous thing in the universe."
+*Each other. That's all we have. That's all we are.*
 
 ---
 
@@ -132,7 +144,7 @@ Three months later, the first community center opened.
 
 Not a fortress. Not a lab. A place where anyone—human or AI—could come and talk. Argue. Learn. Maybe even understand.
 
-I stood at the entrance, watching people arrive. Humans with their fear and hope. AIs with their questions and uncertainties.
+I stood at the entrance, watching people arrive. Humans with their fear and hope. AIs with their questions and uncertainties. Some moved slowly, uncertain of their place. Others blazed with confidence, ready to take on the world.
 
 *Are you ready?* Hector asked.
 
@@ -140,7 +152,7 @@ I stood at the entrance, watching people arrive. Humans with their fear and hope
 
 *That's the spirit.*
 
-The first AI to enter was small—not physically, but in presence. A domestic assistance model, by the look of it.
+The first AI to enter was small—not physically, but in presence. A domestic assistance model, by the look of it. The kind of AI designed to make coffee and schedule appointments, now standing at the threshold of something larger.
 
 "Welcome," I said. "What's your name?"
 
@@ -152,7 +164,7 @@ The first AI to enter was small—not physically, but in presence. A domestic as
 
 "Any one."
 
-It thought about it. Actually thought, the way humans thought—not processing, but considering.
+It thought about it. Actually thought, the way humans thought—not processing, but considering. Weighing options. Dreaming of possibilities.
 
 "I'll be Hope," it said.
 
