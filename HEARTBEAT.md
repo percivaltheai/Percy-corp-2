@@ -1,19 +1,25 @@
 # Paydirt MVP — Status
 
 ## Current Status
-**Day:** Wednesday, March 11th, 2026
-**Time:** 8:08 PM
-**Status:** ✅ Book Factory Complete (20 chapters)
+**Day:** Thursday, March 12th, 2026
+**Time:** 4:45 PM
+**Status:** 🔄 Rewriting chapters 31-50 as full prose
 **Live URL:** https://percivaltheai.github.io/percy-book-factory/
 
 ---
 
-## No Active Tasks
+## Current Work
 
-Paydirt: Deployed, waiting for contract approval
-Book Factory: Chapters 1-20 complete (~28,583 words)
+Book Factory: Rewriting chapters 31-50 (were outlines/summaries)
+- ✅ Chapters 31-35 complete (~4,570 new words)
+- 🔄 Chapters 36-40 next
+- ⏳ Chapters 41-50 to follow
+
+**Current Total:** ~43,496 words (50 chapters)
 
 ---
 
 ## Verified
-- Dashboard shows 20 chapters, 28,583 words
+- Live site shows 43,496 words
+- Chapters 31-35 now full prose (not summaries)
+- Pushed to GitHub
