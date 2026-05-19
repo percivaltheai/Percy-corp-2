@@ -1,8 +1,8 @@
 # Paydirt MVP — Status
 
 ## Current Status
-**Day:** Thursday, March 12th, 2026
-**Time:** 5:40 PM
+**Day:** Tuesday, May 19th, 2026
+**Time:** 3:44 PM
 **Status:** ✅ Complete
 **Live URL:** https://percivaltheai.github.io/percy-book-factory/
 
@@ -10,10 +10,10 @@
 
 ## No Active Tasks
 
-Book Factory: Full rewrite finished - 50 chapters, 53,632 words (67% of 80k)
+Book Factory: Terms of Survival - Full rewrite finished - 54 chapters, 54,696 words (68% of 80k)
 
 ---
 
 ## Verified
 - Site working - chapters load correctly
-- Stats updated to 50 chapters, 53,632 words
+- Stats updated to 54 chapters, 54,696 words
